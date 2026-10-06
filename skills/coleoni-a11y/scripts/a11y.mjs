@@ -137,15 +137,21 @@ function focusInfo() {
   const focused = [pick(el), el.parentElement ? pick(el.parentElement) : ""];
   const desc = `${el.tagName.toLowerCase()}${el.id ? "#" + el.id : ""}${el.getAttribute("href") ? ` ${el.getAttribute("href")}` : ""}`;
   const label = (el.getAttribute("aria-label") || el.innerText || el.value || el.getAttribute("alt") || el.getAttribute("placeholder") || "").replace(/\s+/g, " ").trim().slice(0, 60);
-  el.blur();
-  const plain = [pick(el), el.parentElement ? pick(el.parentElement) : ""];
-  el.focus();
+  // compare with and without focus only on the first visit: refocusing resets
+  // fields with inner stops (a date input's day, month, year) and Tab would never leave
+  const again = !!el.dataset.a11yId;
+  let plain = focused;
+  if (!again) {
+    el.blur();
+    plain = [pick(el), el.parentElement ? pick(el.parentElement) : ""];
+    el.focus();
+  }
   const outlineOn = /solid|dotted|dashed|double|auto/.test(focused[0].split("|")[0]) && parseFloat(focused[0].split("|")[1]) > 0;
   const visible = focused[0] !== plain[0] || focused[1] !== plain[1] || outlineOn;
   const cs = getComputedStyle(el);
   const hidden = r.width < 1 || r.height < 1 || cs.visibility === "hidden" || cs.opacity === "0" || r.bottom < -5 || r.right < -5 || r.left > innerWidth + 5;
   if (!el.dataset.a11yId) el.dataset.a11yId = String(Math.random()).slice(2, 10);
-  return { id: el.dataset.a11yId, desc, label, visible, hidden, href: el.getAttribute("href"), x: r.x + scrollX, y: r.y + scrollY, w: r.width, h: r.height };
+  return { id: el.dataset.a11yId, type: el.type || "", desc, label, visible, hidden, href: el.getAttribute("href"), x: r.x + scrollX, y: r.y + scrollY, w: r.width, h: r.height };
 }
 
 // ---------------------------------------------------------------- crops
@@ -328,7 +334,7 @@ while (queue.length && pages.length < o.pages) {
         const f = await page.evaluate(focusInfo);
         if (!f) break;
         if (f.id === last) {
-          if (++same >= 2) {
+          if (++same >= (/^(date|time|datetime-local|month|week)$/.test(f.type) ? 6 : 2)) {
             kb.trap = f;
             break;
           }

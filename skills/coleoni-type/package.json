@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-type",
+  "private": true,
+  "type": "module",
+  "description": "Typography: the scale, the fonts that load, line height and length",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

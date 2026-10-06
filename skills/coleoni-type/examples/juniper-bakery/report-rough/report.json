@@ -1,0 +1,108 @@
+{
+  "skill": "coleoni-type",
+  "page": "rough",
+  "findings": [
+    {
+      "level": "high",
+      "title": "“Inter” only shows for people who have it installed",
+      "detail": "The CSS asks for <code>Inter</code> with no <code>@font-face</code>. It's installed on this machine, so it looks right here; most visitors get the next font in the stack.",
+      "fix": "Serve it (woff2 from your own domain, only the weights in use, <code>font-display: swap</code>) or drop it from the stack and use the system font on purpose.",
+      "shots": [
+        "shots/type-0.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "13 font sizes, 7 almost equal",
+      "detail": "In use: <code>12</code> <code>13</code> <code>13.5</code> <code>14</code> <code>15</code> <code>15.5</code> <code>17</code> <code>18</code> <code>21</code> <code>22</code> <code>23</code> <code>28</code> <code>46</code>. Pairs nobody can tell apart: 13/13.5, 13.5/14, 14/15, 15/15.5, 17/18, 21/22, 22/23.",
+      "fix": "A scale of 5 to 7 steps with a steady ratio (1.2 to 1.33), as <code>rem</code> tokens: for example 13 · 15 · 17 · 21 · 28 · 44.",
+      "shots": [
+        "shots/type-1.jpg",
+        "shots/type-2.jpg",
+        "shots/type-3.jpg",
+        "shots/type-4.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "Lines too long",
+      "detail": "About 130 characters per line. Past 75, reading tires and the eye misses the next line.",
+      "fix": "<code>max-width: 34em</code> (about 65 characters) on paragraphs.",
+      "shots": [
+        "shots/type-5.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "Justified text",
+      "detail": "Without hyphenation, the web opens gaps between words to fill each line.",
+      "fix": "<code>text-align: start</code>.",
+      "shots": [
+        "shots/type-6.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "Capitals without tracking",
+      "detail": "Small capitals crowd each other without a little space between them.",
+      "fix": "<code>letter-spacing: .06em</code> to <code>.1em</code> on uppercase labels.",
+      "shots": [
+        "shots/type-7.jpg",
+        "shots/type-8.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "Large heading with open tracking",
+      "detail": "At 46px letters already look apart; positive tracking pushes them further.",
+      "fix": "<code>letter-spacing: -0.01em</code> to <code>-0.025em</code> on large headings.",
+      "shots": [
+        "shots/type-9.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "Numbers that don't line up",
+      "detail": "Prices and amounts in columns with proportional digits: they don't stack under each other.",
+      "fix": "<code>font-variant-numeric: tabular-nums</code> on tables, prices and totals.",
+      "shots": [
+        "shots/type-10.jpg"
+      ]
+    }
+  ],
+  "sizes": [
+    12,
+    13,
+    13.5,
+    14,
+    15,
+    15.5,
+    17,
+    18,
+    21,
+    22,
+    23,
+    28,
+    46
+  ],
+  "families": [
+    {
+      "family": "Georgia",
+      "weights": [
+        700,
+        800,
+        400
+      ]
+    },
+    {
+      "family": "Inter",
+      "weights": [
+        400,
+        700,
+        600
+      ]
+    }
+  ],
+  "missing": [],
+  "faces": []
+}

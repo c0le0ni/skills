@@ -1,0 +1,72 @@
+{
+  "site": "refined",
+  "standard": "WCAG 2.2 AA + eMAG 3.1",
+  "date": "2026-10-06T18:38:32.110Z",
+  "counts": {
+    "block": 0,
+    "fix": 0,
+    "look": 0
+  },
+  "passed": [
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "empty-heading",
+    "empty-table-header",
+    "form-field-multiple-labels",
+    "heading-order",
+    "html-has-lang",
+    "html-lang-valid",
+    "label-title-only",
+    "label",
+    "landmark-banner-is-top-level",
+    "landmark-main-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-main",
+    "landmark-one-main",
+    "landmark-unique",
+    "link-name",
+    "meta-viewport-large",
+    "meta-viewport",
+    "nested-interactive",
+    "page-has-heading-one",
+    "region",
+    "select-name",
+    "skip-link",
+    "table-duplicate-name",
+    "target-size",
+    "td-headers-attr",
+    "th-has-data-cells"
+  ],
+  "issues": [],
+  "pages": [
+    {
+      "url": "http://127.0.0.1:50780/",
+      "path": "/",
+      "keyboard": {
+        "stops": 11,
+        "skip": true,
+        "noFocus": 0,
+        "hidden": 0,
+        "trap": false,
+        "order": [
+          "a #content “Skip to content”",
+          "a # “Juniper Bakery”",
+          "a # “Today”",
+          "a # “Cakes”",
+          "a # “Visit”",
+          "a #pick “Order a cake”",
+          "a #sizes “See sizes and prices”",
+          "select “Carrot Pistachio Dark chocolate”",
+          "select “6 inch 8 inch 10 inch”",
+          "input “2026-10-10”",
+          "button “Send the order”"
+        ]
+      },
+      "shot": "shots/page-0.jpg"
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "skill": "coleoni-color",
+  "page": "rough",
+  "findings": [
+    {
+      "level": "high",
+      "title": "Contrast 2.12:1 on “With cream cheese and toaste”",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#A9AFA4;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#A9AFA4</code> on <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FBF8F2;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#FBF8F2</code>, 14px. Needs 4.5:1 (WCAG AA).",
+      "fix": "The same color a little darker: <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#6D7368;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#6D7368</code> (4.63:1).",
+      "shots": [
+        "shots/color-0.jpg",
+        "shots/color-1.jpg"
+      ]
+    },
+    {
+      "level": "high",
+      "title": "Contrast 2.91:1 on “Six flavors, three sizes and”",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#8B8F87;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#8B8F87</code> on <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F6F0E6;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F6F0E6</code>, 18px. Needs 4.5:1 (WCAG AA).",
+      "fix": "The same color a little darker: <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#6B6F67;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#6B6F67</code> (4.55:1).",
+      "shots": [
+        "shots/color-2.jpg"
+      ]
+    },
+    {
+      "level": "high",
+      "title": "Contrast 2.92:1 on “Priya S., ordered a carrot c”",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#8A8F86;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#8A8F86</code> on <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F6F0E6;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F6F0E6</code>, 13.5px. Needs 4.5:1 (WCAG AA).",
+      "fix": "The same color a little darker: <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#6A6F66;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#6A6F66</code> (4.57:1).",
+      "shots": [
+        "shots/color-3.jpg"
+      ]
+    },
+    {
+      "level": "high",
+      "title": "5 more pairs with low contrast",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#8A8F86;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FBF8F2;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>3.12</code> · <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#888888;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FBF8F2;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>3.34</code> · <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#C9663C;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F6F0E6;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>3.40</code> · <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#C8643B;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FBF8F2;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>3.71</code> · <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FFFFFF;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#C8643B;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>3.93</code>",
+      "fix": "See the contrast table below.",
+      "shots": []
+    },
+    {
+      "level": "medium",
+      "title": "3 groups of almost identical colors",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#2F4A3A;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#2F4A3A</code> ×7 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#2E4B3B;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#2E4B3B</code> ×1 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#304A39;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#304A39</code> ×1<br><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#8A8F86;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#8A8F86</code> ×5 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#8B8F87;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#8B8F87</code> ×1<br><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#C8643B;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#C8643B</code> ×4 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#C9663C;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#C9663C</code> ×1<br>Nobody sees the difference; the code keeps both forever.",
+      "fix": "Keep the most used one in each group and make it a token.",
+      "shots": [
+        "shots/color-4.jpg",
+        "shots/color-5.jpg",
+        "shots/color-6.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "34 colors written straight into the CSS",
+      "detail": "34 of 34 color declarations use raw values instead of variables (0 use tokens). Changing the brand becomes a treasure hunt.",
+      "fix": "Semantic tokens (<code>--bg</code>, <code>--text</code>, <code>--accent</code>…) on top of a scale; see <code>palette.css</code>.",
+      "shots": []
+    },
+    {
+      "level": "low",
+      "title": "No dark mode",
+      "detail": "No <code>prefers-color-scheme: dark</code> rule. Not required; if you want one, the tokens below include the dark version.",
+      "fix": "Tokens with light and dark values, switched by <code>@media (prefers-color-scheme: dark)</code>.",
+      "shots": []
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#1F2A23",
+      "n": 16,
+      "roles": {
+        "text": 16
+      },
+      "oklch": [
+        0.272,
+        0.02,
+        156.889
+      ]
+    },
+    {
+      "hex": "#2F4A3A",
+      "n": 7,
+      "roles": {
+        "text": 6,
+        "background": 1
+      },
+      "oklch": [
+        0.382,
+        0.043,
+        157.616
+      ]
+    },
+    {
+      "hex": "#FFFFFF",
+      "n": 6,
+      "roles": {
+        "text": 2,
+        "icon": 1,
+        "background": 3
+      },
+      "oklch": [
+        1,
+        0,
+        89.876
+      ]
+    },
+    {
+      "hex": "#FBF8F2",
+      "n": 5,
+      "roles": {
+        "background": 5
+      },
+      "oklch": [
+        0.98,
+        0.009,
+        84.572
+      ]
+    },
+    {
+      "hex": "#8A8F86",
+      "n": 5,
+      "roles": {
+        "text": 5
+      },
+      "oklch": [
+        0.643,
+        0.014,
+        130.861
+      ]
+    },
+    {
+      "hex": "#4E6B59",
+      "n": 4,
+      "roles": {
+        "text": 4
+      },
+      "oklch": [
+        0.499,
+        0.044,
+        157.126
+      ]
+    },
+    {
+      "hex": "#C8643B",
+      "n": 4,
+      "roles": {
+        "background": 1,
+        "text": 3
+      },
+      "oklch": [
+        0.615,
+        0.139,
+        41.984
+      ]
+    },
+    {
+      "hex": "#EADFCB",
+      "n": 3,
+      "roles": {
+        "background": 3
+      },
+      "oklch": [
+        0.907,
+        0.029,
+        82.593
+      ]
+    },
+    {
+      "hex": "#A9AFA4",
+      "n": 3,
+      "roles": {
+        "text": 3
+      },
+      "oklch": [
+        0.746,
+        0.017,
+        130.478
+      ]
+    },
+    {
+      "hex": "#888888",
+      "n": 3,
+      "roles": {
+        "text": 3
+      },
+      "oklch": [
+        0.627,
+        0,
+        89.876
+      ]
+    },
+    {
+      "hex": "#DDD3C2",
+      "n": 3,
+      "roles": {
+        "border": 3
+      },
+      "oklch": [
+        0.87,
+        0.025,
+        81.116
+      ]
+    },
+    {
+      "hex": "#F6F0E6",
+      "n": 2,
+      "roles": {
+        "background": 1,
+        "text": 1
+      },
+      "oklch": [
+        0.957,
+        0.015,
+        80.707
+      ]
+    },
+    {
+      "hex": "#C9663C",
+      "n": 1,
+      "roles": {
+        "text": 1
+      },
+      "oklch": [
+        0.62,
+        0.138,
+        42.603
+      ]
+    },
+    {
+      "hex": "#2E4B3B",
+      "n": 1,
+      "roles": {
+        "text": 1
+      },
+      "oklch": [
+        0.385,
+        0.045,
+        159.237
+      ]
+    },
+    {
+      "hex": "#8B8F87",
+      "n": 1,
+      "roles": {
+        "text": 1
+      },
+      "oklch": [
+        0.644,
+        0.013,
+        128.68
+      ]
+    },
+    {
+      "hex": "#304A39",
+      "n": 1,
+      "roles": {
+        "background": 1
+      },
+      "oklch": [
+        0.382,
+        0.043,
+        155.174
+      ]
+    }
+  ],
+  "duplicates": [
+    [
+      "#2F4A3A",
+      "#2E4B3B",
+      "#304A39"
+    ],
+    [
+      "#8A8F86",
+      "#8B8F87"
+    ],
+    [
+      "#C8643B",
+      "#C9663C"
+    ]
+  ],
+  "contrast": [
+    {
+      "fg": "#2F4A3A",
+      "bg": "#F6F0E6",
+      "ratio": 8.57
+    },
+    {
+      "fg": "#4E6B59",
+      "bg": "#F6F0E6",
+      "ratio": 5.19
+    },
+    {
+      "fg": "#C9663C",
+      "bg": "#F6F0E6",
+      "ratio": 3.4
+    },
+    {
+      "fg": "#2E4B3B",
+      "bg": "#F6F0E6",
+      "ratio": 8.48
+    },
+    {
+      "fg": "#8B8F87",
+      "bg": "#F6F0E6",
+      "ratio": 2.91
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#C8643B",
+      "ratio": 3.93
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#304A39",
+      "ratio": 9.7
+    },
+    {
+      "fg": "#2F4A3A",
+      "bg": "#FBF8F2",
+      "ratio": 9.17
+    },
+    {
+      "fg": "#A9AFA4",
+      "bg": "#FBF8F2",
+      "ratio": 2.12
+    },
+    {
+      "fg": "#C8643B",
+      "bg": "#FBF8F2",
+      "ratio": 3.71
+    },
+    {
+      "fg": "#888888",
+      "bg": "#FBF8F2",
+      "ratio": 3.34
+    },
+    {
+      "fg": "#F6F0E6",
+      "bg": "#2F4A3A",
+      "ratio": 8.57
+    },
+    {
+      "fg": "#8A8F86",
+      "bg": "#FBF8F2",
+      "ratio": 3.12
+    },
+    {
+      "fg": "#1F2A23",
+      "bg": "#FBF8F2",
+      "ratio": 14.01
+    },
+    {
+      "fg": "#8A8F86",
+      "bg": "#F6F0E6",
+      "ratio": 2.92
+    }
+  ],
+  "tokens": {
+    "declared": {},
+    "literal": 34,
+    "token": 0
+  },
+  "palette": "palette.css"
+}

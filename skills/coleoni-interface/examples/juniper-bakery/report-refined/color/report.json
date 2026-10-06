@@ -1,0 +1,218 @@
+{
+  "skill": "coleoni-color",
+  "page": "refined",
+  "findings": [
+    {
+      "level": "low",
+      "title": "No dark mode",
+      "detail": "No <code>prefers-color-scheme: dark</code> rule. Not required; if you want one, the tokens below include the dark version.",
+      "fix": "Tokens with light and dark values, switched by <code>@media (prefers-color-scheme: dark)</code>.",
+      "shots": []
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#1F2A23",
+      "n": 16,
+      "roles": {
+        "text": 16
+      },
+      "oklch": [
+        0.272,
+        0.02,
+        156.889
+      ]
+    },
+    {
+      "hex": "#2F4A3A",
+      "n": 10,
+      "roles": {
+        "background": 3,
+        "text": 7
+      },
+      "oklch": [
+        0.382,
+        0.043,
+        157.616
+      ]
+    },
+    {
+      "hex": "#66705F",
+      "n": 9,
+      "roles": {
+        "text": 9
+      },
+      "oklch": [
+        0.532,
+        0.029,
+        132.354
+      ]
+    },
+    {
+      "hex": "#4E6B59",
+      "n": 7,
+      "roles": {
+        "text": 7
+      },
+      "oklch": [
+        0.499,
+        0.044,
+        157.126
+      ]
+    },
+    {
+      "hex": "#FFFFFF",
+      "n": 7,
+      "roles": {
+        "text": 3,
+        "icon": 1,
+        "background": 3
+      },
+      "oklch": [
+        1,
+        0,
+        89.876
+      ]
+    },
+    {
+      "hex": "#A9502B",
+      "n": 5,
+      "roles": {
+        "text": 4,
+        "background": 1
+      },
+      "oklch": [
+        0.536,
+        0.128,
+        41.928
+      ]
+    },
+    {
+      "hex": "#FBF8F2",
+      "n": 5,
+      "roles": {
+        "background": 5
+      },
+      "oklch": [
+        0.98,
+        0.009,
+        84.572
+      ]
+    },
+    {
+      "hex": "#EADFCB",
+      "n": 3,
+      "roles": {
+        "background": 3
+      },
+      "oklch": [
+        0.907,
+        0.029,
+        82.593
+      ]
+    },
+    {
+      "hex": "#D6CBB7",
+      "n": 3,
+      "roles": {
+        "border": 3
+      },
+      "oklch": [
+        0.846,
+        0.03,
+        82.586
+      ]
+    },
+    {
+      "hex": "#F6F0E6",
+      "n": 2,
+      "roles": {
+        "background": 1,
+        "text": 1
+      },
+      "oklch": [
+        0.957,
+        0.015,
+        80.707
+      ]
+    }
+  ],
+  "duplicates": [],
+  "contrast": [
+    {
+      "fg": "#F6F0E6",
+      "bg": "#2F4A3A",
+      "ratio": 8.57
+    },
+    {
+      "fg": "#2F4A3A",
+      "bg": "#F6F0E6",
+      "ratio": 8.57
+    },
+    {
+      "fg": "#4E6B59",
+      "bg": "#F6F0E6",
+      "ratio": 5.19
+    },
+    {
+      "fg": "#A9502B",
+      "bg": "#F6F0E6",
+      "ratio": 4.79
+    },
+    {
+      "fg": "#66705F",
+      "bg": "#F6F0E6",
+      "ratio": 4.58
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#A9502B",
+      "ratio": 5.43
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#2F4A3A",
+      "ratio": 9.72
+    },
+    {
+      "fg": "#2F4A3A",
+      "bg": "#FBF8F2",
+      "ratio": 9.17
+    },
+    {
+      "fg": "#66705F",
+      "bg": "#FBF8F2",
+      "ratio": 4.89
+    },
+    {
+      "fg": "#A9502B",
+      "bg": "#FBF8F2",
+      "ratio": 5.12
+    },
+    {
+      "fg": "#4E6B59",
+      "bg": "#FBF8F2",
+      "ratio": 5.55
+    },
+    {
+      "fg": "#1F2A23",
+      "bg": "#FBF8F2",
+      "ratio": 14.01
+    }
+  ],
+  "tokens": {
+    "declared": {
+      "--cream": "#F6F0E6",
+      "--paper": "#FBF8F2",
+      "--line": "#E4DCCD",
+      "--sage": "#2F4A3A",
+      "--sage-2": "#4E6B59",
+      "--muted": "#66705F",
+      "--terracotta": "#C8643B",
+      "--terracotta-ink": "#A9502B"
+    },
+    "literal": 11,
+    "token": 18
+  },
+  "palette": "palette.css"
+}

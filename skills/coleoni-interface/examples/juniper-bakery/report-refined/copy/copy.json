@@ -1,0 +1,370 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "lang": "en",
+      "voice": {
+        "we": 2,
+        "you": 4
+      },
+      "flag": null
+    }
+  ],
+  "counts": {},
+  "items": [
+    {
+      "page": "/",
+      "role": "title",
+      "text": "Cakes by order · Juniper Bakery",
+      "where": "head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h1",
+      "text": "A cake for Saturday? Tell us on Thursday and it’s yours",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Carrot",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Pistachio",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Dark chocolate",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Pick your cake",
+      "where": "#pick",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Sizes and prices",
+      "where": "#sizes",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Order a cake",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "See sizes and prices",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Send the order",
+      "where": "form",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "link",
+      "text": "Skip to content",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Juniper Bakery",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Today",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Cakes",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Visit",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "CAKES BY ORDER",
+      "where": "section",
+      "css": "uppercase",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Six flavors, three sizes and a message written by hand. Order at least 48 hours ahead and pick it up any day from 9 to 3. We confirm every order on WhatsApp the same day, and you pay when you pick it up.",
+      "where": "section",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "With cream cheese and toasted walnuts.",
+      "where": "section",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Pistachio sponge, raspberry and white chocolate.",
+      "where": "section",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Three layers, salted ganache.",
+      "where": "section",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "label",
+      "text": "Flavor Carrot Pistachio Dark chocolate",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "label",
+      "text": "Size 6 inch 8 inch 10 inch",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "label",
+      "text": "Pickup day",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Carrot",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$38",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$52",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$68",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Pistachio",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$44",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$58",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$76",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Dark chocolate",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$40",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$54",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$70",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Lemon and olive oil",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$36",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$50",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "$64",
+      "where": "#sizes",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "“Ordered on Thursday, picked up on Saturday, and the message was spelled right. That never happens.” Priya S., ordered a carrot cake for a 40th birthday",
+      "where": "page",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Priya S., ordered a carrot cake for a 40th birthday",
+      "where": "page",
+      "css": "none",
+      "flags": [],
+      "also": []
+    }
+  ]
+}

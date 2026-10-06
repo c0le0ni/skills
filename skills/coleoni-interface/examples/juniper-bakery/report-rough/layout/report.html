@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Layout · rough</title><style>
+*{box-sizing:border-box;margin:0}
+body{background:#111214;color:#e8e8ea;font:14.5px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1240px;margin:0 auto;padding:44px 32px 60px;display:grid;gap:34px}
+.k{font:600 12px/1 ui-monospace,"SF Mono",Consolas,monospace;letter-spacing:.06em;text-transform:uppercase;color:#8b8d94}
+h1{font-size:40px;line-height:1.05;letter-spacing:-.025em;font-weight:650;margin-top:14px}
+h1 span{color:#8b8d94}
+.sub{color:#b5b7bd;font-size:16px;max-width:52em;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{border:1px solid #2a2b30;background:#16171a;border-radius:999px;padding:5px 12px;font-size:13px;color:#c9cacf}
+.chips b{font-weight:650;color:#f4f4f5}.chips .r b{color:#ff8a7d}.chips .y b{color:#ffc861}.chips .g b{color:#aefa0e}
+h2{font-size:22px;font-weight:620;letter-spacing:-.01em;display:flex;gap:10px;align-items:baseline}
+h2 small{font-size:13px;color:#8b8d94;font-weight:500}
+section{display:grid;gap:14px}
+ul.f{list-style:none;padding:0;display:grid;gap:12px}
+ul.f>li{background:#16171a;border:1px solid #26272b;border-radius:14px;padding:16px 18px;display:grid;gap:10px}
+.hd{display:flex;gap:12px;align-items:baseline}
+.hd i{width:9px;height:9px;border-radius:50%;flex:none;background:#6b6d74;transform:translateY(-1px)}
+li.high .hd i{background:#ff6b5e}li.medium .hd i{background:#f5b84a}
+.hd b{font-size:15.5px;font-weight:600}
+.hd em{margin-left:auto;font-style:normal;font-size:12px;color:#7c7e85;white-space:nowrap}
+li.high .hd em{color:#ff8a7d}li.medium .hd em{color:#ffc861}
+ul.f>li>p{color:#a9abb2}
+ul.f>li>p code,.fix code{font:12.5px ui-monospace,"SF Mono",Consolas,monospace;background:#1d1e22;padding:1px 5px;border-radius:5px;color:#d9dade}
+.crops{display:flex;flex-wrap:wrap;gap:10px}
+.crops img{max-width:min(100%,380px);max-height:200px;border-radius:8px;border:1px solid #26272b;background:#0c0d0f}
+.where{font:11.5px ui-monospace,"SF Mono",Consolas,monospace;color:#7c7e85;overflow-wrap:anywhere}
+.fix{font-size:13.5px;color:#c9cacf;border-top:1px solid #222327;padding-top:10px}
+.fix small{display:block;font:600 11px system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7c7e85;margin-bottom:2px}
+.skill{justify-self:start;font:12px ui-monospace,Consolas,monospace;color:#aefa0e;border:1px solid #2c3a16;background:#18200c;border-radius:999px;padding:1px 9px}
+.panel{background:#16171a;border:1px solid #26272b;border-radius:14px;padding:18px 20px;overflow:hidden}
+.foot{color:#6b6d74;font-size:12.5px}
+@media (max-width:760px){.w{padding:28px 16px 44px}h1{font-size:28px}}
+</style></head><body><div class="w">
+<header><span class="k">Layout · 2026-10-06</span><h1>rough</h1><div class="chips"><span class="r"><b>1</b> fix first</span><span class="y"><b>2</b> to fix</span><span class=""><b>7</b> left edges</span><span class=""><b>2</b> near misses</span></div></header>
+<section><h2>Edges and gaps on the page <small>green: edges in use · red: near misses · blue: gaps between sections</small></h2><div class="panel" style="padding:10px"><img src="shots/overlay.jpg" alt="" style="width:100%;display:block;border-radius:8px"></div></section>
+<section><h2>What to fix <small>most important first</small></h2><ul class="f"><li class="high"><div class="hd"><i></i><b>Scrolls sideways at 390px</b><em>Fix first</em></div><p>166px wider than the screen, starting at <code>article.card</code>.</p><div class="fix"><small>How to fix</small>Columns with <code>repeat(auto-fill, minmax(min(100%, 16rem), 1fr))</code>, <code>min-width: 0</code> on flex children, tables inside an <code>overflow-x: auto</code> wrapper.</div></li><li class="medium"><div class="hd"><i></i><b>2 edges that almost line up</b><em>Fix</em></div><p><code>30px</code> instead of <code>32px</code> (-2px, 3 blocks)<br><code>34px</code> instead of <code>30px</code> (+4px, 3 blocks)<br>Nobody notices the number; everyone feels the page is crooked.</p><div class="crops"><img src="shots/layout-0.jpg" alt=""><img src="shots/layout-1.jpg" alt=""></div><div class="fix"><small>How to fix</small>One container (<code>max-width</code> + <code>margin-inline: auto</code> + one <code>padding-inline</code> token) for every section, instead of padding per section.</div></li><li class="medium"><div class="hd"><i></i><b>No rhythm between sections</b><em>Fix</em></div><p>Gaps between sections: <code>72px</code> → <code>58px</code> → <code>64px</code> → <code>66px</code>. Values this close look like mistakes.</p><div class="fix"><small>How to fix</small>One section spacing token (for example <code>--s-8: 64px</code>), and a bigger one only where the subject really changes.</div></li></ul></section>
+<section><h2>Phone and tablet</h2><div class="panel" style="display:flex;gap:18px;align-items:flex-start;overflow-x:auto"><figure style="display:grid;gap:6px;flex:none;width:220px"><img src="shots/width-390.jpg" alt="" style="width:100%;border-radius:10px;border:1px solid #26272b"><figcaption style="font:12px ui-monospace,monospace;color:#ff8a7d">390px · scrolls 166px sideways</figcaption></figure><figure style="display:grid;gap:6px;flex:none;width:330px"><img src="shots/width-768.jpg" alt="" style="width:100%;border-radius:10px;border:1px solid #26272b"><figcaption style="font:12px ui-monospace,monospace;color:#aefa0e">768px · fits</figcaption></figure></div></section>
+<p class="foot">Made by /coleoni-layout · skills.coleoni.com</p>
+</div></body></html>

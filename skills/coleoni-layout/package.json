@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-layout",
+  "private": true,
+  "type": "module",
+  "description": "Layout: alignment, rhythm, grouping and widths",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

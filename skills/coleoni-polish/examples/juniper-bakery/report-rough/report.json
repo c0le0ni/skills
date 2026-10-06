@@ -1,0 +1,233 @@
+{
+  "skill": "coleoni-polish",
+  "page": "rough",
+  "findings": [
+    {
+      "level": "medium",
+      "title": "7 different corner radii",
+      "detail": "In use: <code>4px</code> ×3, <code>6px</code> ×1, <code>8px</code> ×1, <code>10px</code> ×1, <code>12px</code> ×4, <code>16px</code> ×1, <code>20px</code> ×1. Close values (10, 12, 16) read as mistakes, not choices.",
+      "fix": "A scale of 3 or 4 tokens (<code>--r-sm</code>, <code>--r-md</code>, <code>--r-lg</code>, <code>--r-pill</code>), and each component picks one.",
+      "shots": [
+        "shots/polish-0.jpg",
+        "shots/polish-1.jpg",
+        "shots/polish-2.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "Inner corner doesn't follow the outer one",
+      "detail": "An element with a <code>12px</code> radius inside a <code>16px</code> one, <code>10px</code> from its edge. The corners aren't parallel and the inner one looks swollen.",
+      "fix": "Inner radius = outer radius − the gap: <code>16 − 10 = 6px</code>, or <code>calc(var(--r-lg) - var(--pad))</code>.",
+      "shots": [
+        "shots/polish-3.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "A hard, black shadow",
+      "detail": "<code>rgba(0, 0, 0, 0.5) 0px 2px 4px 0px</code>: black at high opacity with little blur reads as a dirty edge, not depth.",
+      "fix": "More blur, low opacity (6 to 15%) and the brand's dark color instead of black.",
+      "shots": [
+        "shots/polish-4.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "15 spacings off the 4px grid",
+      "detail": "Values like <code>11px</code> ×7, <code>5px</code> ×6, <code>26px</code> ×5, <code>13px</code> ×4, <code>22px</code> ×4, <code>23px</code> ×4, <code>14px</code> ×3, <code>18px</code> ×3. Almost equal to their neighbors on the scale, they create 1 to 3px misalignments.",
+      "fix": "A spacing scale in multiples of 4 (<code>4 8 12 16 24 32 48 64</code>) and tokens for it.",
+      "shots": [
+        "shots/polish-5.jpg",
+        "shots/polish-6.jpg",
+        "shots/polish-7.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "3 kinds of button that don't match",
+      "detail": "Height, radius and font size: <code>46px · 6px · 15.5px</code>, <code>46px · pill · 14px</code>, <code>46px · 8px · 15px</code>.",
+      "fix": "One button component with color variants (primary, secondary) and at most two sizes, same height and radius.",
+      "shots": [
+        "shots/polish-8.jpg",
+        "shots/polish-9.jpg",
+        "shots/polish-10.jpg"
+      ]
+    },
+    {
+      "level": "high",
+      "title": "Looks like a button, isn't one",
+      "detail": "<code>div.send</code> looks like a button but is a <code>div</code> with a text cursor: it can't be focused, ignores Enter and screen readers don't announce it.",
+      "fix": "Use <code>&lt;button type=\"submit\"&gt;</code> (or <code>&lt;a href&gt;</code> if it navigates) with the same style.",
+      "shots": [
+        "shots/polish-11.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "2 buttons with no hover state",
+      "detail": "Nothing changes when the pointer is over them: they feel dead.",
+      "fix": "A subtle <code>:hover</code> (background 6 to 10% darker), <code>:active</code> 1px down, and a 150ms <code>transition</code> on the properties that change.",
+      "shots": [
+        "shots/polish-12.jpg",
+        "shots/polish-13.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "Icon off the text's center",
+      "detail": "The icon sits 3.2px below the center of the text line.",
+      "fix": "Remove manual margins on the icon and align with <code>display:inline-flex; align-items:center</code> on the button.",
+      "shots": [
+        "shots/polish-14.jpg"
+      ]
+    }
+  ],
+  "scales": {
+    "radii": [
+      {
+        "k": "4",
+        "n": 3
+      },
+      {
+        "k": "6",
+        "n": 1
+      },
+      {
+        "k": "8",
+        "n": 1
+      },
+      {
+        "k": "10",
+        "n": 1
+      },
+      {
+        "k": "12",
+        "n": 4
+      },
+      {
+        "k": "16",
+        "n": 1
+      },
+      {
+        "k": "20",
+        "n": 1
+      },
+      {
+        "k": "pill",
+        "n": 1
+      }
+    ],
+    "shadows": [
+      {
+        "k": "rgba(0, 0, 0, 0.5) 0px 2px 4px 0px",
+        "n": 1
+      },
+      {
+        "k": "rgba(47, 74, 58, 0.45) 0px 18px 40px -20px",
+        "n": 1
+      },
+      {
+        "k": "rgb(228, 220, 205) 0px 1px 0px 0px, rgba(0, 0, 0, 0.12) 0px 8px 24px 0px",
+        "n": 1
+      }
+    ],
+    "spacing": [
+      {
+        "k": 5,
+        "n": 6
+      },
+      {
+        "k": 6,
+        "n": 4
+      },
+      {
+        "k": 7,
+        "n": 3
+      },
+      {
+        "k": 9,
+        "n": 2
+      },
+      {
+        "k": 10,
+        "n": 7
+      },
+      {
+        "k": 11,
+        "n": 7
+      },
+      {
+        "k": 12,
+        "n": 49
+      },
+      {
+        "k": 13,
+        "n": 4
+      },
+      {
+        "k": 14,
+        "n": 3
+      },
+      {
+        "k": 16,
+        "n": 43
+      },
+      {
+        "k": 18,
+        "n": 3
+      },
+      {
+        "k": 20,
+        "n": 4
+      },
+      {
+        "k": 22,
+        "n": 4
+      },
+      {
+        "k": 23,
+        "n": 4
+      },
+      {
+        "k": 24,
+        "n": 4
+      },
+      {
+        "k": 26,
+        "n": 5
+      },
+      {
+        "k": 30,
+        "n": 3
+      },
+      {
+        "k": 32,
+        "n": 2
+      },
+      {
+        "k": 34,
+        "n": 2
+      },
+      {
+        "k": 58,
+        "n": 2
+      },
+      {
+        "k": 64,
+        "n": 2
+      },
+      {
+        "k": 66,
+        "n": 1
+      },
+      {
+        "k": 70,
+        "n": 1
+      },
+      {
+        "k": 72,
+        "n": 1
+      }
+    ]
+  }
+}

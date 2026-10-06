@@ -132,7 +132,9 @@ function lint(item, lang) {
       break;
     }
   }
-  if (/\b[A-ZÀ-Ý]{2,}(?:\s+[A-ZÀ-Ý]{2,}){1,}\b/.test(t) && t.replace(/[^A-ZÀ-Ý]/g, "").length >= 8) f.push(["caps", "shouting in capitals"]);
+  // a short label set in capitals by CSS is a label, not shouting
+  const cssLabel = item.css === "uppercase" && t.length < 40;
+  if (!cssLabel && /\b[A-ZÀ-Ý]{2,}(?:\s+[A-ZÀ-Ý]{2,}){1,}\b/.test(t) && t.replace(/[^A-ZÀ-Ý]/g, "").length >= 8) f.push(["caps", "shouting in capitals"]);
   if (/!/.test(t) && !["code"].includes(item.role)) f.push(["exclaim", "exclamation mark"]);
   if (/(?![©®™])\p{Extended_Pictographic}/u.test(t)) f.push(["emoji", "emoji"]);
   if (["h1", "h2", "h3", "button", "title"].includes(item.role)) {
@@ -208,7 +210,7 @@ function extract() {
     if ([...taken].some((t) => t.contains?.(el) && t !== el)) continue;
     const t = txt(el);
     if (!t || [...el.querySelectorAll("a, button")].map(txt).join(" ").trim() === t) continue;
-    push(el.tagName === "LABEL" ? "label" : "text", t, el);
+    push(el.tagName === "LABEL" ? "label" : "text", t, el, { css: getComputedStyle(el).textTransform });
   }
   for (const el of document.querySelectorAll("input[placeholder], textarea[placeholder]")) {
     if (!vis(el)) continue;

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cakes by order · Juniper Bakery</title>
+<style>
+  /* one set of tokens, used everywhere */
+  :root {
+    --cream: #F6F0E6; --paper: #FBF8F2; --line: #E4DCCD;
+    --sage: #2F4A3A; --sage-2: #4E6B59; --muted: #66705F; --terracotta: #C8643B; --terracotta-ink: #A9502B;
+    --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-pill: 999px;
+    --shadow-1: 0 1px 2px rgb(47 74 58 / .08), 0 6px 16px -8px rgb(47 74 58 / .25);
+    --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+    --t-xs: .8125rem; --t-sm: .9375rem; --t-md: 1.0625rem; --t-lg: 1.3125rem; --t-xl: 1.75rem; --t-2xl: 2.75rem;
+    --serif: Georgia, "Times New Roman", serif; --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: #1F2A23; font: var(--t-sm)/1.55 var(--sans); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(var(--s-4), 4vw, var(--s-6)); }
+  .skip { position: fixed; left: var(--s-4); top: -64px; z-index: 10; background: var(--sage); color: var(--cream); padding: var(--s-2) var(--s-4); border-radius: var(--r-sm); font-weight: 600; text-decoration: none; }
+  .skip:focus { top: var(--s-3); }
+  .scroll { overflow-x: auto; border-radius: var(--r-md); }
+  header { display: flex; align-items: center; justify-content: space-between; padding: var(--s-5) 0; }
+  .brand { font: 600 var(--t-lg) var(--serif); color: var(--sage); text-decoration: none; }
+  nav { display: flex; gap: var(--s-5); }
+  nav a { color: var(--sage-2); text-decoration: none; font-size: var(--t-sm); }
+  nav a:hover { color: var(--sage); text-decoration: underline; text-underline-offset: 4px; }
+  section { margin-top: var(--s-8); }
+  .hero { margin-top: var(--s-7); }
+  .eyebrow { font-size: var(--t-xs); font-weight: 700; letter-spacing: .08em; color: var(--terracotta-ink); text-transform: uppercase; }
+  h1 { font: 600 var(--t-2xl)/1.05 var(--serif); letter-spacing: -.02em; color: var(--sage); margin: var(--s-3) 0 var(--s-4); max-width: 18em; text-wrap: balance; }
+  .lead { font-size: var(--t-md); color: var(--muted); max-width: 34em; text-wrap: pretty; }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-5); }
+  .btn { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; background: var(--terracotta-ink); color: #fff; border: 0; border-radius: var(--r-pill); padding: 0 var(--s-5); font: 600 var(--t-sm) var(--sans); text-decoration: none; cursor: pointer; transition: background-color .15s ease, transform .15s ease; }
+  .btn:hover { background: #8F4323; }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+  .btn.alt { background: var(--sage); }
+  .btn.alt:hover { background: #22372B; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: var(--s-5); }
+  .card { background: var(--paper); border-radius: var(--r-lg); padding: var(--s-3); box-shadow: var(--shadow-1); }
+  .card .pic { height: 132px; border-radius: calc(var(--r-lg) - var(--s-3)); background: #EADFCB; }
+  .card .body { padding: var(--s-4) var(--s-3) var(--s-3); }
+  .card h2 { font: 600 var(--t-lg)/1.2 var(--serif); color: var(--sage); margin: 0; }
+  .card p { font-size: var(--t-sm); color: var(--muted); margin-top: var(--s-1); }
+  .card .price { font-size: var(--t-md); font-weight: 600; color: var(--terracotta-ink); margin-top: var(--s-3); font-variant-numeric: tabular-nums; }
+  h2 { font: 600 var(--t-xl)/1.15 var(--serif); color: var(--sage); margin-bottom: var(--s-4); }
+  .pick form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--s-4); align-items: end; background: var(--paper); padding: var(--s-5); border-radius: var(--r-lg); box-shadow: var(--shadow-1); }
+  label { display: grid; gap: var(--s-2); font-size: var(--t-xs); font-weight: 600; color: var(--sage-2); }
+  input, select { font: inherit; font-weight: 400; font-size: var(--t-sm); min-height: 44px; padding: 0 var(--s-3); border: 1px solid #D6CBB7; border-radius: var(--r-sm); background: #fff; color: #1F2A23; }
+  input:focus-visible, select:focus-visible { outline: 2px solid var(--sage); outline-offset: 1px; }
+  table { width: 100%; border-collapse: collapse; background: var(--paper); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-1); font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--line); font-size: var(--t-sm); }
+  th { font-size: var(--t-xs); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  td:not(:first-child), th:not(:first-child) { text-align: right; }
+  .quote { margin: var(--s-8) 0; max-width: 34em; font: italic var(--t-lg)/1.5 var(--serif); color: var(--sage-2); text-wrap: pretty; }
+  .quote small { display: block; font: var(--t-xs) var(--sans); color: var(--muted); margin-top: var(--s-3); font-style: normal; }
+</style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="wrap">
+  <header><a class="brand" href="#">Juniper Bakery</a><nav><a href="#">Today</a><a href="#">Cakes</a><a href="#">Visit</a></nav></header>
+  <main id="content">
+  <section class="hero">
+    <span class="eyebrow">Cakes by order</span>
+    <h1>A cake for Saturday? Tell us on Thursday and it’s yours</h1>
+    <p class="lead">Six flavors, three sizes and a message written by hand. Order at least 48 hours ahead and pick it up any day from 9 to 3. We confirm every order on WhatsApp the same day, and you pay when you pick it up.</p>
+    <div class="actions"><a class="btn" href="#pick">Order a cake <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn alt" href="#sizes">See sizes and prices</a></div>
+  </section>
+  <section class="cards">
+    <article class="card"><div class="pic"></div><div class="body"><h2>Carrot</h2><p>With cream cheese and toasted walnuts.</p><div class="price">from $38</div></div></article>
+    <article class="card"><div class="pic"></div><div class="body"><h2>Pistachio</h2><p>Pistachio sponge, raspberry and white chocolate.</p><div class="price">from $44</div></div></article>
+    <article class="card"><div class="pic"></div><div class="body"><h2>Dark chocolate</h2><p>Three layers, salted ganache.</p><div class="price">from $40</div></div></article>
+  </section>
+  <section class="pick" id="pick">
+    <h2>Pick your cake</h2>
+    <form><label>Flavor<select><option>Carrot</option><option>Pistachio</option><option>Dark chocolate</option></select></label><label>Size<select><option>6 inch</option><option>8 inch</option><option>10 inch</option></select></label><label>Pickup day<input type="date" value="2026-10-10"></label><button class="btn alt" type="button">Send the order</button></form>
+  </section>
+  <section class="sizes" id="sizes">
+    <h2>Sizes and prices</h2>
+    <div class="scroll"><table><tr><th>Flavor</th><th>6 inch</th><th>8 inch</th><th>10 inch</th></tr><tr><td>Carrot</td><td>$38</td><td>$52</td><td>$68</td></tr><tr><td>Pistachio</td><td>$44</td><td>$58</td><td>$76</td></tr><tr><td>Dark chocolate</td><td>$40</td><td>$54</td><td>$70</td></tr><tr><td>Lemon and olive oil</td><td>$36</td><td>$50</td><td>$64</td></tr></table></div>
+  </section>
+  <p class="quote">“Ordered on Thursday, picked up on Saturday, and the message was spelled right. That never happens.”<small>Priya S., ordered a carrot cake for a 40th birthday</small></p>
+  </main>
+  </div>
+</body>
+</html>

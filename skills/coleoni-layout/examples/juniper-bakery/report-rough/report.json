@@ -1,0 +1,79 @@
+{
+  "skill": "coleoni-layout",
+  "page": "rough",
+  "findings": [
+    {
+      "level": "medium",
+      "title": "2 edges that almost line up",
+      "detail": "<code>30px</code> instead of <code>32px</code> (-2px, 3 blocks)<br><code>34px</code> instead of <code>30px</code> (+4px, 3 blocks)<br>Nobody notices the number; everyone feels the page is crooked.",
+      "fix": "One container (<code>max-width</code> + <code>margin-inline: auto</code> + one <code>padding-inline</code> token) for every section, instead of padding per section.",
+      "shots": [
+        "shots/layout-0.jpg",
+        "shots/layout-1.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "No rhythm between sections",
+      "detail": "Gaps between sections: <code>72px</code> → <code>58px</code> → <code>64px</code> → <code>66px</code>. Values this close look like mistakes.",
+      "fix": "One section spacing token (for example <code>--s-8: 64px</code>), and a bigger one only where the subject really changes.",
+      "shots": []
+    },
+    {
+      "level": "high",
+      "title": "Scrolls sideways at 390px",
+      "detail": "166px wider than the screen, starting at <code>article.card</code>.",
+      "fix": "Columns with <code>repeat(auto-fill, minmax(min(100%, 16rem), 1fr))</code>, <code>min-width: 0</code> on flex children, tables inside an <code>overflow-x: auto</code> wrapper.",
+      "shots": []
+    }
+  ],
+  "edges": [
+    {
+      "x": 0,
+      "n": 1
+    },
+    {
+      "x": 30,
+      "n": 3
+    },
+    {
+      "x": 32,
+      "n": 5
+    },
+    {
+      "x": 34,
+      "n": 3
+    },
+    {
+      "x": 411,
+      "n": 1
+    },
+    {
+      "x": 791,
+      "n": 1
+    },
+    {
+      "x": 1058,
+      "n": 1
+    }
+  ],
+  "gaps": [
+    0,
+    72,
+    58,
+    64,
+    66
+  ],
+  "widths": [
+    {
+      "w": 390,
+      "extra": 166,
+      "el": "article.card"
+    },
+    {
+      "w": 768,
+      "extra": 0,
+      "el": null
+    }
+  ]
+}

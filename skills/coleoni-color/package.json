@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-color",
+  "private": true,
+  "type": "module",
+  "description": "Color: what the page uses, contrast, near-duplicates and an OKLCH palette",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

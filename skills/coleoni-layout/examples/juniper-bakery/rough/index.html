@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cakes by order · Juniper Bakery</title>
+<style>
+  /* built screen by screen, each section copied from a different mockup */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #F6F0E6; color: #1F2A23; font: 15px/1.45 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 20px 34px; }
+  .brand { font: 700 21px Georgia, serif; color: #2F4A3A; text-decoration: none; }
+  nav a { color: #4E6B59; text-decoration: none; margin-left: 26px; font-size: 14px; }
+  .hero { padding: 58px 32px 64px; max-width: 1180px; }
+  .eyebrow { font-size: 12px; font-weight: 700; color: #C9663C; text-transform: uppercase; }
+  h1 { font: 800 46px/1.02 Georgia, serif; color: #2E4B3B; margin: 14px 0 18px; max-width: 760px; letter-spacing: .01em; }
+  .lead { font-size: 18px; color: #8b8f87; max-width: 1100px; text-align: justify; }
+  .actions { display: flex; gap: 10px; margin-top: 26px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; background: #C8643B; color: #fff; border-radius: 6px; padding: 13px 20px 11px; font-weight: 600; font-size: 15.5px; text-decoration: none; }
+  .btn svg { width: 16px; height: 16px; margin-top: 5px; }
+  .btn.alt { background: #304A39; border-radius: 999px; padding: 9px 22px; font-size: 14px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding: 0 30px; max-width: 1180px; margin-top: 72px; }
+  .card { background: #FBF8F2; border-radius: 12px; padding: 23px; box-shadow: 0 2px 4px rgba(0,0,0,.5); }
+  .card:nth-child(2) { border-radius: 16px; padding: 10px; box-shadow: 0 18px 40px -20px rgba(47,74,58,.45); }
+  .card:nth-child(3) { border-radius: 10px; padding: 24px; box-shadow: 0 1px 0 #E4DCCD, 0 8px 24px rgba(0,0,0,.12); }
+  .card .pic { height: 120px; border-radius: 12px; background: #EADFCB; margin-bottom: 16px; }
+  .card h3 { font: 700 23px/1.2 Georgia, serif; color: #2F4A3A; }
+  .card p { font-size: 14px; color: #A9AFA4; margin-top: 7px; }
+  .card .price { font-size: 17px; font-weight: 600; color: #C8643B; margin-top: 13px; }
+  .pick { margin: 58px 34px 0; max-width: 1180px; }
+  .pick h2 { font: 700 28px Georgia, serif; color: #2F4A3A; margin-bottom: 30px; }
+  .pick form { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 14px; align-items: end; background: #FBF8F2; padding: 26px; border-radius: 20px; }
+  label { display: grid; gap: 5px; font-size: 13px; color: #888; }
+  input, select { font: inherit; padding: 11px 12px; border: 1px solid #DDD3C2; border-radius: 4px; background: #fff; }
+  .send { background: #2F4A3A; color: #F6F0E6; border-radius: 8px; padding: 12px 18px; font-weight: 600; cursor: default; }
+  .sizes { margin: 64px 30px 0; max-width: 1180px; }
+  .sizes h2 { font: 700 22px Georgia, serif; color: #2F4A3A; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; background: #FBF8F2; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid #E8DFCF; font-size: 15px; }
+  th { font-size: 12px; text-transform: uppercase; color: #8a8f86; }
+  td:not(:first-child) { text-align: right; }
+  .quote { margin: 66px 32px 70px; max-width: 1180px; font: italic 22px/1.5 Georgia, serif; color: #4E6B59; }
+  .quote small { display: block; font: 13.5px Inter, system-ui, sans-serif; color: #8a8f86; margin-top: 10px; font-style: normal; }
+</style>
+</head>
+<body>
+  <header><a class="brand" href="#">Juniper Bakery</a><nav><a href="#">Today</a><a href="#">Cakes</a><a href="#">Visit</a></nav></header>
+  <section class="hero">
+    <span class="eyebrow">Cakes by order</span>
+    <h1>A cake for Saturday? Tell us on Thursday and it’s yours</h1>
+    <p class="lead">Six flavors, three sizes and a message written by hand. Order at least 48 hours ahead and pick it up any day from 9 to 3. We confirm every order on WhatsApp the same day, and you pay when you pick it up.</p>
+    <div class="actions"><a class="btn" href="#pick">Order a cake <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn alt" href="#sizes">See sizes and prices</a></div>
+  </section>
+  <section class="cards">
+    <article class="card"><div class="pic"></div><h3>Carrot</h3><p>With cream cheese and toasted walnuts.</p><div class="price">from $38</div></article>
+    <article class="card"><div class="pic"></div><h3>Pistachio</h3><p>Pistachio sponge, raspberry and white chocolate.</p><div class="price">from $44</div></article>
+    <article class="card"><div class="pic"></div><h3>Dark chocolate</h3><p>Three layers, salted ganache.</p><div class="price">from $40</div></article>
+  </section>
+  <section class="pick" id="pick">
+    <h2>Pick your cake</h2>
+    <form><label>Flavor<select><option>Carrot</option><option>Pistachio</option><option>Dark chocolate</option></select></label><label>Size<select><option>6 inch</option><option>8 inch</option><option>10 inch</option></select></label><label>Pickup day<input type="date" value="2026-10-10"></label><div class="send">Send the order</div></form>
+  </section>
+  <section class="sizes" id="sizes">
+    <h2>Sizes and prices</h2>
+    <table><tr><th>Flavor</th><th>6 inch</th><th>8 inch</th><th>10 inch</th></tr><tr><td>Carrot</td><td>$38</td><td>$52</td><td>$68</td></tr><tr><td>Pistachio</td><td>$44</td><td>$58</td><td>$76</td></tr><tr><td>Dark chocolate</td><td>$40</td><td>$54</td><td>$70</td></tr><tr><td>Lemon and olive oil</td><td>$36</td><td>$50</td><td>$64</td></tr></table>
+  </section>
+  <p class="quote">“Ordered on Thursday, picked up on Saturday, and the message was spelled right. That never happens.”<small>Priya S., ordered a carrot cake for a 40th birthday</small></p>
+</body>
+</html>

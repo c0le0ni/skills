@@ -53,6 +53,11 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-break`](#coleoni-break) | Breaks a component on purpose (long text, translation, 320px, 200% text…) and fixes it |
 | [`/coleoni-states`](#coleoni-states) | Every state of a component, forced through its API: loading, empty, error, offline… |
 | [`/coleoni-variants`](#coleoni-variants) | Three real variations of a component, side by side in the page, to pick one |
+| [`/coleoni-polish`](#coleoni-polish) | Radii, shadows, spacing, buttons, icons and hover: the details that make it look finished |
+| [`/coleoni-type`](#coleoni-type) | The type scale, fonts that never load, line height and length |
+| [`/coleoni-color`](#coleoni-color) | Contrast, near-identical colors and an OKLCH palette with light and dark tokens |
+| [`/coleoni-layout`](#coleoni-layout) | Edges that almost line up, section rhythm and widths, drawn on the page |
+| [`/coleoni-interface`](#coleoni-interface) | The whole interface review in one pass: polish, type, color, layout, copy and a11y |
 
 <br>
 
@@ -349,6 +354,60 @@ versions, in the real page, is a decision.
 /coleoni-variants the pricing table
 /coleoni-variants the hero, 3 directions, one of them without the photo
 ```
+
+<br>
+
+### The interface family
+
+`/coleoni-polish`, `/coleoni-type`, `/coleoni-color` and `/coleoni-layout`
+each measure one side of an interface on the real page, crop every problem
+and turn what they find into tokens. `/coleoni-interface` runs them together
+(with `/coleoni-copy` and `/coleoni-a11y` when installed) and merges
+everything into one report ordered by severity.
+
+<a href="https://skills.coleoni.com/coleoni-interface/">
+  <img src=".github/assets/coleoni-interface-report.jpg" alt="An interface review made by coleoni-interface: findings by area and by severity" width="100%">
+</a>
+
+#### `/coleoni-polish`
+
+Seven corner radii where three would do, an inner corner that doesn't follow
+the outer one, a hard black shadow, spacing off the 4px grid, buttons that
+don't match, an arrow 3px below the text, buttons with no hover, a `div` that
+looks like a button. Shows the radii, shadows and spacing the page really uses.
+
+#### `/coleoni-type`
+
+Fonts named but never loaded (or only on the machine that built the page),
+faked bold, 13 sizes where 6 would do, line height, lines 130 characters
+long, justified text, capitals without tracking, numbers that don't line up.
+Draws the specimen the page really uses.
+
+#### `/coleoni-color`
+
+Every color in use, the ones nobody can tell apart, the contrast of every
+text on its real background with the closest passing shade, hardcoded vs
+tokens. Proposes OKLCH scales from the brand and semantic tokens for light
+and dark, as `palette.css`.
+
+#### `/coleoni-layout`
+
+Edges off by 2px, uneven gaps between sections, headings that float between
+blocks, sideways scroll on phones. Draws the edges and gaps over the page.
+
+#### `/coleoni-interface`
+
+```bash
+npx skills add c0le0ni/skills --skill coleoni-interface --skill coleoni-polish --skill coleoni-type --skill coleoni-color --skill coleoni-layout --skill coleoni-copy --skill coleoni-a11y
+```
+
+```text
+/coleoni-interface https://yoursite.com
+/coleoni-interface the checkout page, fix it in order
+```
+
+The example is a cake order page built section by section: 29 findings
+across six areas, then 0 after one pass of tokens and components.
 
 ## Made by
 

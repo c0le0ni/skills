@@ -1,0 +1,84 @@
+{
+  "skill": "coleoni-interface",
+  "page": "refined",
+  "areas": [
+    {
+      "key": "polish",
+      "script": "polish.mjs",
+      "name": [
+        "Polish",
+        "Acabamento"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "type",
+      "script": "type.mjs",
+      "name": [
+        "Typography",
+        "Tipografia"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "color",
+      "script": "color.mjs",
+      "name": [
+        "Color",
+        "Cor"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 1
+    },
+    {
+      "key": "layout",
+      "script": "layout.mjs",
+      "name": [
+        "Layout",
+        "Layout"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "copy",
+      "script": "copy.mjs",
+      "name": [
+        "Copy",
+        "Texto"
+      ],
+      "optional": true,
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "a11y",
+      "script": "a11y.mjs",
+      "name": [
+        "Accessibility",
+        "Acessibilidade"
+      ],
+      "optional": true,
+      "ok": true,
+      "err": "",
+      "count": 0
+    }
+  ],
+  "findings": [
+    {
+      "level": "low",
+      "title": "No dark mode",
+      "detail": "No <code>prefers-color-scheme: dark</code> rule. Not required; if you want one, the tokens below include the dark version.",
+      "fix": "Tokens with light and dark values, switched by <code>@media (prefers-color-scheme: dark)</code>.",
+      "shots": [],
+      "skill": "coleoni-color"
+    }
+  ]
+}

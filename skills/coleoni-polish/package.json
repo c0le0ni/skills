@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-polish",
+  "private": true,
+  "type": "module",
+  "description": "Interface finish: radii, shadows, spacing, buttons, icons and states",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

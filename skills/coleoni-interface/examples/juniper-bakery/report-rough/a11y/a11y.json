@@ -1,0 +1,284 @@
+{
+  "site": "rough",
+  "standard": "WCAG 2.2 AA + eMAG 3.1",
+  "date": "2026-10-06T18:38:10.357Z",
+  "counts": {
+    "block": 2,
+    "fix": 3,
+    "look": 1
+  },
+  "passed": [
+    "aria-hidden-body",
+    "bypass",
+    "document-title",
+    "empty-heading",
+    "empty-table-header",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label-title-only",
+    "label",
+    "landmark-banner-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-unique",
+    "link-name",
+    "meta-viewport-large",
+    "meta-viewport",
+    "nested-interactive",
+    "page-has-heading-one",
+    "select-name",
+    "table-duplicate-name",
+    "target-size",
+    "td-headers-attr",
+    "th-has-data-cells"
+  ],
+  "issues": [
+    {
+      "rule": "color-contrast",
+      "impact": "serious",
+      "title": "Elements must meet minimum color contrast ratio thresholds",
+      "detail": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "sc": [
+        "1.4.3"
+      ],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+      "best": false,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "span",
+          "html": "<span class=\"eyebrow\">Cakes by order</span>",
+          "summary": "Element has insufficient color contrast of 3.39 (foreground color: #c9663c, background color: #f6f0e6, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+          "shot": "shots/el-0.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".lead",
+          "html": "<p class=\"lead\">Six flavors, three sizes and a message written by hand. Order at least 48 hours ahead and pick it up any day from 9 to 3. We confirm every order on WhatsApp the same day, and you pay w",
+          "summary": "Element has insufficient color contrast of 2.9 (foreground color: #8b8f87, background color: #f6f0e6, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "shot": "shots/el-1.jpg",
+          "page": "/"
+        },
+        {
+          "target": "a[href$=\"#pick\"]",
+          "html": "<a class=\"btn\" href=\"#pick\">Order a cake <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg></a>",
+          "summary": "Element has insufficient color contrast of 3.93 (foreground color: #ffffff, background color: #c8643b, font size: 11.6pt (15.5px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "shot": "shots/el-2.jpg",
+          "page": "/"
+        },
+        {
+          "target": "article:nth-child(1) > p",
+          "html": "<p>With cream cheese and toasted walnuts.</p>",
+          "summary": "Element has insufficient color contrast of 2.11 (foreground color: #a9afa4, background color: #fbf8f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 17,
+      "sev": "block",
+      "emag": [
+        "4.1"
+      ]
+    },
+    {
+      "rule": "reflow",
+      "sc": [
+        "1.4.10"
+      ],
+      "impact": "serious",
+      "en": [
+        "Content does not reflow at 320px",
+        "At 320 CSS pixels wide (400% zoom on a laptop) the page scrolls sideways.",
+        "Let the element wrap or shrink: max-width: 100%, flexible grids, overflow-x: auto on tables and code."
+      ],
+      "pt": [
+        "O conteúdo não se ajusta em 320px",
+        "Com 320 pixels CSS de largura (zoom de 400% num notebook) a página rola pro lado.",
+        "Deixe o elemento quebrar ou encolher: max-width: 100%, grids flexíveis, overflow-x: auto em tabelas e código."
+      ],
+      "title": "Content does not reflow at 320px",
+      "detail": "At 320 CSS pixels wide (400% zoom on a laptop) the page scrolls sideways.",
+      "fixText": "Let the element wrap or shrink: max-width: 100%, flexible grids, overflow-x: auto on tables and code.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "article.card · +230px",
+          "html": "",
+          "summary": "",
+          "shot": "shots/reflow-0.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "block",
+      "emag": [
+        "4.3"
+      ]
+    },
+    {
+      "rule": "region",
+      "impact": "moderate",
+      "title": "All page content should be contained by landmarks",
+      "detail": "Ensure all page content is contained by landmarks",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=axeAPI",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": ".hero",
+          "html": "<section class=\"hero\">",
+          "summary": "Some page content is not contained by landmarks",
+          "shot": "shots/el-5.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".cards",
+          "html": "<section class=\"cards\">",
+          "summary": "Some page content is not contained by landmarks",
+          "shot": "shots/el-6.jpg",
+          "page": "/"
+        },
+        {
+          "target": "#pick",
+          "html": "<section class=\"pick\" id=\"pick\">",
+          "summary": "Some page content is not contained by landmarks",
+          "shot": "shots/el-7.jpg",
+          "page": "/"
+        },
+        {
+          "target": "#sizes",
+          "html": "<section class=\"sizes\" id=\"sizes\">",
+          "summary": "Some page content is not contained by landmarks",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 5,
+      "sev": "fix",
+      "emag": [
+        "1.8"
+      ]
+    },
+    {
+      "rule": "heading-order",
+      "impact": "moderate",
+      "title": "Heading levels should only increase by one",
+      "detail": "Ensure the order of headings is semantically correct",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/heading-order?application=axeAPI",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "article:nth-child(1) > h3",
+          "html": "<h3>Carrot</h3>",
+          "summary": "Heading order invalid",
+          "shot": "shots/el-3.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "fix",
+      "emag": [
+        "1.3"
+      ]
+    },
+    {
+      "rule": "landmark-one-main",
+      "impact": "moderate",
+      "title": "Document should have one main landmark",
+      "detail": "Ensure the document has a main landmark",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-one-main?application=axeAPI",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "html",
+          "html": "<html lang=\"en\">",
+          "summary": "Document does not have a main landmark",
+          "shot": "shots/el-4.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "fix",
+      "emag": [
+        "1.8"
+      ]
+    },
+    {
+      "rule": "skip-link-missing",
+      "sc": [
+        "2.4.1"
+      ],
+      "impact": "minor",
+      "en": [
+        "No skip link",
+        "The first Tab stop is not a link to the main content, so keyboard users go through the whole menu on every page.",
+        "Add “Skip to content” as the first focusable element, pointing to <main id=\"content\">. eMAG 1.5 asks for it."
+      ],
+      "pt": [
+        "Sem link de pular conteúdo",
+        "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página.",
+        "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra <main id=\"conteudo\">. O eMAG pede isso na recomendação 1.5."
+      ],
+      "title": "No skip link",
+      "detail": "The first Tab stop is not a link to the main content, so keyboard users go through the whole menu on every page.",
+      "fixText": "Add “Skip to content” as the first focusable element, pointing to <main id=\"content\">. eMAG 1.5 asks for it.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "a # “Juniper Bakery”",
+          "html": "",
+          "summary": "",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "look",
+      "emag": [
+        "1.5"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "url": "http://127.0.0.1:54027/",
+      "path": "/",
+      "keyboard": {
+        "stops": 9,
+        "skip": false,
+        "noFocus": 0,
+        "hidden": 0,
+        "trap": false,
+        "order": [
+          "a # “Juniper Bakery”",
+          "a # “Today”",
+          "a # “Cakes”",
+          "a # “Visit”",
+          "a #pick “Order a cake”",
+          "a #sizes “See sizes and prices”",
+          "select “Carrot Pistachio Dark chocolate”",
+          "select “6 inch 8 inch 10 inch”",
+          "input “2026-10-10”"
+        ]
+      },
+      "shot": "shots/page-0.jpg"
+    }
+  ]
+}

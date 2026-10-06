@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-thumb",
+  "private": true,
+  "type": "module",
+  "description": "Thumbnails de portfólio a partir de capturas reais de um site",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

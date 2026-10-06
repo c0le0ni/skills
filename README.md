@@ -44,6 +44,7 @@ installer. Requires Node.js 18 or newer.
 | --- | --- |
 | [`/coleoni-thumb`](#coleoni-thumb) | Portfolio thumbnails and mockups from your project's real screens |
 | [`/coleoni-briefing`](#coleoni-briefing) | Turns a client briefing into a decided scope, with a client-ready PDF |
+| [`/coleoni-init`](#coleoni-init) | Sets up a new project's docs before any code, with a one-page overview |
 
 <br>
 
@@ -110,6 +111,35 @@ call notes, emails, chat exports) and writes a scope you can defend.
 
 A full example, from messy briefing to scope, lives in
 [`skills/coleoni-briefing/examples/juniper-bakery`](skills/coleoni-briefing/examples/juniper-bakery).
+
+<br>
+
+### `/coleoni-init`
+
+<a href="https://skills.coleoni.com/coleoni-init/">
+  <img src=".github/assets/coleoni-init-phones.jpg" alt="The project overview made by coleoni-init, shown on three phones" width="100%">
+</a>
+
+Before the first line of code, a project needs to say what it is, what it is
+not, what was decided and what is still open. This skill reads the scope (and
+the mockups or brand, when there are any) and writes that skeleton.
+
+- **An agent guide for every agent.** `AGENTS.md` with the same eight sections
+  every time, plus a one-line `CLAUDE.md` pointing to it.
+- **Roadmap, status, glossary, decision records** and, when there is personal
+  data, a privacy note (LGPD, GDPR).
+- **Real design tokens** taken from the mockups or brand, never invented.
+- **No stack, no code.** Heavy choices become pending decision records for the team.
+- **One-page overview.** `--overview` turns the docs into a single HTML page with
+  phases, palette, open decisions and blockers.
+
+```text
+/coleoni-init
+/coleoni-init ./my-project --write --overview
+```
+
+The example continues the bakery from `/coleoni-briefing`:
+[`skills/coleoni-init/examples/juniper-bakery`](skills/coleoni-init/examples/juniper-bakery).
 
 ## Made by
 

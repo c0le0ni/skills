@@ -134,7 +134,7 @@ function lint(item, lang) {
   }
   if (/\b[A-ZÀ-Ý]{2,}(?:\s+[A-ZÀ-Ý]{2,}){1,}\b/.test(t) && t.replace(/[^A-ZÀ-Ý]/g, "").length >= 8) f.push(["caps", "shouting in capitals"]);
   if (/!/.test(t) && !["code"].includes(item.role)) f.push(["exclaim", "exclamation mark"]);
-  if (/\p{Extended_Pictographic}/u.test(t)) f.push(["emoji", "emoji"]);
+  if (/(?![©®™])\p{Extended_Pictographic}/u.test(t)) f.push(["emoji", "emoji"]);
   if (["h1", "h2", "h3", "button", "title"].includes(item.role)) {
     const words = t.split(/\s+/).filter((w) => /^\p{L}/u.test(w) && !SMALL.has(w.toLowerCase()));
     const caps = words.filter((w) => /^\p{Lu}\p{Ll}/u.test(w));

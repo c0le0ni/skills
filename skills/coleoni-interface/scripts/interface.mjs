@@ -54,7 +54,7 @@ for (const a of AREAS) {
     console.log(`  ${a.key.padEnd(7)} not installed`);
     continue;
   }
-  if (!existsSync(join(dir, "node_modules"))) spawnSync("npm", ["install", "--silent"], { cwd: dir, shell: true, stdio: "ignore" });
+  if (!existsSync(join(dir, "node_modules"))) spawnSync("npm install --silent", { cwd: dir, shell: true, stdio: "ignore" });
   const sub = join(out, a.key);
   const args = a.key === "copy" ? [script, target, "--out", sub, "--pages", "1"] : a.key === "a11y" ? [script, target, "--out", sub, "--pages", "1", "--lang", o.lang] : [script, target, "--out", sub, "--lang", o.lang];
   const run = spawnSync(process.execPath, args, { encoding: "utf8", timeout: 600000 });

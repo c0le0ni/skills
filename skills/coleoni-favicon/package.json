@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-favicon",
+  "private": true,
+  "type": "module",
+  "description": "A complete favicon set from a logo, with a preview sheet",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

@@ -45,6 +45,7 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-thumb`](#coleoni-thumb) | Portfolio thumbnails and mockups from your project's real screens |
 | [`/coleoni-briefing`](#coleoni-briefing) | Turns a client briefing into a decided scope, with a client-ready PDF |
 | [`/coleoni-init`](#coleoni-init) | Sets up a new project's docs before any code, with a one-page overview |
+| [`/coleoni-favicon`](#coleoni-favicon) | The complete favicon set from a logo, checked in tabs and home screens |
 
 <br>
 
@@ -140,6 +141,30 @@ the mockups or brand, when there are any) and writes that skeleton.
 
 The example continues the bakery from `/coleoni-briefing`:
 [`skills/coleoni-init/examples/juniper-bakery`](skills/coleoni-init/examples/juniper-bakery).
+
+<br>
+
+### `/coleoni-favicon`
+
+<a href="https://skills.coleoni.com/coleoni-favicon/">
+  <img src=".github/assets/coleoni-favicon-devices.jpg" alt="The favicon preview sheet made by coleoni-favicon, in a browser and on a phone" width="100%">
+</a>
+
+One logo in, every icon out, each one checked where it actually appears.
+
+- **The whole set:** `favicon.svg` (with dark mode), `favicon.ico` with 16, 32
+  and 48 inside, PNGs, the iPhone icon, Android icons including maskable,
+  `site.webmanifest` and the `<head>` tags.
+- **A preview sheet** with light and dark browser tabs, iPhone and Android home
+  screens and every size side by side, so a 16px problem shows before launch.
+- **Crops part of a logo** (one letter, the symbol of a lockup) with `--crop`.
+- **Installs it** the way the framework expects: `app/` for Next.js, the public
+  folder plus `<head>` tags for the rest.
+
+```text
+/coleoni-favicon public/logo.svg
+/coleoni-favicon brand/mark.svg on #0a0a0a, rounded, install it
+```
 
 ## Made by
 

@@ -43,6 +43,7 @@ installer. Requires Node.js 18 or newer.
 | Skill | What it does |
 | --- | --- |
 | [`/coleoni-thumb`](#coleoni-thumb) | Portfolio thumbnails and mockups from your project's real screens |
+| [`/coleoni-briefing`](#coleoni-briefing) | Turns a client briefing into a decided scope, with a client-ready PDF |
 
 <br>
 
@@ -80,6 +81,35 @@ Nothing is AI-generated: the image shows exactly what was shipped.
 
 Every image on this page was made by the skill itself.
 [See the full skill page](https://skills.coleoni.com/coleoni-thumb/).
+
+<br>
+
+### `/coleoni-briefing`
+
+<a href="https://skills.coleoni.com/coleoni-briefing/">
+  <img src=".github/assets/coleoni-briefing-phones.jpg" alt="A scope document made by coleoni-briefing, shown on three phones" width="100%">
+</a>
+
+Clients describe the product they imagine. Their answers reveal a smaller,
+sharper problem. This skill reads everything the client sent (form answers,
+call notes, emails, chat exports) and writes a scope you can defend.
+
+- **One pain first.** The single problem that already justifies the project,
+  cited from the client's own answers.
+- **What they already use stays out.** Each cut names the tool that already
+  does the job, so the client sees why.
+- **First release, roadmap, open questions and a deadline check**, in a
+  ten-section document that reads in ten minutes.
+- **Client-ready PDF.** `--pdf` renders a clean A4 document with your accent
+  color and logo, using the Chrome already on the machine.
+
+```text
+/coleoni-briefing briefing/answers.csv
+/coleoni-briefing client-notes.md --pdf
+```
+
+A full example, from messy briefing to scope, lives in
+[`skills/coleoni-briefing/examples/juniper-bakery`](skills/coleoni-briefing/examples/juniper-bakery).
 
 ## Made by
 

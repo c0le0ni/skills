@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juniper Bakery | Bread at 7, cakes by order</title>
+<meta name="description" content="A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root { --cream: #F6F0E6; --paper: #FBF8F2; --sage: #2F4A3A; --sage-2: #4E6B59; --terracotta: #C8643B; --ink: #1F2A23; --line: #E4DCCD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: var(--ink); font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--sage); text-decoration: none; font: 600 21px/1 Fraunces, Georgia, "Times New Roman", serif; letter-spacing: -.01em; }
+  .brand svg { width: 34px; height: 34px; }
+  nav { display: flex; gap: 28px; font-size: 15px; }
+  nav a { color: var(--sage-2); text-decoration: none; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--terracotta); color: #fff; border-radius: 999px; padding: 13px 22px; font-weight: 600; text-decoration: none; font-size: 15px; }
+  .btn.ghost { background: transparent; color: var(--sage); border: 1.5px solid var(--sage); }
+  .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; padding: 64px 0 88px; }
+  .eyebrow { color: var(--terracotta); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { font: 600 64px/1.02 Fraunces, Georgia, "Times New Roman", serif; letter-spacing: -.025em; color: var(--sage); margin: 18px 0 22px; }
+  h1 em { font-style: italic; color: var(--terracotta); }
+  .lead { font-size: 19px; color: var(--sage-2); max-width: 30em; }
+  .actions { display: flex; gap: 12px; margin-top: 32px; }
+  .menu { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 26px 28px; box-shadow: 0 30px 60px -30px rgb(47 74 58 / .35); }
+  .menu h2 { font: 600 22px/1.2 Fraunces, Georgia, serif; color: var(--sage); display: flex; justify-content: space-between; align-items: baseline; }
+  .menu h2 small { font: 500 13px Inter, system-ui, sans-serif; color: var(--terracotta); }
+  .menu ul { list-style: none; padding: 0; margin-top: 16px; }
+  .menu li { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-top: 1px dashed var(--line); }
+  .menu li span:last-child { font-variant-numeric: tabular-nums; color: var(--sage-2); }
+  .menu li b { font-weight: 600; }
+  .menu li i { display: block; font-style: normal; font-size: 13px; color: #8a8f86; }
+  .menu .out b { color: #a7a99f; text-decoration: line-through; }
+  .strip { background: var(--sage); color: var(--cream); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 56px 32px; }
+  .strip h3 { font: 600 24px/1.2 Fraunces, Georgia, serif; margin-bottom: 8px; }
+  .strip p { color: #cfd8cf; }
+  .cakes { padding: 88px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .cakes h2 { font: 600 44px/1.08 Fraunces, Georgia, serif; color: var(--sage); letter-spacing: -.02em; }
+  .cakes p { color: var(--sage-2); margin-top: 16px; font-size: 18px; }
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .swatches div { aspect-ratio: 1; border-radius: 18px; display: grid; place-items: end start; padding: 16px; color: #fff; font-weight: 600; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: #7d8478; font-size: 14px; display: flex; justify-content: space-between; }
+  @media (max-width: 820px) {
+    nav { display: none; }
+    .hero, .cakes { grid-template-columns: 1fr; gap: 36px; padding: 36px 0 56px; }
+    h1 { font-size: 44px; }
+    .strip .wrap { grid-template-columns: 1fr; }
+    .wrap { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M60 14 V58 a22 22 0 0 1 -44 0" fill="none" stroke="#2F4A3A" stroke-width="15" stroke-linecap="round"/><path d="M60 22 C 74 12, 88 16, 92 26 C 80 32, 68 30, 60 22 Z" fill="#2F4A3A"/><circle cx="80" cy="56" r="11" fill="#C8643B"/></svg>
+      Juniper Bakery
+    </a>
+    <nav><a href="#menu">Today</a><a href="#cakes">Cakes</a><a href="#visit">Visit</a></nav>
+    <a class="btn" href="#menu">Order for pickup</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Alberta St, Portland · open 7 to 3</span>
+      <h1>Bread out of the oven at 7. <em>Cakes by order.</em></h1>
+      <p class="lead">Order today’s bread before it sells out, or a cake for the weekend with 48 hours’ notice. No account, pay when you pick it up.</p>
+      <div class="actions"><a class="btn" href="#menu">See today’s menu</a><a class="btn ghost" href="#cakes">Order a cake</a></div>
+    </div>
+    <div class="menu" id="menu">
+      <h2>Today <small>Tuesday · 6 left</small></h2>
+      <ul>
+        <li><span><b>Country sourdough</b><i>Ready at 7:00</i></span><span>$9</span></li>
+        <li><span><b>Seeded rye</b><i>Ready at 7:00</i></span><span>$10</span></li>
+        <li><span><b>Cardamom buns</b><i>Ready at 8:30</i></span><span>$4.5</span></li>
+        <li class="out"><span><b>Brown butter croissant</b><i>Sold out</i></span><span>$5</span></li>
+        <li><span><b>Olive focaccia</b><i>Ready at 11:00</i></span><span>$8</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="strip" id="visit">
+  <div class="wrap">
+    <div><h3>Order before it sells out</h3><p>The menu updates as the day goes. What’s gone is marked, so nobody walks in for nothing.</p></div>
+    <div><h3>Cakes, 48 hours ahead</h3><p>Pick the flavor, the size and the message. We confirm on WhatsApp the same day.</p></div>
+    <div><h3>Pay at the counter</h3><p>No account and no card online. Your name is your order.</p></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="cakes" id="cakes">
+    <div><h2>A cake for Saturday? Tell us on Thursday.</h2><p>Six flavors, three sizes and a message written by hand. Pickup any day from 9 to 3.</p></div>
+    <div class="swatches"><div style="background:#C8643B">Carrot</div><div style="background:#2F4A3A">Pistachio</div><div style="background:#8B5A3C">Chocolate</div><div style="background:#D9A441">Lemon</div><div style="background:#B5485A">Berry</div><div style="background:#6F7F5A">Olive oil</div></div>
+  </section>
+  <footer><span>Juniper Bakery · 2418 NE Alberta St, Portland</span><span>A fictional bakery, made for the Coleoni Skills examples</span></footer>
+</div>
+</body>
+</html>

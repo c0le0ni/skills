@@ -1,0 +1,70 @@
+[
+  {
+    "url": "file:///H:/coleoni-skills-repo/skills/coleoni-og/examples/juniper-bakery/site/index.html",
+    "image": "site.jpg",
+    "kb": 85,
+    "imageUrl": "https://juniperbakery.com/og/site.jpg",
+    "title": "Bread out of the oven at 7. Cakes by order.",
+    "subtitle": "A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.",
+    "domain": "juniperbakery.com",
+    "colors": {
+      "bg": "#F6F0E6",
+      "text": "#2F4A3A",
+      "accent": "#C8643B"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "43 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "143 characters"
+      },
+      {
+        "level": "miss",
+        "label": "og:title",
+        "detail": "missing; some apps fall back to <title>, others show nothing"
+      },
+      {
+        "level": "miss",
+        "label": "og:description",
+        "detail": "missing"
+      },
+      {
+        "level": "miss",
+        "label": "og:image",
+        "detail": "missing; the link shares without a picture"
+      },
+      {
+        "level": "warn",
+        "label": "og:url / canonical",
+        "detail": "missing; shares of the same page with different query strings count apart"
+      },
+      {
+        "level": "warn",
+        "label": "og:type",
+        "detail": "missing; use website"
+      },
+      {
+        "level": "warn",
+        "label": "twitter:card",
+        "detail": "missing; X shows a small square card instead of the large image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:title\" content=\"Juniper Bakery | Bread at 7, cakes by order\">",
+      "<meta property=\"og:description\" content=\"A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.\">",
+      "<meta property=\"og:site_name\" content=\"juniperbakery.com\">",
+      "<meta property=\"og:locale\" content=\"en\">",
+      "<meta property=\"og:image\" content=\"https://juniperbakery.com/og/site.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Bread out of the oven at 7. Cakes by order.\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  }
+]

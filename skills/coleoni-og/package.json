@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-og",
+  "private": true,
+  "type": "module",
+  "description": "Share images from a site's real pages, with a tag check and previews",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

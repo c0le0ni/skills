@@ -1,0 +1,101 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+body{background:#16171a;color:#e8e8ea;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.sheet{width:100%;max-width:1520px;margin:0 auto;padding:44px 40px 48px;display:grid;gap:30px}
+h1{font-size:15px;font-weight:600;color:#9a9ca3;letter-spacing:.04em;text-transform:uppercase}
+h1 em{font-style:normal;color:#f2f2f3;text-transform:none;letter-spacing:0}
+h2{font-size:13px;font-weight:600;color:#8b8d94;letter-spacing:.06em;text-transform:uppercase;margin-bottom:-14px}
+.top{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:30px;align-items:start}
+.big img{width:100%;display:block;border-radius:12px;border:1px solid #2a2b2f}
+.big p{margin-top:10px;font:12.5px ui-monospace,"SF Mono",Consolas,monospace;color:#8b8d94}
+.pair{display:grid;gap:18px}
+.lab{font:600 11.5px system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#8b8d94;margin-bottom:8px}
+.lab.after{color:#aefa0e}
+.cell{border-radius:14px;overflow:hidden;padding:18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.wa{background:#0b141a;border-radius:14px;padding:16px}
+.bubble{background:#005c4b;border-radius:9px;padding:4px 4px 6px;max-width:400px;margin-left:auto;color:#e9edef;font-size:14px}
+.wa-card{background:#025144;border-radius:6px;overflow:hidden}
+.wa-card img{display:block;width:100%;aspect-ratio:1.91;object-fit:cover}
+.wa-tx{padding:8px 10px 9px;display:grid;gap:2px}
+.wa-tx b{font-weight:600}
+.wa-tx span{color:#b4c2c9;font-size:13px}
+.wa-tx small{color:#8fa3ac;font-size:12.5px}
+.wa-link{padding:6px 8px 0;color:#53bdeb;word-break:break-all}
+.wa-time{text-align:right;font-size:11px;color:#9fb3ad;padding:0 6px}
+.x{background:#fff;color:#0f1419}
+.x .who{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.x .av{width:36px;height:36px;border-radius:50%;background:#cfd9de}
+.x .who b{font-size:15px}.x .who span{color:#536471}
+.x .card{border:1px solid #cfd9de;border-radius:16px;overflow:hidden;position:relative}
+.x .card img{display:block;width:100%;aspect-ratio:1.91;object-fit:cover}
+.x .pill{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:rgb(0 0 0 / .77);color:#fff;font-size:13px;padding:2px 6px;border-radius:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x .from{color:#536471;font-size:13px;margin-top:5px}
+.li{background:#f4f2ee;color:#000000e6}
+.li .post{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e0dfdc}
+.li .post p{padding:12px 14px;font-size:14px}
+.li img{display:block;width:100%;aspect-ratio:1.91;object-fit:cover}
+.li .meta{padding:10px 14px 12px;border-top:1px solid #e0dfdc}
+.li .meta b{font-size:14px;font-weight:600;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.li .meta span{font-size:12px;color:#00000099}
+.sl{background:#fff;color:#1d1c1d;font-size:14.5px}
+.sl .att{border-left:4px solid #dddddd;padding-left:12px;display:grid;gap:3px}
+.sl .site{font-weight:700;display:flex;gap:6px;align-items:center}
+.sl .ttl{color:#1264a3;font-weight:700}
+.sl .att span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.sl img{width:100%;max-width:360px;border-radius:8px;border:1px solid #e3e3e3;margin-top:6px;aspect-ratio:1.91;object-fit:cover}
+.dc{background:#313338;color:#dbdee1}
+.dc .emb{background:#2b2d31;border-left:4px solid rgb(200 100 59);border-radius:4px;padding:12px 14px 14px;display:grid;gap:6px}
+.dc small{color:#b5bac1;font-size:12px}
+.dc .ttl{color:#00a8fc;font-weight:600;font-size:15.5px}
+.dc span{font-size:14px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.dc img{width:100%;border-radius:4px;margin-top:6px;aspect-ratio:1.91;object-fit:cover}
+.im{background:#fff}
+.im .bub{max-width:330px;margin-left:auto;border-radius:18px;overflow:hidden;background:#e9e9eb}
+.im img{display:block;width:100%;aspect-ratio:1.91;object-fit:cover}
+.im .bub div{padding:9px 13px 10px;display:grid;gap:1px}
+.im b{font-size:13px;color:#000;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.im span{font-size:13px;color:#8e8e93}
+ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px}
+li{display:grid;grid-template-columns:14px 170px minmax(0,1fr);gap:10px;align-items:baseline;padding:9px 0;border-top:1px solid #26272b}
+li i{width:9px;height:9px;border-radius:50%;background:#aefa0e;transform:translateY(-1px)}
+li.warn i{background:#f5b84a}li.miss i{background:#ff6b5e}
+li b{font:500 13px ui-monospace,"SF Mono",Consolas,monospace;color:#f2f2f3}
+li span{color:#9a9ca3}
+.all{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.all img{width:100%;display:block;border-radius:8px;border:1px solid #2a2b2f}
+.all figcaption{font:12px ui-monospace,Consolas,monospace;color:#8b8d94;margin-top:6px}
+</style></head><body><div class="sheet">
+<h1>Share preview · <em>https://juniperbakery.com</em></h1>
+<div class="top">
+  <div class="big"><img src="./site.jpg" alt=""><p>site.jpg · 1200 × 630 · 85 KB · screen</p></div>
+  <div class="pair">
+    <div><div class="lab">Today</div>
+    <div class="wa"><div class="bubble">
+      <div class="wa-card"><div class="wa-tx"><b style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">Juniper Bakery | Bread at 7, cakes by order</b><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.</span><small>juniperbakery.com</small></div></div>
+      <div class="wa-link">https://juniperbakery.com</div><div class="wa-time">10:42</div>
+    </div></div></div>
+    <div><div class="lab after">With the new tags</div>
+    <div class="wa"><div class="bubble">
+      <div class="wa-card"><img src="./site.jpg" alt=""><div class="wa-tx"><b style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">Juniper Bakery | Bread at 7, cakes by order</b><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.</span><small>juniperbakery.com</small></div></div>
+      <div class="wa-link">https://juniperbakery.com</div><div class="wa-time">10:42</div>
+    </div></div></div>
+  </div>
+</div>
+<h2>Where it shows</h2>
+<div class="grid">
+  <div><div class="lab">X</div><div class="cell x"><div class="who"><div class="av"></div><div><b>You</b> <span>@you · 1m</span></div></div><div class="card"><img src="./site.jpg" alt=""><div class="pill">Juniper Bakery | Bread at 7, cakes by order</div></div><div class="from">From juniperbakery.com</div></div></div>
+  <div><div class="lab">LinkedIn</div><div class="cell li"><div class="post"><p>New on the site:</p><img src="./site.jpg" alt=""><div class="meta"><b>Juniper Bakery | Bread at 7, cakes by order</b><span>juniperbakery.com</span></div></div></div></div>
+  <div><div class="lab">iMessage</div><div class="cell im"><div class="bub"><img src="./site.jpg" alt=""><div><b>Juniper Bakery | Bread at 7, cakes by order</b><span>juniperbakery.com</span></div></div></div></div>
+  <div><div class="lab">Slack</div><div class="cell sl"><div class="att"><div class="site">juniperbakery.com</div><div class="ttl">Juniper Bakery | Bread at 7, cakes by order</div><span>A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.</span><img src="./site.jpg" alt=""></div></div></div>
+  <div><div class="lab">Discord</div><div class="cell dc"><div class="emb"><small>juniperbakery.com</small><div class="ttl">Juniper Bakery | Bread at 7, cakes by order</div><span>A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.</span><img src="./site.jpg" alt=""></div></div></div>
+  <div><div class="lab">WhatsApp</div>
+    <div class="wa"><div class="bubble">
+      <div class="wa-card"><img src="./site.jpg" alt=""><div class="wa-tx"><b style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">Juniper Bakery | Bread at 7, cakes by order</b><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">A neighborhood bakery in Portland. Bread out of the oven at 7 every morning, cakes by order with 48 hours’ notice. Order online, pay at pickup.</span><small>juniperbakery.com</small></div></div>
+      <div class="wa-link">https://juniperbakery.com</div><div class="wa-time">10:42</div>
+    </div></div></div>
+</div>
+<h2>Checks today</h2>
+<ul><li class="ok"><i></i><b>&lt;title&gt;</b><span>43 characters</span></li><li class="ok"><i></i><b>meta description</b><span>143 characters</span></li><li class="miss"><i></i><b>og:title</b><span>missing; some apps fall back to &lt;title&gt;, others show nothing</span></li><li class="miss"><i></i><b>og:description</b><span>missing</span></li><li class="miss"><i></i><b>og:image</b><span>missing; the link shares without a picture</span></li><li class="warn"><i></i><b>og:url / canonical</b><span>missing; shares of the same page with different query strings count apart</span></li><li class="warn"><i></i><b>og:type</b><span>missing; use website</span></li><li class="warn"><i></i><b>twitter:card</b><span>missing; X shows a small square card instead of the large image</span></li></ul>
+
+</div></body></html>

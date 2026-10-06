@@ -46,6 +46,7 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-briefing`](#coleoni-briefing) | Turns a client briefing into a decided scope, with a client-ready PDF |
 | [`/coleoni-init`](#coleoni-init) | Sets up a new project's docs before any code, with a one-page overview |
 | [`/coleoni-favicon`](#coleoni-favicon) | The complete favicon set from a logo, checked in tabs and home screens |
+| [`/coleoni-og`](#coleoni-og) | Share images from your real pages, with the tags checked and every app previewed |
 
 <br>
 
@@ -165,6 +166,34 @@ One logo in, every icon out, each one checked where it actually appears.
 /coleoni-favicon public/logo.svg
 /coleoni-favicon brand/mark.svg on #0a0a0a, rounded, install it
 ```
+
+<br>
+
+### `/coleoni-og`
+
+<a href="https://skills.coleoni.com/coleoni-og/">
+  <img src=".github/assets/coleoni-og-juniper.jpg" alt="A share image made by coleoni-og from a bakery's home page" width="100%">
+</a>
+
+The picture a link shows when someone shares it, made from the page itself:
+its headline, its logo, its fonts and colors, and the page in a browser frame.
+
+- **Three layouts:** `screen` (text and the page), `title` (type only) and
+  `hero` (the page's own first screen), all 1200x630, around 100 KB.
+- **Tags checked like a bot reads them.** Title, description, `og:*`,
+  `twitter:card`, image size, ratio, weight and URL, page by page.
+- **A preview sheet** with the link in WhatsApp, X, LinkedIn, iMessage, Slack
+  and Discord, today and with the new tags.
+- **A whole site at once** from its sitemap, then installed the way the
+  framework expects.
+
+```text
+/coleoni-og https://yoursite.com
+/coleoni-og the whole site from the sitemap, title layout for the blog, install it
+```
+
+The share images of [skills.coleoni.com](https://skills.coleoni.com) were made
+by this skill.
 
 ## Made by
 

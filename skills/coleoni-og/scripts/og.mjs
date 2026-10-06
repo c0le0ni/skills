@@ -505,7 +505,7 @@ function previewHtml(pages, o) {
   const nowDesc = p.info.og["og:description"] || p.info.description;
   const checks = p.checks.map((c) => `<li class="${c.level}"><i></i><b>${esc(c.label)}</b><span>${esc(c.detail)}</span></li>`).join("");
   const grid = pages.length > 1 ? `<h2>All pages</h2><div class="all">${pages.map((q) => `<figure><img src="./${q.file}" alt=""><figcaption>${esc(q.file)}</figcaption></figure>`).join("")}</div>` : "";
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 *{box-sizing:border-box;margin:0}
 body{background:#16171a;color:#e8e8ea;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .sheet{width:100%;max-width:1520px;margin:0 auto;padding:44px 40px 48px;display:grid;gap:30px}
@@ -572,6 +572,8 @@ li span{color:#9a9ca3}
 .all{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .all img{width:100%;display:block;border-radius:8px;border:1px solid #2a2b2f}
 .all figcaption{font:12px ui-monospace,Consolas,monospace;color:#8b8d94;margin-top:6px}
+@media (max-width:980px){.top,.grid{grid-template-columns:minmax(0,1fr)}.all{grid-template-columns:repeat(2,minmax(0,1fr))}ul{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.sheet{padding:28px 18px 32px;gap:24px}li{grid-template-columns:14px minmax(0,1fr)}li span{grid-column:2}.all{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><div class="sheet">
 <h1>Share preview · <em>${esc(link)}</em></h1>
 <div class="top">

@@ -315,7 +315,8 @@ while (queue.length && pages.length < o.pages) {
   const page = await ctx.newPage();
   try {
     const r = await page.goto(u, { waitUntil: "load", timeout: 60000 });
-    if ((r?.status() ?? 0) >= 400) throw new Error(`status ${r.status()}`);
+    if ([404, 410].includes(r?.status() ?? 0)) throw new Error(`status ${r.status()}`);
+    if ((r?.status() ?? 0) >= 400) console.log(`  note: ${u} answers ${r.status()}; reading it anyway`);
     await page.waitForLoadState("networkidle", { timeout: 8000 }).catch(() => {});
     const d = await page.evaluate(extract);
     const lang = o.lang ?? (d.lang ? (d.lang.toLowerCase().startsWith("pt") ? "pt" : "en") : guessLang(d.body));

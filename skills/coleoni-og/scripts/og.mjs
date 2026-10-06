@@ -454,7 +454,7 @@ async function audit(ctx, page, info, response, requested) {
 function tagsFor(p, o) {
   const origin = p.url.startsWith("http") ? new URL(p.url).origin : "";
   const base = o.base ? o.base.replace(/\/?$/, "/") : `${origin}/og/`;
-  const pageUrl = p.info.canonical || p.info.og["og:url"] || (p.url.startsWith("http") ? p.info.finalUrl : null);
+  const pageUrl = p.info.canonical || p.info.og["og:url"] || (p.url.startsWith("http") ? p.info.finalUrl : p.d.domain ? `https://${p.d.domain}/` : null);
   const title = p.info.og["og:title"] || p.info.title || p.d.title;
   const desc = p.info.og["og:description"] || p.info.description || p.d.subtitle;
   const lines = [
@@ -463,7 +463,7 @@ function tagsFor(p, o) {
     `<meta property="og:title" content="${esc(title)}">`,
     desc ? `<meta property="og:description" content="${esc(desc)}">` : null,
     p.info.og["og:site_name"] || p.d.domain ? `<meta property="og:site_name" content="${esc(p.info.og["og:site_name"] || p.d.domain)}">` : null,
-    p.info.lang ? `<meta property="og:locale" content="${esc(p.info.lang.replace("-", "_"))}">` : null,
+    /^[a-z]{2}-[a-z]{2}$/i.test(p.info.lang ?? "") ? `<meta property="og:locale" content="${esc(p.info.lang.replace("-", "_"))}">` : null,
     `<meta property="og:image" content="${esc(base + p.file)}">`,
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
@@ -623,12 +623,13 @@ for (const url of urls) {
       await page.screenshot({ path: join(out, file), scale: "css", clip: { x: 0, y: 0, width: 1200, height: 630 }, ...shotOpts });
     }
     const kb = Math.round(statSync(join(out, file)).size / 1024);
-    const p = { url, slug, file, kb, info, d, checks, current };
+    const where = info.finalUrl.startsWith("file:") ? (d.domain ? `https://${d.domain}/` : basename(new URL(info.finalUrl).pathname)) : info.finalUrl;
+    const p = { url, slug, file, kb, info, d, checks, current, where };
     p.tags = tagsFor(p, o);
     pages.push(p);
     const miss = checks.filter((c) => c.level === "miss").length;
     const warn = checks.filter((c) => c.level === "warn").length;
-    console.log(`ok ${file}  ${kb} KB  ·  ${miss} missing, ${warn} to fix  ·  ${info.finalUrl}`);
+    console.log(`ok ${file}  ${kb} KB  ·  ${miss} missing, ${warn} to fix  ·  ${p.where}`);
   } catch (e) {
     console.error(`failed ${url}: ${e.message.split("\n")[0]}`);
   }
@@ -638,8 +639,8 @@ for (const url of urls) {
 if (!pages.length) fail("no page could be read");
 
 // tags.html, og.json, report.md
-writeFileSync(join(out, "tags.html"), pages.map((p) => `<!-- ${p.info.finalUrl} -->\n${p.tags.lines.join("\n")}\n`).join("\n"));
-writeFileSync(join(out, "og.json"), JSON.stringify(pages.map((p) => ({ url: p.info.finalUrl, image: p.file, kb: p.kb, imageUrl: p.tags.imageUrl, title: p.d.title, subtitle: p.d.subtitle, domain: p.d.domain, colors: { bg: hex(p.d.bg), text: hex(p.d.text), accent: hex(p.d.accent) }, checks: p.checks, tags: p.tags.lines })), null, 2));
+writeFileSync(join(out, "tags.html"), pages.map((p) => `<!-- ${p.where} -->\n${p.tags.lines.join("\n")}\n`).join("\n"));
+writeFileSync(join(out, "og.json"), JSON.stringify(pages.map((p) => ({ url: p.where, image: p.file, kb: p.kb, imageUrl: p.tags.imageUrl, title: p.d.title, subtitle: p.d.subtitle, domain: p.d.domain, colors: { bg: hex(p.d.bg), text: hex(p.d.text), accent: hex(p.d.accent) }, checks: p.checks, tags: p.tags.lines })), null, 2));
 const icon = { ok: "ok", warn: "fix", miss: "missing" };
 const report = [
   `# Share check`,
@@ -647,7 +648,7 @@ const report = [
   `${pages.length} page${pages.length > 1 ? "s" : ""} read as a link preview bot reads them (no cookies, en-US, UTC).`,
   ``,
   ...pages.flatMap((p) => [
-    `## ${p.info.finalUrl}`,
+    `## ${p.where}`,
     ``,
     `New image: \`${p.file}\` (1200x630, ${p.kb} KB)`,
     ``,

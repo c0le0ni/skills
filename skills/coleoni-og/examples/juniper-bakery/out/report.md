@@ -2,7 +2,7 @@
 
 1 page read as a link preview bot reads them (no cookies, en-US, UTC).
 
-## file:///H:/coleoni-skills-repo/skills/coleoni-og/examples/juniper-bakery/site/index.html
+## https://juniperbakery.com/
 
 New image: `site.jpg` (1200x630, 85 KB)
 

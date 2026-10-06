@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Coleoni · thumbnails de portfólio a partir de capturas reais de um site.
+ * Coleoni · portfolio thumbnails from real captures of a website.
  *
- *   node thumb.mjs <url> [opções]
+ *   node thumb.mjs <url> [options]
  *
- * Captura (Chrome instalado, 2×): primeira tela do desktop, topo da página,
- * cada seção, e três telas do celular. Extrai a paleta do site. Depois monta
- * as artes em HTML (layouts × fundos) e renderiza JPG em 1× e 2×.
- * Opções e catálogo: veja ../SKILL.md ou rode com --help.
+ * Captures (installed Chrome, 2×): the first desktop screen, the top of the
+ * page, every section, and three phone screens. Reads the site's palette.
+ * Then composes the images in HTML (layouts × backgrounds) and renders JPG at
+ * 1× and 2×. Options and catalog: see ../SKILL.md or run with --help.
  */
 import { chromium } from "playwright-core";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -25,30 +25,30 @@ const DEFAULT_SET = [
 const DEFAULT_FRAME = { split: "plain", devices: "browser", wall: "plain", phones: "plain", focus: "browser", tilt: "plain" };
 
 const HELP = `
-node thumb.mjs <url> [opções]
+node thumb.mjs <url> [options]
 
-  --set split:auto,phones:dark   pares layout:fundo (prioridade sobre --layouts/--bg)
-  --layouts split,wall           layouts (combina com cada fundo de --bg)
-  --bg auto,dark,#1f2a24         fundos (nomes ou cor hex)
-  --frame plain|browser          moldura das telas de desktop (padrão por layout)
-  --size 1536x1024               tamanho da arte em 1× (2× sai junto)
-  --out ./portfolio-thumbs       pasta de saída
-  --name meu-projeto             prefixo dos arquivos (padrão: título do site)
-  --label marianaalves.com.br    texto da barra do navegador (padrão: o host; vazio em localhost)
-  --phone-at 0,0.3,0.62          trechos da página nos três celulares (fração da altura; encaixa no início da seção mais próxima)
-  --column 2,3,5                 índices das seções na coluna/parede (padrão: todas depois da 1ª)
-  --hide ".cookie,#chat"         seletores escondidos nas capturas (banners, chats, botões flutuantes)
-  --force-visible                força visíveis elementos de animação de entrada (AOS, reveal…)
-  --motion                       captura sem movimento reduzido (padrão: reduzido)
-  --wait 800                     espera extra (ms) antes de capturar
+  --set split:auto,phones:dark   layout:background pairs (takes priority over --layouts/--bg)
+  --layouts split,wall           layouts (combined with every background in --bg)
+  --bg auto,dark,#1f2a24         backgrounds (names or a hex color)
+  --frame plain|browser          frame for desktop screens (default depends on the layout)
+  --size 1536x1024               image size at 1× (the 2× comes with it)
+  --out ./portfolio-thumbs       output folder
+  --name my-project              file prefix (default: the site title)
+  --label example.com            text in the browser bar (default: the host; empty on localhost)
+  --phone-at 0,0.3,0.62          parts of the page on the three phones (fraction of the height; snaps to the nearest section start)
+  --column 2,3,5                 section indexes for the column/wall (default: every section after the first)
+  --hide ".cookie,#chat"         selectors hidden in the captures (banners, chats, floating buttons)
+  --force-visible                forces entrance-animation elements to show (AOS, reveal…)
+  --motion                       captures without reduced motion (default: reduced)
+  --wait 800                     extra wait (ms) before capturing
   --desktop 1440x900 --mobile 390x844   viewports
-  --reuse                        reaproveita as capturas anteriores (só recompõe)
+  --reuse                        reuses the previous captures (only recomposes)
 
-Layouts: ${LAYOUTS.join(", ")}
-Fundos:  ${BACKGROUNDS.join(", ")}, ou #hex
+Layouts:     ${LAYOUTS.join(", ")}
+Backgrounds: ${BACKGROUNDS.join(", ")}, or #hex
 `;
 
-// ---------------------------------------------------------------- argumentos
+// ---------------------------------------------------------------- arguments
 function parseArgs(argv) {
   const o = {
     url: null,
@@ -135,7 +135,7 @@ function parseArgs(argv) {
         o.phoneAt = val().split(",").map(Number);
         break;
       default:
-        console.error(`opção desconhecida: ${a}`);
+        console.error(`unknown option: ${a}`);
         process.exit(1);
     }
   }
@@ -156,7 +156,7 @@ const slug = (s) =>
     .replace(/^-|-$/g, "")
     .slice(0, 40) || "site";
 
-// ---------------------------------------------------------------- navegador
+// ---------------------------------------------------------------- browser
 async function launch() {
   const tries = [{ channel: "chrome" }, { channel: "msedge" }];
   if (process.env.CHROME_PATH) tries.unshift({ executablePath: process.env.CHROME_PATH });
@@ -165,7 +165,7 @@ async function launch() {
       return await chromium.launch(t);
     } catch {}
   }
-  throw new Error("Chrome/Edge não encontrado. Defina CHROME_PATH com o executável do Chrome.");
+  throw new Error("Chrome/Edge not found. Set CHROME_PATH to the Chrome executable.");
 }
 
 const FORCE_VISIBLE = `[data-aos],[data-sal],[data-scroll],.aos-init,.aos-animate,.reveal,.fade-in,.fade-up,.wow,[class*="animate__"]{opacity:1!important;transform:none!important;visibility:visible!important;animation:none!important;transition:none!important}`;
@@ -177,7 +177,7 @@ async function prepare(page, url, o) {
   await page.addStyleTag({
     content: `html{scrollbar-gutter:auto!important;scrollbar-width:none!important;scroll-behavior:auto!important}::-webkit-scrollbar{display:none!important}${hide}${o.forceVisible ? FORCE_VISIBLE : ""}`,
   });
-  // carrega imagens preguiçosas e dispara animações de entrada rolando a página toda
+  // loads lazy images and fires entrance animations by scrolling the whole page
   await page.evaluate(async () => {
     document.querySelectorAll("img[loading=lazy]").forEach((i) => (i.loading = "eager"));
     const step = Math.round(innerHeight * 0.7);
@@ -192,7 +192,7 @@ async function prepare(page, url, o) {
   await page.waitForTimeout(o.wait);
 }
 
-/** Blocos de primeiro nível da página (seções), na ordem, sem sobreposição */
+/** Top-level blocks of the page (sections), in order, without overlap */
 function findSections(minHeight) {
   const H = document.documentElement.scrollHeight;
   let kids = [...(document.querySelector("main") ?? document.body).children];
@@ -222,7 +222,7 @@ function findSections(minHeight) {
   return out;
 }
 
-/** Paleta: fundo, texto e cor de destaque (a cor de fundo mais comum em botões/links) */
+/** Palette: background, text and accent (the most common background color on buttons/links) */
 function readPalette() {
   const clear = (c) => !c || c === "transparent" || /rgba\(.*,\s*0\)$/.test(c);
   let bg = getComputedStyle(document.body).backgroundColor;
@@ -270,7 +270,7 @@ async function capture(o, dir) {
     await ctx.close();
   }
 
-  // celular: primeira tela + duas telas no meio da página, começando em seções
+  // phone: first screen + two screens further down the page, starting at sections
   {
     const ctx = await browser.newContext({
       viewport: { width: mw, height: mh },
@@ -299,7 +299,7 @@ async function capture(o, dir) {
   return meta;
 }
 
-// ---------------------------------------------------------------- cores
+// ---------------------------------------------------------------- colors
 const rgb = (s) => {
   if (s.startsWith("#")) {
     const h = s.length === 4 ? [...s.slice(1)].map((c) => c + c).join("") : s.slice(1);
@@ -314,7 +314,7 @@ const lum = (c) => (0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b) / 255;
 const WHITE = { r: 255, g: 255, b: 255 };
 const BLACK = { r: 0, g: 0, b: 0 };
 
-/** Fundo da arte + se ele é escuro (muda sombras e borda das molduras) */
+/** Image background + whether it is dark (changes frame shadows and borders) */
 function background(name, pal) {
   const page = rgb(pal.bg);
   const text = rgb(pal.text);
@@ -362,11 +362,11 @@ function background(name, pal) {
       return { css: "#141414", dark: true, photo: true };
     default:
       if (/^#[0-9a-f]{3,6}$/i.test(name)) return soft(rgb(name));
-      throw new Error(`fundo desconhecido: ${name}`);
+      throw new Error(`unknown background: ${name}`);
   }
 }
 
-// ---------------------------------------------------------------- composição
+// ---------------------------------------------------------------- composition
 const img = (file, cls = "shot") => `<img class="${cls}" src="${file}" alt="">`;
 const stack = (files) => `<div class="stack">${files.map((f) => `<img src="${f}" alt="">`).join("")}</div>`;
 
@@ -380,7 +380,7 @@ function desktopFrame(style, content, host, attrs) {
 const phone = (file, attrs) =>
   `<div class="phone" ${attrs}><div class="bezel"><div class="screen"><div class="status"><b></b></div><div class="view">${img(file)}</div></div></div></div>`;
 
-/** Divide as seções em n grupos de altura parecida */
+/** Splits the sections into n groups of similar height */
 function groups(sections, n) {
   const total = sections.reduce((s, x) => s + x.height, 0);
   const out = Array.from({ length: n }, () => []);
@@ -424,7 +424,7 @@ function layoutHtml(layout, meta, frame, host, columnSections) {
       return `<div id="tilt">${strips.map((s) => `<div class="frame strip">${stack(s)}</div>`).join("")}</div>`;
     }
     default:
-      throw new Error(`layout desconhecido: ${layout}`);
+      throw new Error(`unknown layout: ${layout}`);
   }
 }
 
@@ -457,29 +457,29 @@ body{position:relative;background:${bg.css};--page:${css(page)};--shadow:${shado
 .phone .status b{position:absolute;left:50%;top:2.6cqw;width:27cqw;height:7.6cqw;transform:translateX(-50%);border-radius:5cqw;background:#0e0e10}
 .phone .view{flex:1;min-height:0;overflow:hidden}
 
-/* split: tela grande + página longa */
+/* split: large screen + long page */
 #desk{left:3.3vw;top:8.2vh;width:66.1vw;height:89.1vh}
 #col{left:71.6vw;top:2.3vh;width:25.1vw;height:95.3vh;border-radius:calc(var(--r)*.85)}
-/* devices: janela + celular */
+/* devices: window + phone */
 #win{left:5vw;top:8vh;width:72vw;aspect-ratio:1440/934;max-height:84vh}
 #ph{right:6vw;bottom:6vh;height:74vh}
-/* wall: três colunas da página */
+/* wall: three columns of the page */
 .strip{width:27vw}
 #w1{left:6vw;top:-9vh;height:118vh}#w2{left:36.5vw;top:7vh;height:118vh}#w3{left:67vw;top:-3vh;height:118vh}
-/* phones: trio */
+/* phones: three phones */
 body{--hc:min(84vh,66vw)}
 #p1,#p2,#p3{top:50%;transform:translate(-50%,-50%)}
 #p2{left:50%;height:var(--hc)}
 #p1{left:calc(50vw - var(--hc)*.5);height:calc(var(--hc)*.86)}
 #p3{left:calc(50vw + var(--hc)*.5);height:calc(var(--hc)*.86)}
-/* focus: uma janela */
+/* focus: one window */
 #one{left:50%;top:50%;width:min(84vw,128vh);aspect-ratio:1440/934;transform:translate(-50%,-50%)}
-/* tilt: páginas inclinadas */
+/* tilt: tilted pages */
 #tilt{position:absolute;left:50%;top:50%;width:150vw;height:170vh;display:flex;gap:3vw;justify-content:center;transform:translate(-50%,-50%) perspective(2600px) rotateX(30deg) rotateZ(-24deg)}
 #tilt .strip{position:relative;flex:none;width:30vw;height:170vh}
 #tilt .strip:nth-child(2){margin-top:12vh}#tilt .strip:nth-child(3){margin-top:-6vh}#tilt .strip:nth-child(4){margin-top:18vh}
 
-/* telas em pé ou quadradas */
+/* portrait or square images */
 @media (max-aspect-ratio:6/5){
   #desk{left:6vw;top:4vh;width:88vw;height:56vh}
   #col{left:6vw;top:63vh;width:88vw;height:34vh}
@@ -504,7 +504,7 @@ async function render(htmlFile, outFile, w, h, scale, browser) {
   await ctx.close();
 }
 
-// ---------------------------------------------------------------- principal
+// ---------------------------------------------------------------- main
 const o = parseArgs(process.argv.slice(2));
 const host = new URL(o.url).host;
 const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$|\.(localhost|test)(:\d+)?$/.test(host);
@@ -516,15 +516,15 @@ mkdirSync(capDir, { recursive: true });
 let meta;
 if (o.reuse && existsSync(join(capDir, "meta.json"))) {
   meta = JSON.parse(readFileSync(join(capDir, "meta.json"), "utf8"));
-  console.log("capturas reaproveitadas:", capDir);
+  console.log("reusing captures:", capDir);
 } else {
-  console.log("capturando", o.url, "…");
+  console.log("capturing", o.url, "…");
   meta = await capture(o, capDir);
 }
 
 const name = o.name ?? slug(meta.palette.title.split(/[|·–—-]/)[0] || host);
-console.log(`paleta: fundo ${meta.palette.bg} · texto ${meta.palette.text} · destaque ${meta.palette.accent}`);
-console.log("seções (desktop):");
+console.log(`palette: background ${meta.palette.bg} · text ${meta.palette.text} · accent ${meta.palette.accent}`);
+console.log("sections (desktop):");
 meta.sections.forEach((s, i) => console.log(`  [${i}] ${s.tag} y=${s.top} h=${s.height}`));
 
 const columnSections = o.column ? o.column.map((i) => meta.sections[i]).filter(Boolean) : meta.sections.slice(1);
@@ -538,7 +538,7 @@ const [w, h] = wh(o.size);
 const browser = await launch();
 const made = [];
 for (const [layout, bgName] of pairs) {
-  if (!LAYOUTS.includes(layout)) throw new Error(`layout desconhecido: ${layout} (use ${LAYOUTS.join(", ")})`);
+  if (!LAYOUTS.includes(layout)) throw new Error(`unknown layout: ${layout} (use ${LAYOUTS.join(", ")})`);
   const bg = background(bgName, meta.palette);
   const html = join(capDir, `compose-${layout}-${slug(bgName)}.html`);
   writeFileSync(html, pageHtml({ layout, bg, meta, frame: o.frame, host: label, columnSections }));
@@ -549,4 +549,4 @@ for (const [layout, bgName] of pairs) {
   console.log("ok", `${base}.jpg (+ @2x)`);
 }
 await browser.close();
-console.log(`\n${made.length} arte(s) em ${outDir}`);
+console.log(`\n${made.length} image(s) in ${outDir}`);

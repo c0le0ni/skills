@@ -1,138 +1,140 @@
 ---
 name: coleoni-thumb
 description: >
-  Gera thumbnails e mockups de portfólio de QUALQUER site a partir de capturas
-  reais (não é imagem gerada por IA). Monta as telas em molduras de desktop,
-  página longa, janela de navegador e celular, com vários layouts e fundos
-  (automático, escuro, cor da marca, mesh, pontilhado, desfocado ou cor hex),
-  em 1× e 2×. Use quando o usuário pedir "thumbnail", "capa do projeto",
-  "mockup do site", "imagem pro portfólio/Behance/Dribbble/Instagram", ou rodar
-  /coleoni-thumb.
-argument-hint: "<url> [layouts] [fundos] [tamanho] [o que mostrar/esconder]"
+  Generates portfolio thumbnails and mockups of ANY website from real captures
+  (not AI-generated images). Sets the screens in desktop, long-page, browser
+  window and phone frames, with several layouts and backgrounds (auto, dark,
+  brand color, mesh, dot grid, blur or a hex color), at 1× and 2×. Use when the
+  user asks for a "thumbnail", "project cover", "site mockup", "portfolio /
+  Behance / Dribbble / Instagram image", or runs /coleoni-thumb.
+argument-hint: "<url> [layouts] [backgrounds] [size] [what to show/hide]"
 ---
 
-# Coleoni · Thumbnails de portfólio
+# Coleoni · Portfolio thumbnails
 
-Pedido do usuário: $ARGUMENTS
+User request: $ARGUMENTS
 
-(Se o agente não substituir `$ARGUMENTS`, o pedido é a própria mensagem do usuário.)
+(If the agent does not substitute `$ARGUMENTS`, the request is the user's own message.)
 
-Você transforma um site em artes de apresentação no estilo "mockup de estúdio":
-telas reais do site, em molduras limpas, sobre um fundo que conversa com a
-paleta dele. Tudo sai de capturas reais, então a arte mostra exatamente o que
-foi entregue, sem custo de API de imagem.
+You turn a website into studio-style presentation images: the site's real
+screens, in clean frames, on a background that matches its palette. Everything
+comes from real captures, so the image shows exactly what was shipped, with no
+image API cost.
 
-O motor é `scripts/thumb.mjs` (Node + `playwright-core` com o Chrome instalado,
-sem baixar navegador). Ele captura uma vez e recompõe quantas variações quiser.
+Reply to the user in the language they wrote in.
 
-## 1. Entender o pedido
+The engine is `scripts/thumb.mjs` (Node + `playwright-core` driving the
+installed Chrome, no browser download). It captures once and recomposes as many
+variations as you want.
+
+## 1. Understand the request
 
 - **URL.**
-  - Se o usuário não passou uma, use o site do projeto atual.
-  - Site local: confirme que o servidor está de pé. Prefira o build de produção, porque o dev pode ter o indicador do Next na tela; suba o servidor do projeto se precisar.
-  - URL pública: use direto.
-- **Variações.** Layouts e fundos que ele quer.
-  - Se não disser, rode o conjunto padrão de 4 artes: `split:auto`, `devices:dark`, `wall:mesh` e `phones:brand`.
-  - Se pedir "várias opções", gere 6–8 pares variados.
-- **Tamanho.**
-  - Padrão `1536x1024` (3:2), com o 2× junto.
-  - Comuns: `1920x1080` (16:9), `1600x1200` (4:3), `1080x1350` (feed 4:5) e `1200x1200` (quadrado).
-  - Telas em pé ou quadradas usam um arranjo vertical automático.
-- **O que esconder.** Banners de cookies, chat, botões flutuantes e popups: use `--hide`. **Nunca clique em "aceitar" cookies** só para limpar a tela; esconda com CSS.
-- **Pasta de saída.** Dentro do projeto atual (ex.: `docs/portfolio/`) ou onde o usuário pedir. Não commitar sem ele pedir.
+  - If the user did not pass one, use the current project's site.
+  - Local site: make sure the server is up. Prefer the production build, since dev servers may show overlays (like the Next.js indicator); start the project's server if needed.
+  - Public URL: use it as is.
+- **Variations.** The layouts and backgrounds they want.
+  - If they don't say, run the default set of 4 images: `split:auto`, `devices:dark`, `wall:mesh` and `phones:brand`.
+  - If they ask for "several options", generate 6–8 varied pairs.
+- **Size.**
+  - Default `1536x1024` (3:2), with the 2× alongside.
+  - Common: `1920x1080` (16:9), `1600x1200` (4:3), `1080x1350` (4:5 feed) and `1200x1200` (square).
+  - Portrait or square sizes get an automatic vertical arrangement.
+- **What to hide.** Cookie banners, chat widgets, floating buttons and popups: use `--hide`. **Never click "accept" on cookies** just to clean the screen; hide them with CSS.
+- **Output folder.** Inside the current project (e.g. `docs/portfolio/`) or wherever the user asks. Do not commit without being asked.
 
-## 2. Preparar (uma vez por máquina)
+## 2. Prepare (once per machine)
 
-`SKILL_DIR` é a pasta onde está este `SKILL.md`. Ela muda conforme o agente e o
-escopo da instalação (`~/.claude/skills/coleoni-thumb`, `~/.codex/skills/coleoni-thumb`,
-`.agents/skills/coleoni-thumb` no projeto…). Use o caminho real de onde você leu
-este arquivo.
+`SKILL_DIR` is the folder that holds this `SKILL.md`. It changes with the agent
+and the install scope (`~/.claude/skills/coleoni-thumb`,
+`~/.codex/skills/coleoni-thumb`, `.agents/skills/coleoni-thumb` in a project…).
+Use the real path you read this file from.
 
-Se `SKILL_DIR/node_modules/playwright-core` não existir, instale:
+If `SKILL_DIR/node_modules/playwright-core` does not exist, install it:
 
 ```bash
 cd SKILL_DIR && npm install
 ```
 
-Só instala `playwright-core`; usa o Chrome (ou o Edge) do sistema. Se não achar o navegador, defina `CHROME_PATH`.
+It only installs `playwright-core` and uses the system Chrome (or Edge). If the browser is not found, set `CHROME_PATH`.
 
-## 3. Rodar
+## 3. Run
 
 ```bash
-node SKILL_DIR/scripts/thumb.mjs <url> --out <pasta> [opções]
+node SKILL_DIR/scripts/thumb.mjs <url> --out <folder> [options]
 ```
 
-O script imprime:
-- a paleta detectada: fundo, texto e destaque;
-- a **lista de seções** do desktop, com índice, posição e altura.
+The script prints:
+- the detected palette: background, text and accent;
+- the desktop **section list**, with index, position and height.
 
-Use essa lista para escolher `--column`.
+Use that list to pick `--column`.
 
-### Opções
+### Options
 
-| Opção | Para quê |
+| Option | What it does |
 | --- | --- |
-| `--set split:auto,phones:#1f2a24` | Pares exatos layout:fundo (recomendado) |
-| `--layouts a,b` + `--bg x,y` | Combinação de todos os layouts com todos os fundos |
-| `--frame plain\|browser` | Moldura das telas de desktop (padrão: `plain` no split e no wall, `browser` no devices e no focus) |
-| `--size 1536x1024` | Tamanho em 1× (o 2× sai junto) |
-| `--name meu-projeto` | Prefixo dos arquivos (padrão: título do site) |
-| `--label site.com.br` | Texto da barra do navegador (padrão: o host; vazio em localhost) |
-| `--column 1,2,5,9` | Seções que entram na página longa, na parede e no tilt (padrão: todas depois da primeira) |
-| `--phone-at 0,0.3,0.62` | Trechos da página nos três celulares, em fração da altura; encaixa no início da seção mais próxima |
-| `--hide ".cookie,#chat"` | Esconde elementos nas capturas |
-| `--force-visible` | Força visíveis elementos de animação de entrada (AOS, `.reveal`, `.wow`…) que ficaram transparentes |
-| `--motion` | Captura sem movimento reduzido. O padrão é reduzido, que evita pegar animação pela metade |
-| `--wait 800` | Espera extra antes de capturar (sites lentos) |
+| `--set split:auto,phones:#1f2a24` | Exact layout:background pairs (recommended) |
+| `--layouts a,b` + `--bg x,y` | Every layout combined with every background |
+| `--frame plain\|browser` | Frame for desktop screens (default: `plain` for split and wall, `browser` for devices and focus) |
+| `--size 1536x1024` | Size at 1× (the 2× comes with it) |
+| `--name my-project` | File prefix (default: the site title) |
+| `--label example.com` | Text in the browser bar (default: the host; empty on localhost) |
+| `--column 1,2,5,9` | Sections used in the long page, the wall and the tilt (default: every section after the first) |
+| `--phone-at 0,0.3,0.62` | Parts of the page on the three phones, as a fraction of the height; snaps to the nearest section start |
+| `--hide ".cookie,#chat"` | Hides elements in the captures |
+| `--force-visible` | Forces entrance-animation elements (AOS, `.reveal`, `.wow`…) that stayed transparent to show |
+| `--motion` | Captures without reduced motion. The default is reduced, which avoids catching an animation halfway |
+| `--wait 800` | Extra wait before capturing (slow sites) |
 | `--desktop 1440x900` `--mobile 390x844` | Viewports |
-| `--reuse` | Reaproveita as capturas e só recompõe. Use para testar fundos e layouts rápido |
+| `--reuse` | Reuses the captures and only recomposes. Use it to try backgrounds and layouts quickly |
 
 ### Layouts
 
-- `split`: tela grande do desktop (topo da página) e uma coluna com a página longa ao lado. É o clássico de portfólio.
-- `devices`: janela de navegador com um celular sobreposto no canto.
-- `wall`: três colunas da página inteira, desencontradas, saindo pelas bordas.
-- `phones`: trio de celulares (abertura no centro, dois trechos nas laterais).
-- `focus`: uma janela de navegador grande e centralizada.
-- `tilt`: páginas inclinadas em perspectiva (isométrico).
+- `split`: the large desktop screen (top of the page) with a column showing the long page beside it. The portfolio classic.
+- `devices`: a browser window with a phone overlapping the corner.
+- `wall`: three columns of the full page, staggered, bleeding off the edges.
+- `phones`: three phones (the opening in the middle, two parts of the page on the sides).
+- `focus`: one large, centered browser window.
+- `tilt`: pages tilted in perspective (isometric).
 
-### Fundos
+### Backgrounds
 
-- `auto`: o fundo do site, um pouco mais escuro, com luz suave. É o mais elegante.
-- `dark`: grafite levemente puxado para a cor da marca.
-- `brand`: a cor de destaque do site.
-- `mesh`: manchas suaves com a cor da marca.
-- `grid`: pontilhado discreto sobre o tom do site.
-- `blur`: a primeira tela do site desfocada e escurecida.
-- `#rrggbb`: cor livre.
+- `auto`: the site's background, slightly darker, softly lit. The most elegant.
+- `dark`: graphite with a slight pull toward the brand color.
+- `brand`: the site's accent color.
+- `mesh`: soft blobs of the brand color.
+- `grid`: a subtle dot grid over the site's tone.
+- `blur`: the site's first screen, blurred and darkened.
+- `#rrggbb`: any color.
 
-## 4. Conferir antes de entregar (obrigatório)
+## 4. Check before delivering (required)
 
-Abra **cada** JPG gerado (com a ferramenta de ler imagem do seu agente) e procure:
+Open **every** generated JPG (with your agent's image-reading tool) and look for:
 
-- **Banner, chat ou botão flutuante por cima.** Use `--hide` e rode de novo.
-- **Seção em branco ou meio transparente** (animação de entrada que não disparou). Use `--force-visible` ou `--wait`.
-- **Hero capturada no meio de uma animação.** O padrão já é movimento reduzido; se o site só mostra conteúdo com animação, use `--motion` e `--wait`.
-- **Corte feio na coluna, na parede ou no tilt** (seção cortada no meio de cards, seção sem graça como uma lista de filtros). Escolha seções melhores com `--column`, olhando a lista impressa.
-- **Celulares mostrando trechos pobres.** Ajuste `--phone-at`.
-- **Barra do navegador vazia ou errada.** Use `--label`.
-- **Fundo brigando com o site.** Tente outro fundo com `--reuse`, que leva segundos.
+- **A banner, chat or floating button on top.** Use `--hide` and run again.
+- **A blank or half-transparent section** (an entrance animation that did not fire). Use `--force-visible` or `--wait`.
+- **A hero caught mid-animation.** Reduced motion is already the default; if the site only shows content with animation, use `--motion` and `--wait`.
+- **An ugly cut in the column, wall or tilt** (a section cut through the middle of cards, a dull section like a filter list). Pick better sections with `--column`, using the printed list.
+- **Phones showing weak parts of the page.** Adjust `--phone-at`.
+- **An empty or wrong browser bar.** Use `--label`.
+- **A background fighting the site.** Try another one with `--reuse`, which takes seconds.
 
-Corrija e recomponha com `--reuse` sempre que a captura em si estiver boa.
+Fix and recompose with `--reuse` whenever the capture itself is good.
 
-## 5. Entregar
+## 5. Deliver
 
-- Mostre as artes ao usuário (a versão 1×; diga que o @2x está na mesma pasta). Se o agente tiver uma ferramenta de enviar arquivo, use-a.
-- Liste os arquivos com caminho clicável.
-- Em uma linha, sugira uma ou duas variações que valham a pena, com o comando pronto (ex.: o mesmo layout num fundo escuro, ou um momento específico do site).
-- Não commitar as imagens sem o usuário pedir.
+- Show the images to the user (the 1× version; mention the @2x is in the same folder). If the agent has a tool for sending files, use it.
+- List the files with clickable paths.
+- In one line, suggest one or two variations worth trying, with the command ready (e.g. the same layout on a dark background, or a specific moment of the site).
+- Do not commit the images unless the user asks.
 
-## Notas
+## Notes
 
-- As capturas ficam em `<out>/.capture/<host>/`: PNGs em 2× e o `meta.json` com paleta e seções. A pasta pode ser apagada depois.
-- Sites com cena ou animação presa à rolagem: o modo reduzido costuma mostrar a versão estática, que é a melhor para thumbnail. Para mostrar um momento específico da cena, capture à parte e componha com o HTML gerado em `.capture/` como base.
-- Páginas muito longas: cada seção é limitada a 4000px de captura.
+- Captures live in `<out>/.capture/<host>/`: 2× PNGs and `meta.json` with the palette and sections. The folder can be deleted afterwards.
+- Sites with scroll-bound scenes or animation: reduced motion usually shows the static version, which is the best one for a thumbnail. To show a specific moment of the scene, capture it separately and compose using the HTML generated in `.capture/` as a base.
+- Very long pages: each section capture is capped at 4000px.
 
 ---
 
-Feita pela [Coleoni](https://coleoni.com) · [skills.coleoni.com](https://skills.coleoni.com/coleoni-thumb/)
+Made by [Coleoni](https://coleoni.com) · [skills.coleoni.com](https://skills.coleoni.com/coleoni-thumb/)

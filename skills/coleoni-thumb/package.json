@@ -2,7 +2,7 @@
   "name": "coleoni-thumb",
   "private": true,
   "type": "module",
-  "description": "Thumbnails de portfólio a partir de capturas reais de um site",
+  "description": "Portfolio thumbnails from real captures of a website",
   "dependencies": {
     "playwright-core": "^1.55.0"
   }

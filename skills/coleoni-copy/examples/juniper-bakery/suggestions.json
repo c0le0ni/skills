@@ -1,0 +1,111 @@
+{
+  "project": "Juniper Bakery",
+  "language": "en",
+  "voice": "we",
+  "summary": "The page talked about the bakery (12 times “we” and “our”) and never said what a customer can do: when the bread is ready, how to order a cake, how to pay. The rewrite uses what is already on the page (the menu, the hours, the 48 hours for cakes) and drops every claim nobody can check.",
+  "counts": [["13", "rewrites"], ["8", "hype words out"], ["4", "vague buttons named"], ["0", "claims without proof"]],
+  "items": [
+    {
+      "where": "/ · hero",
+      "role": "h1",
+      "before": "Elevating Your Bread Experience To The Next Level",
+      "after": "Bread out of the oven at 7. Cakes by order.",
+      "why": ["hype", "titlecase", "specific"],
+      "note": "The two things people come for, with the hour."
+    },
+    {
+      "where": "/ · hero",
+      "role": "text",
+      "before": "At Juniper Bakery, we believe that every loaf tells a story, and we are committed to providing our valued customers with a seamless, innovative and unforgettable artisan experience that is crafted with passion, love and only the finest ingredients — every single day!",
+      "after": "Order today’s bread before it sells out, or a cake for the weekend with 48 hours’ notice. No account, pay when you pick it up.",
+      "why": ["long", "hype", "dash", "exclaim", "company-first"],
+      "note": "42 words about the bakery became 23 about what the reader can do."
+    },
+    {
+      "where": "/ · hero",
+      "role": "text",
+      "before": "WELCOME TO JUNIPER BAKERY",
+      "after": "Alberta St, Portland · open 7 to 3",
+      "why": ["caps", "empty"],
+      "note": "The logo already says the name. Where and when is what a first visitor needs."
+    },
+    {
+      "where": "/ · hero",
+      "role": "button",
+      "before": "Learn More",
+      "after": "See today’s menu",
+      "why": ["vague"]
+    },
+    {
+      "where": "/ · hero",
+      "role": "button",
+      "before": "Click Here",
+      "after": "Order a cake",
+      "why": ["vague"]
+    },
+    {
+      "where": "/ · header",
+      "role": "button",
+      "before": "Get Started",
+      "after": "Order for pickup",
+      "why": ["vague", "specific"],
+      "note": "There is nothing to start. There is something to order."
+    },
+    {
+      "where": "/ · menu",
+      "role": "h2",
+      "before": "Our Products Fresh!",
+      "after": "Today · 6 left",
+      "why": ["exclaim", "company-first", "specific"],
+      "note": "The card already shows fresh bread. The count is news."
+    },
+    {
+      "where": "/ · how it works",
+      "role": "text",
+      "before": "Our state-of-the-art online platform empowers you to unlock a seamless ordering journey.",
+      "after": "The menu updates as the day goes. What’s gone is marked, so nobody walks in for nothing.",
+      "why": ["hype", "jargon"],
+      "note": "Under “Order before it sells out”."
+    },
+    {
+      "where": "/ · how it works",
+      "role": "text",
+      "before": "Cake orders are reviewed by our team and will be confirmed by our staff in a timely manner.",
+      "after": "Pick the flavor, the size and the message. We confirm on WhatsApp the same day.",
+      "why": ["passive", "specific"],
+      "note": "“A timely manner” became “the same day”, on the channel the bakery already uses."
+    },
+    {
+      "where": "/ · how it works",
+      "role": "text",
+      "before": "We are going to be offering a variety of convenient payment solutions to meet your needs.",
+      "after": "No account and no card online. Your name is your order.",
+      "why": ["hype", "specific"],
+      "note": "The bakery takes payment at the counter. The copy promised something that does not exist."
+    },
+    {
+      "where": "/ · cakes",
+      "role": "h2",
+      "before": "Welcome To Our World Of Cakes",
+      "after": "A cake for Saturday? Tell us on Thursday.",
+      "why": ["empty", "titlecase"],
+      "note": "The 48-hour rule, said the way a customer plans."
+    },
+    {
+      "where": "/ · newsletter",
+      "role": "button",
+      "before": "Submit",
+      "after": "Get the Friday menu",
+      "why": ["vague", "nolabel"],
+      "note": "Add a visible label above the field: “Email, for the Friday menu”."
+    },
+    {
+      "where": "/ · head",
+      "role": "description",
+      "before": "Juniper Bakery is passionate about delivering innovative, world-class baked goods and seamless ordering solutions that elevate your everyday experience — from our family to yours!",
+      "after": "A neighborhood bakery in Portland. Bread out of the oven at 7, cakes by order with 48 hours’ notice. Order online, pay at pickup.",
+      "why": ["hype", "dash", "exclaim", "length"],
+      "note": "129 characters, shown whole in search results."
+    }
+  ]
+}

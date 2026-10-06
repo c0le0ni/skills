@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-copy",
+  "private": true,
+  "type": "module",
+  "description": "Copy inventory, lint and a before and after review sheet",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

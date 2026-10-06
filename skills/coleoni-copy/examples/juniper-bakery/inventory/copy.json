@@ -1,0 +1,417 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "lang": "en",
+      "voice": {
+        "we": 12,
+        "you": 5
+      },
+      "flag": {
+        "rule": "company-first",
+        "note": "talks about itself (12× we/our) more than the reader (5× you/your)"
+      }
+    }
+  ],
+  "counts": {
+    "hype": 8,
+    "length": 2,
+    "dash": 2,
+    "exclaim": 3,
+    "titlecase": 6,
+    "empty": 1,
+    "vague": 4,
+    "caps": 1,
+    "long": 1,
+    "passive": 1,
+    "emoji": 1,
+    "nolabel": 1,
+    "company-first": 1
+  },
+  "items": [
+    {
+      "page": "/",
+      "role": "title",
+      "text": "Juniper Bakery | Welcome To Portland's #1 Destination For Artisan Excellence",
+      "where": "head",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“Excellence”, “#1”, “Destination”"
+        },
+        {
+          "rule": "length",
+          "note": "76 characters; cut after about 60"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "description",
+      "text": "Juniper Bakery is passionate about delivering innovative, world-class baked goods and seamless ordering solutions that elevate your everyday experience — from our family to yours!",
+      "where": "head",
+      "flags": [
+        {
+          "rule": "dash",
+          "note": "em dash"
+        },
+        {
+          "rule": "hype",
+          "note": "“seamless”, “innovative”, “world-class”"
+        },
+        {
+          "rule": "exclaim",
+          "note": "exclamation mark"
+        },
+        {
+          "rule": "length",
+          "note": "179 characters; aim for 50 to 160"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h1",
+      "text": "Elevating Your Bread Experience To The Next Level",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“Next Level”"
+        },
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Our Products Fresh!",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "exclaim",
+          "note": "exclamation mark"
+        },
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h3",
+      "text": "Innovative Ordering Solutions",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“Innovative”, “Solutions”"
+        },
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h3",
+      "text": "Custom Cakes For Every Occasion",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h3",
+      "text": "Flexible Payment Options",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h2",
+      "text": "Welcome To Our World Of Cakes",
+      "where": "#cakes",
+      "flags": [
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        },
+        {
+          "rule": "empty",
+          "note": "a welcome says nothing"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Get Started",
+      "where": "header",
+      "flags": [
+        {
+          "rule": "vague",
+          "note": "“Get Started” doesn't say what happens"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Learn More",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "vague",
+          "note": "“Learn More” doesn't say what happens"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Click Here",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "vague",
+          "note": "“Click Here” doesn't say what happens"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Submit",
+      "where": "form",
+      "flags": [
+        {
+          "rule": "vague",
+          "note": "“Submit” doesn't say what happens"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Juniper Bakery",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Our Products",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Our Services",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "About Us",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "WELCOME TO JUNIPER BAKERY",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "caps",
+          "note": "shouting in capitals"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "At Juniper Bakery, we believe that every loaf tells a story, and we are committed to providing our valued customers with a seamless, innovative and unforgettable artisan experience that is crafted with passion, love and only the finest ingredients — every single day!",
+      "where": "section",
+      "flags": [
+        {
+          "rule": "dash",
+          "note": "em dash"
+        },
+        {
+          "rule": "hype",
+          "note": "“seamless”, “innovative”"
+        },
+        {
+          "rule": "long",
+          "note": "42-word sentence"
+        },
+        {
+          "rule": "exclaim",
+          "note": "exclamation mark"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Country sourdough Ready at 7:00 $9",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Seeded rye Ready at 7:00 $10",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Cardamom buns Ready at 8:30 $4.5",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Brown butter croissant Sold out $5",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Olive focaccia Ready at 11:00 $8",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Our state-of-the-art online platform empowers you to unlock a seamless ordering journey.",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“state-of-the-art”, “seamless”, “unlock”"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Cake orders are reviewed by our team and will be confirmed by our staff in a timely manner.",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "passive",
+          "note": "passive voice"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "We are going to be offering a variety of convenient payment solutions to meet your needs.",
+      "where": "#visit",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“solutions”"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "We are passionate about creating unforgettable moments. Our talented team of bakers uses only the finest ingredients to craft cakes that are truly second to none. 🎂",
+      "where": "#cakes",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“passionate”, “second to none”"
+        },
+        {
+          "rule": "emoji",
+          "note": "emoji"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Juniper Bakery · 2418 NE Alberta St, Portland",
+      "where": "footer",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "A fictional bakery, made for the Coleoni Skills examples",
+      "where": "footer",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "placeholder",
+      "text": "Enter your email",
+      "where": "form",
+      "noLabel": true,
+      "flags": [
+        {
+          "rule": "nolabel",
+          "note": "placeholder used as the only label"
+        }
+      ],
+      "also": []
+    }
+  ]
+}

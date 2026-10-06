@@ -48,6 +48,7 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-favicon`](#coleoni-favicon) | The complete favicon set from a logo, checked in tabs and home screens |
 | [`/coleoni-og`](#coleoni-og) | Share images from your real pages, with the tags checked and every app previewed |
 | [`/coleoni-launch`](#coleoni-launch) | Checks a whole site before it goes live, with a verdict and screenshots |
+| [`/coleoni-copy`](#coleoni-copy) | Rewrites hype and vague copy into plain, specific text, in English or Portuguese |
 
 <br>
 
@@ -219,6 +220,32 @@ says plainly whether the site is ready.
 ```text
 /coleoni-launch https://yoursite.com
 /coleoni-launch ./dist, domain yoursite.com, fix what you can
+```
+
+<br>
+
+### `/coleoni-copy`
+
+<a href="https://skills.coleoni.com/coleoni-copy/">
+  <img src=".github/assets/coleoni-copy-review.jpg" alt="A copy review made by coleoni-copy: before and after, with the reasons" width="100%">
+</a>
+
+Reads a product the way its reader does and rewrites every sentence that talks
+to itself instead of to them.
+
+- **Every piece of text listed:** titles, headings, buttons, links, labels,
+  placeholders and alt text, with hype, vague buttons, long sentences, em
+  dashes, Title Case and "we, we, we" pages flagged.
+- **The project's voice first.** Its own guide wins; a plain, specific default
+  voice fills the gaps, with patterns for buttons, forms, errors and empty states.
+- **Nothing invented.** Every fact in the rewrite comes from the product. What
+  is missing becomes a question, not a made-up number.
+- **English and Brazilian Portuguese**, each written on its own, with a before
+  and after sheet you can send to the client.
+
+```text
+/coleoni-copy https://yoursite.com
+/coleoni-copy src/ (the app's buttons, errors and empty states), apply it
 ```
 
 ## Made by

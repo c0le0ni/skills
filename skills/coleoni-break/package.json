@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-break",
+  "private": true,
+  "type": "module",
+  "description": "Breaks a component on purpose and shows what broke",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

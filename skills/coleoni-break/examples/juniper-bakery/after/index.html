@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today’s menu · Juniper Bakery</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  /* the same cards, built to take whatever content arrives */
+  :root { --cream: #F6F0E6; --paper: #FBF8F2; --sage: #2F4A3A; --sage-2: #4E6B59; --terracotta: #C8643B; --line: #E4DCCD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: #1F2A23; font: 1rem/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 48px clamp(16px, 4vw, 32px); }
+  h1 { font: 600 2.5rem/1.1 Fraunces, Georgia, serif; color: var(--sage); margin-bottom: 8px; overflow-wrap: anywhere; }
+  .sub { color: var(--sage-2); margin-bottom: 32px; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 1.5rem; max-width: 62.5rem; }
+  .card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; min-width: 0; }
+  .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #EADFCB; color: var(--sage-2); font-size: .8rem; }
+  .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .top { display: flex; align-items: flex-start; gap: 10px; }
+  .name { font: 600 1.25rem/1.2 Fraunces, Georgia, serif; color: var(--sage); min-width: 0; flex: 1; overflow-wrap: anywhere; text-wrap: balance; }
+  .price { flex: none; max-width: 45%; background: var(--terracotta); color: #fff; font-weight: 700; border-radius: 999px; padding: 3px 12px; font-size: .95rem; overflow-wrap: anywhere; }
+  .meta { color: var(--sage-2); font-size: .875rem; overflow-wrap: anywhere; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: auto; padding-top: 12px; }
+  .left { font-size: .8125rem; color: var(--terracotta); font-weight: 600; }
+  .btn { margin-inline-start: auto; padding: 9px 18px; border-radius: 999px; background: var(--sage); color: var(--cream); font-weight: 600; font-size: .875rem; text-decoration: none; text-align: center; overflow-wrap: anywhere; }
+  @media (forced-colors: active) { .price, .btn { border: 1px solid CanvasText; } }
+</style>
+</head>
+<body>
+  <h1>Today’s menu</h1>
+  <p class="sub">Tuesday · ready from 7:00</p>
+  <section class="menu" id="menu">
+    <article class="card">
+      <img src="sourdough.svg" alt="Country sourdough">
+      <div class="body">
+        <div class="top"><h2 class="name">Country sourdough</h2><span class="price">$9</span></div>
+        <p class="meta">Ready at 7:00 · 900 g</p>
+        <div class="row"><span class="left">4 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="buns.svg" alt="Cardamom buns">
+      <div class="body">
+        <div class="top"><h2 class="name">Cardamom buns</h2><span class="price">$4.5</span></div>
+        <p class="meta">Ready at 8:30 · box of 2</p>
+        <div class="row"><span class="left">12 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="focaccia.svg" alt="Olive focaccia">
+      <div class="body">
+        <div class="top"><h2 class="name">Olive focaccia</h2><span class="price">$8</span></div>
+        <p class="meta">Ready at 11:00 · half tray</p>
+        <div class="row"><span class="left">6 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

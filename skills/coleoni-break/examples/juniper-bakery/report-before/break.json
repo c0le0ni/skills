@@ -1,0 +1,196 @@
+{
+  "url": null,
+  "select": "#menu",
+  "date": "2026-10-06T17:56:13.756Z",
+  "base": [
+    {
+      "type": "clipped",
+      "text": "text cut off: h2.name"
+    }
+  ],
+  "results": [
+    {
+      "kind": "long",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: h2.name (+7)"
+        },
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+2)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/long.jpg",
+      "height": 372
+    },
+    {
+      "kind": "word",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: h2.name (+7)"
+        },
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+4)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/word.jpg",
+      "height": 372
+    },
+    {
+      "kind": "empty",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "height": 372
+    },
+    {
+      "kind": "translate",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: h2.name (+2)"
+        },
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+2)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/translate.jpg",
+      "height": 372
+    },
+    {
+      "kind": "numbers",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: p.meta"
+        },
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+2)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/numbers.jpg",
+      "height": 372
+    },
+    {
+      "kind": "names",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: h2.name (+7)"
+        },
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+2)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/names.jpg",
+      "height": 372
+    },
+    {
+      "kind": "images",
+      "status": "look",
+      "issues": [],
+      "notes": [],
+      "file": "shots/images.jpg",
+      "height": 372
+    },
+    {
+      "kind": "one",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "height": 372
+    },
+    {
+      "kind": "many",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "clipped",
+          "text": "text cut off: h2.name (+7)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "height": 3540
+    },
+    {
+      "kind": "rtl",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "overlap",
+          "text": "texts on top of each other: span.price × h2.name (+2)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/rtl.jpg",
+      "height": 372
+    },
+    {
+      "kind": "narrow",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "spills",
+          "text": "spills out of the component: article.card, 44px (+5)"
+        },
+        {
+          "type": "sideways",
+          "text": "page scrolls sideways, 660px"
+        }
+      ],
+      "notes": [],
+      "file": "shots/narrow.jpg",
+      "height": 372
+    },
+    {
+      "kind": "text200",
+      "status": "breaks",
+      "issues": [
+        {
+          "type": "fixed",
+          "text": "text ignores the font size setting (px): span.price (+14)"
+        }
+      ],
+      "notes": [],
+      "file": "shots/text200.jpg",
+      "height": 372
+    },
+    {
+      "kind": "contrast",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/contrast.jpg",
+      "height": 372
+    },
+    {
+      "kind": "dark",
+      "status": "holds",
+      "issues": [],
+      "notes": [
+        "looks exactly like the default"
+      ],
+      "file": "shots/dark.jpg",
+      "height": 372
+    }
+  ]
+}

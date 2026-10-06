@@ -1,0 +1,111 @@
+{
+  "url": null,
+  "select": "body",
+  "api": [
+    "**/api/orders.json*"
+  ],
+  "date": "2026-10-06T18:02:18.158Z",
+  "results": [
+    {
+      "state": "ready",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/ready.jpg",
+      "text": "Day board Tue Oct 06 2026 PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 READY PICKUP 08:30 Daniel O. Cardamom buns, box of 2 ×3 $13.50 NEW PICKUP 09:00 Priya S. Carrot cake 8 inch, “Happy 40th, Sam",
+      "busy": false
+    },
+    {
+      "state": "loading",
+      "status": "problem",
+      "issues": [
+        "gives no sign that it is loading"
+      ],
+      "notes": [],
+      "file": "shots/loading.jpg",
+      "text": "Day board",
+      "busy": false
+    },
+    {
+      "state": "empty",
+      "status": "problem",
+      "issues": [
+        "doesn't say there is nothing here, or what to do"
+      ],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "text": "Day board Tue Oct 06 2026",
+      "busy": false
+    },
+    {
+      "state": "one",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "text": "Day board Tue Oct 06 2026 PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 READY",
+      "busy": false
+    },
+    {
+      "state": "many",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "text": "Day board Tue Oct 06 2026 PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 READY Maya R. Country sourdough ×2 $18.00 READY Maya R. Country sourdough ×2 $18.00 READY Maya R. Country sourdough ×2 $18.00",
+      "busy": false
+    },
+    {
+      "state": "partial",
+      "status": "problem",
+      "issues": [
+        "crashes: Cannot read properties of null (reading 'toUpperCase')"
+      ],
+      "notes": [],
+      "file": "shots/partial.jpg",
+      "text": "Day board Tue Oct 06 2026",
+      "busy": false
+    },
+    {
+      "state": "error",
+      "status": "problem",
+      "issues": [
+        "crashes: data.orders is not iterable",
+        "shows raw values: Invalid Date"
+      ],
+      "notes": [
+        "doesn't say what happened or what to do"
+      ],
+      "file": "shots/error.jpg",
+      "text": "Day board Invalid Date",
+      "busy": false
+    },
+    {
+      "state": "offline",
+      "status": "problem",
+      "issues": [
+        "crashes: Failed to fetch"
+      ],
+      "notes": [
+        "doesn't say what happened or what to do"
+      ],
+      "file": "shots/offline.jpg",
+      "text": "Day board",
+      "busy": false
+    },
+    {
+      "state": "denied",
+      "status": "problem",
+      "issues": [
+        "crashes: data.orders is not iterable",
+        "shows raw values: Invalid Date"
+      ],
+      "notes": [
+        "doesn't say what happened or what to do"
+      ],
+      "file": "shots/denied.jpg",
+      "text": "Day board Invalid Date",
+      "busy": false
+    }
+  ]
+}

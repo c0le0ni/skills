@@ -1,0 +1,23 @@
+{
+  "title": "Today’s menu card",
+  "brief": "The card next to the headline is the first thing a customer reads: what’s ready, when, how much, and what’s gone. Three directions, all with the bakery’s own colors and fonts, none adding a fact that isn’t already on the page.",
+  "variants": [
+    {
+      "name": "Receipt",
+      "note": "A printed ticket from the counter: monospace, dotted leaders to the price, a torn edge. Feels made today.",
+      "css": "#menu{background:#FFFDF8;border:0;border-radius:6px 6px 0 0;padding:26px 26px 30px;font-family:ui-monospace,'SF Mono',Consolas,monospace;position:relative;box-shadow:0 26px 50px -30px rgb(47 74 58/.5)}#menu:after{content:'';position:absolute;left:0;right:0;bottom:-9px;height:10px;background:radial-gradient(circle at 7px 0,transparent 6px,#FFFDF8 6.5px) 0 0/14px 10px repeat-x}#menu h2{font:700 13px/1 ui-monospace,'SF Mono',Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:#2F4A3A;padding-bottom:14px;border-bottom:1.5px dashed #C9BFAE}#menu h2 small{font:inherit;letter-spacing:.06em;color:#C8643B}#menu ul{margin-top:8px}#menu li{border-top:0;padding:9px 0;align-items:baseline;gap:6px}#menu li span:first-child{flex:1;display:flex;flex-direction:column;min-width:0}#menu li b{font-weight:600;font-size:14px;color:#1F2A23;display:flex;gap:6px;align-items:baseline}#menu li b:after{content:'';flex:1;border-bottom:1.5px dotted #C9BFAE;transform:translateY(-3px)}#menu li i{font-size:11.5px;color:#7d8478}#menu li span:last-child{font-size:14px;font-weight:700;color:#2F4A3A}#menu .out b{color:#a7a99f}#menu .out span:last-child{color:#a7a99f;text-decoration:line-through}"
+    },
+    {
+      "name": "Chalkboard",
+      "note": "The board behind the counter, in the brand’s sage: big serif names, prices in terracotta, the time as a small chip. Strong next to the cream page.",
+      "css": "#menu{background:#2F4A3A;border:0;color:#F6F0E6;border-radius:24px;padding:28px 28px 20px;box-shadow:0 34px 70px -30px rgb(31 42 35/.7)}#menu h2{font:600 28px/1.1 Fraunces,Georgia,serif;color:#F6F0E6}#menu h2 small{font:600 11.5px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#F2B79C}#menu ul{margin-top:12px}#menu li{border-top:1px solid rgb(246 240 230/.14);padding:14px 0;align-items:center}#menu li b{font:600 19px/1.2 Fraunces,Georgia,serif;color:#F6F0E6}#menu li i{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:600;color:#DDE5DC;background:rgb(246 240 230/.1);border-radius:999px;padding:2px 9px}#menu li span:last-child{font:600 21px Fraunces,Georgia,serif;color:#F2B79C}#menu .out b{color:rgb(246 240 230/.45);text-decoration:line-through}#menu .out i{color:#F2B79C;background:rgb(242 183 156/.14)}#menu .out span:last-child{color:rgb(246 240 230/.4)}"
+    },
+    {
+      "name": "Tiles",
+      "note": "One tile per item, the ready time on top, and a last tile for the cakes the page already sells. Scans fastest on a phone and makes “sold out” obvious, at the cost of the list’s calm.",
+      "replace": "inner",
+      "html": "<h2>Today <small>Tuesday · 6 left</small></h2><div class=\"tiles\"><div class=\"tile\"><span class=\"t\">7:00</span><b>Country sourdough</b><span class=\"p\">$9</span></div><div class=\"tile\"><span class=\"t\">7:00</span><b>Seeded rye</b><span class=\"p\">$10</span></div><div class=\"tile\"><span class=\"t\">8:30</span><b>Cardamom buns</b><span class=\"p\">$4.5</span></div><div class=\"tile out\"><span class=\"t\">Sold out</span><b>Brown butter croissant</b><span class=\"p\">$5</span></div><div class=\"tile\"><span class=\"t\">11:00</span><b>Olive focaccia</b><span class=\"p\">$8</span></div><div class=\"tile more\"><b>Cakes by order</b><span class=\"p\">48 h ahead</span></div></div>",
+      "css": "#menu{background:transparent;border:0;box-shadow:none;padding:0}#menu h2{margin-bottom:14px}#menu .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#menu .tile{background:#FBF8F2;border:1px solid #E4DCCD;border-radius:16px;padding:14px 16px;display:grid;gap:3px;align-content:start}#menu .tile .t{justify-self:start;font-size:11.5px;font-weight:700;color:#2F4A3A;background:#E9E1CF;border-radius:999px;padding:2px 9px;margin-bottom:4px}#menu .tile b{font:600 17px/1.2 Fraunces,Georgia,serif;color:#2F4A3A;overflow-wrap:anywhere}#menu .tile .p{font-weight:700;color:#C8643B;font-variant-numeric:tabular-nums}#menu .tile.out{background:transparent;border-style:dashed}#menu .tile.out .t{background:#C8643B;color:#fff}#menu .tile.out b,#menu .tile.out .p{color:#a7a99f;text-decoration:line-through}#menu .tile.more{background:#2F4A3A;border-color:#2F4A3A}#menu .tile.more b{color:#F6F0E6}#menu .tile.more .p{color:#F2B79C}"
+    }
+  ]
+}

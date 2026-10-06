@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day board · Juniper Bakery</title>
+<style>
+  :root { --cream: #F6F0E6; --paper: #FBF8F2; --sage: #2F4A3A; --sage-2: #4E6B59; --terracotta: #C8643B; --line: #E4DCCD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: #1F2A23; font: 1rem/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 40px 32px; }
+  header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  h1 { font: 600 2rem/1.1 Fraunces, Georgia, serif; color: var(--sage); }
+  .date { color: var(--sage-2); }
+  .count { margin-left: auto; color: var(--sage-2); font-size: .9rem; }
+  .board { display: grid; gap: 22px; max-width: 760px; }
+  .slot h2 { font: 600 .8rem/1 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 10px; }
+  .order { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 16px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-bottom: 8px; }
+  .order b { color: var(--sage); overflow-wrap: anywhere; }
+  .order span { display: block; color: var(--sage-2); font-size: .9rem; overflow-wrap: anywhere; }
+  .muted { color: #8a8f86 !important; font-style: italic; }
+  .total { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .status { font-size: .8rem; font-weight: 700; border-radius: 999px; padding: 4px 10px; background: #E9E1CF; color: var(--sage); }
+  .status.ready { background: var(--sage); color: var(--cream); }
+  .status.picked { background: transparent; color: #8a8f86; text-decoration: line-through; }
+  /* loading: the shape of what's coming */
+  .skeleton { display: grid; gap: 8px; }
+  .skeleton div { height: 66px; border-radius: 14px; background: linear-gradient(90deg, #EFE7D9, #F7F1E7, #EFE7D9); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+  .skeleton div:first-child { height: 14px; width: 120px; border-radius: 6px; }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+  @media (prefers-reduced-motion: reduce) { .skeleton div { animation: none; } }
+  /* empty, error, offline, signed out: say what happened and what to do */
+  .note { background: var(--paper); border: 1px dashed var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 8px; justify-items: start; }
+  .note h2 { font: 600 1.25rem/1.2 Fraunces, Georgia, serif; color: var(--sage); }
+  .note p { color: var(--sage-2); max-width: 34em; }
+  .note button, .note a { margin-top: 6px; font: 600 .9rem Inter, system-ui, sans-serif; color: var(--cream); background: var(--sage); border: 0; border-radius: 999px; padding: 9px 18px; cursor: pointer; text-decoration: none; }
+  .note.error { border-style: solid; border-color: #E8B8A3; }
+</style>
+</head>
+<body>
+  <header><h1>Day board</h1><span class="date" id="date">Tuesday, October 6</span><span class="count" id="count"></span></header>
+  <main class="board" id="board" aria-live="polite"></main>
+  <script>
+    const board = document.getElementById("board");
+    const money = (n) => (typeof n === "number" ? `$${n.toFixed(2)}` : "–");
+    const time = (iso) => {
+      const d = new Date(iso);
+      return isNaN(d) ? null : d.toTimeString().slice(0, 5);
+    };
+    const STATUS = { new: "New", ready: "Ready", picked: "Picked up" };
+    const note = (kind, title, text, action) => {
+      board.removeAttribute("aria-busy");
+      board.innerHTML = `<div class="note ${kind}"><h2>${title}</h2><p>${text}</p>${action ?? ""}</div>`;
+    };
+
+    function load() {
+      board.setAttribute("aria-busy", "true");
+      board.innerHTML = `<div class="skeleton" aria-label="Loading today's orders"><div></div><div></div><div></div><div></div></div>`;
+      fetch("/api/orders.json")
+        .then((r) => {
+          if (r.status === 401) throw Object.assign(new Error("signed out"), { kind: "denied" });
+          if (!r.ok) throw Object.assign(new Error("server"), { kind: "error" });
+          return r.json();
+        })
+        .then(render)
+        .catch((e) => {
+          if (e.kind === "denied") return note("error", "You’ve been signed out", "For safety the board signs out after 12 hours. Sign in again to see today’s orders.", `<a href="/login">Sign in</a>`);
+          if (e.kind === "error") return note("error", "The orders didn’t load", "The order system isn’t answering. Nothing was lost: try again in a minute, and call the owner if it keeps happening.", `<button onclick="load()">Try again</button>`);
+          note("error", "No connection", "The tablet is offline. Check the Wi-Fi; the board will load as soon as it’s back.", `<button onclick="load()">Try again</button>`);
+        });
+    }
+
+    function render(data) {
+      board.removeAttribute("aria-busy");
+      const orders = Array.isArray(data?.orders) ? data.orders : [];
+      document.getElementById("count").textContent = orders.length ? `${orders.length} order${orders.length > 1 ? "s" : ""}` : "";
+      if (!orders.length) return note("empty", "No orders for today yet", "New orders show up here as customers place them, grouped by pickup time. The board refreshes on its own.");
+      const slots = {};
+      for (const o of orders) (slots[time(o.pickup) ?? "No time"] ||= []).push(o);
+      board.innerHTML = Object.keys(slots).sort().map((t) => `
+        <section class="slot"><h2>${t === "No time" ? "No pickup time" : `Pickup ${t}`}</h2>
+          ${slots[t].map((o) => `<div class="order"><div><b>${o.name ?? '<span class="muted">No name given</span>'}</b>${o.items ? `<span>${o.items}</span>` : '<span class="muted">Items missing, check the order</span>'}</div><div class="total">${money(o.total)}</div><div class="status ${o.status ?? ""}">${STATUS[o.status] ?? "Unknown"}</div></div>`).join("")}
+        </section>`).join("");
+    }
+    load();
+  </script>
+</body>
+</html>

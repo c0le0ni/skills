@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day board · Juniper Bakery</title>
+<style>
+  :root { --cream: #F6F0E6; --paper: #FBF8F2; --sage: #2F4A3A; --sage-2: #4E6B59; --terracotta: #C8643B; --line: #E4DCCD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: #1F2A23; font: 1rem/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 40px 32px; }
+  header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+  h1 { font: 600 2rem/1.1 Fraunces, Georgia, serif; color: var(--sage); }
+  .date { color: var(--sage-2); }
+  .board { display: grid; gap: 22px; max-width: 760px; }
+  .slot h2 { font: 600 .8rem/1 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 10px; }
+  .order { display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-bottom: 8px; }
+  .order b { color: var(--sage); }
+  .order span { display: block; color: var(--sage-2); font-size: .9rem; }
+  .total { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .status { font-size: .8rem; font-weight: 700; border-radius: 999px; padding: 4px 10px; background: #E9E1CF; color: var(--sage); }
+  .status.ready { background: var(--sage); color: var(--cream); }
+  .status.picked { background: transparent; color: #8a8f86; text-decoration: line-through; }
+</style>
+</head>
+<body>
+  <header><h1>Day board</h1><span class="date" id="date"></span></header>
+  <main class="board" id="board"></main>
+  <script>
+    // written the way a first version usually is: the happy path only
+    fetch("/api/orders.json")
+      .then((r) => r.json())
+      .then((data) => {
+        document.getElementById("date").textContent = new Date(data.date).toDateString();
+        const slots = {};
+        for (const o of data.orders) {
+          const t = new Date(o.pickup).toTimeString().slice(0, 5);
+          (slots[t] = slots[t] || []).push(o);
+        }
+        document.getElementById("board").innerHTML = Object.keys(slots).sort().map((t) => `
+          <section class="slot"><h2>Pickup ${t}</h2>
+            ${slots[t].map((o) => `<div class="order"><div><b>${o.name}</b><span>${o.items}</span></div><div class="total">$${o.total.toFixed(2)}</div><div class="status ${o.status}">${o.status.toUpperCase()}</div></div>`).join("")}
+          </section>`).join("");
+      });
+  </script>
+</body>
+</html>

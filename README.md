@@ -50,6 +50,9 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-launch`](#coleoni-launch) | Checks a whole site before it goes live, with a verdict and screenshots |
 | [`/coleoni-copy`](#coleoni-copy) | Rewrites hype and vague copy into plain, specific text, in English or Portuguese |
 | [`/coleoni-a11y`](#coleoni-a11y) | Accessibility audit for WCAG 2.2 AA and eMAG, with keyboard checks and a report |
+| [`/coleoni-break`](#coleoni-break) | Breaks a component on purpose (long text, translation, 320px, 200% text…) and fixes it |
+| [`/coleoni-states`](#coleoni-states) | Every state of a component, forced through its API: loading, empty, error, offline… |
+| [`/coleoni-variants`](#coleoni-variants) | Three real variations of a component, side by side in the page, to pick one |
 
 <br>
 
@@ -275,6 +278,77 @@ reader, with low vision, at 320px, sensitive to motion.
 
 skills.coleoni.com went through it: 268 low-contrast elements, a skip link
 and keyboard access to scrolling boxes, all fixed.
+
+<br>
+
+### `/coleoni-break`
+
+<a href="https://skills.coleoni.com/coleoni-break/">
+  <img src=".github/assets/coleoni-break-sheet.jpg" alt="A break test sheet made by coleoni-break: each scenario with what broke outlined" width="100%">
+</a>
+
+Mockups get perfect content. Production gets a 60-character name, a German
+translation, a missing photo and a user with text at 200%. This skill does
+that to the component first.
+
+- **14 scenarios** on the real page: text 3× longer, a word that won't wrap,
+  no text, translation +40%, huge numbers, accents and emoji, failed images,
+  1 and 25 items, RTL, 320px, browser text at 200%, high contrast, dark mode.
+- **Measured, not eyeballed:** clipped text, overlaps, content spilling out,
+  sideways scroll, text in px, all outlined in red on each crop.
+- **Fixes the CSS** at the cause (fixed sizes, nowrap, absolute badges, px),
+  then runs again: the example goes from 9 scenarios breaking to 0.
+
+```text
+/coleoni-break http://localhost:5173/menu .product-card
+/coleoni-break the checkout summary, fix what breaks
+```
+
+<br>
+
+### `/coleoni-states`
+
+<a href="https://skills.coleoni.com/coleoni-states/">
+  <img src=".github/assets/coleoni-states-board.jpg" alt="A states board made by coleoni-states: loading, empty, error, offline and more" width="100%">
+</a>
+
+A component is designed full of data. It lives a good part of its life
+waiting, empty, failing or half filled.
+
+- **9 states forced through the real API:** ready, loading, empty, one, many,
+  missing fields, server error, offline, signed out. No mocks to write.
+- **Finds the ones nobody designed:** blank screens, crashes, `undefined` and
+  `Invalid Date` on screen, an error that spins like loading, an empty state
+  that says nothing.
+- **Builds them** in the project's way, with `aria-busy` and `aria-live`, and
+  shows the board before and after.
+
+```text
+/coleoni-states http://localhost:3000/orders .orders
+/coleoni-states the dashboard cards, build the missing states
+```
+
+<br>
+
+### `/coleoni-variants`
+
+<a href="https://skills.coleoni.com/coleoni-variants/">
+  <img src=".github/assets/coleoni-variants-board.jpg" alt="A variations board made by coleoni-variants: the current card and three directions" width="100%">
+</a>
+
+Choosing between descriptions is guessing. Choosing between three real
+versions, in the real page, is a decision.
+
+- **Three directions, not three tweaks:** each takes a position (quiet,
+  branded, dense…) and says what it gives up.
+- **In the real page**, with the project's fonts, tokens and surroundings, on
+  desktop and phone, checked for sideways scroll and clipped text.
+- **Builds the one you pick** (or a mix) the way the project writes styles.
+
+```text
+/coleoni-variants the pricing table
+/coleoni-variants the hero, 3 directions, one of them without the photo
+```
 
 ## Made by
 

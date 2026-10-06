@@ -1,0 +1,91 @@
+{
+  "url": null,
+  "select": "body",
+  "api": [
+    "**/api/orders.json*"
+  ],
+  "date": "2026-10-06T18:02:38.583Z",
+  "results": [
+    {
+      "state": "ready",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/ready.jpg",
+      "text": "Day board Tuesday, October 6 5 orders PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 Ready PICKUP 08:30 Daniel O. Cardamom buns, box of 2 ×3 $13.50 New PICKUP 09:00 Priya S. Carrot cake 8 inch, “Hap",
+      "busy": false
+    },
+    {
+      "state": "loading",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/loading.jpg",
+      "text": "Day board Tuesday, October 6",
+      "busy": true
+    },
+    {
+      "state": "empty",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "text": "Day board Tuesday, October 6 No orders for today yet New orders show up here as customers place them, grouped by pickup time. The board refreshes on its own.",
+      "busy": false
+    },
+    {
+      "state": "one",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "text": "Day board Tuesday, October 6 1 order PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 Ready",
+      "busy": false
+    },
+    {
+      "state": "many",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "text": "Day board Tuesday, October 6 30 orders PICKUP 07:30 Maya R. Country sourdough ×2 $18.00 Ready Maya R. Country sourdough ×2 $18.00 Ready Maya R. Country sourdough ×2 $18.00 Ready Maya R. Country sourdo",
+      "busy": false
+    },
+    {
+      "state": "partial",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/partial.jpg",
+      "text": "Day board Tuesday, October 6 5 orders PICKUP 07:30 Maya R. Items missing, check the order $18.00 Unknown PICKUP 08:30 Daniel O. Items missing, check the order $13.50 Unknown PICKUP 09:00 Priya S. Item",
+      "busy": false
+    },
+    {
+      "state": "error",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/error.jpg",
+      "text": "Day board Tuesday, October 6 The orders didn’t load The order system isn’t answering. Nothing was lost: try again in a minute, and call the owner if it keeps happening. Try again",
+      "busy": false
+    },
+    {
+      "state": "offline",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/offline.jpg",
+      "text": "Day board Tuesday, October 6 No connection The tablet is offline. Check the Wi-Fi; the board will load as soon as it’s back. Try again",
+      "busy": false
+    },
+    {
+      "state": "denied",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/denied.jpg",
+      "text": "Day board Tuesday, October 6 You’ve been signed out For safety the board signs out after 12 hours. Sign in again to see today’s orders. Sign in",
+      "busy": false
+    }
+  ]
+}

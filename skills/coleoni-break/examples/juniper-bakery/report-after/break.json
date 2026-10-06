@@ -1,0 +1,122 @@
+{
+  "url": null,
+  "select": "#menu",
+  "date": "2026-10-06T17:56:38.976Z",
+  "base": [],
+  "results": [
+    {
+      "kind": "long",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/long.jpg",
+      "height": 545
+    },
+    {
+      "kind": "word",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/word.jpg",
+      "height": 562
+    },
+    {
+      "kind": "empty",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "height": 317
+    },
+    {
+      "kind": "translate",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/translate.jpg",
+      "height": 401
+    },
+    {
+      "kind": "numbers",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/numbers.jpg",
+      "height": 425
+    },
+    {
+      "kind": "names",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/names.jpg",
+      "height": 497
+    },
+    {
+      "kind": "images",
+      "status": "look",
+      "issues": [],
+      "notes": [],
+      "file": "shots/images.jpg",
+      "height": 381
+    },
+    {
+      "kind": "one",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "height": 381
+    },
+    {
+      "kind": "many",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "height": 3624
+    },
+    {
+      "kind": "rtl",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/rtl.jpg",
+      "height": 381
+    },
+    {
+      "kind": "narrow",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/narrow.jpg",
+      "height": 1145
+    },
+    {
+      "kind": "text200",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/text200.jpg",
+      "height": 1340
+    },
+    {
+      "kind": "contrast",
+      "status": "holds",
+      "issues": [],
+      "notes": [],
+      "file": "shots/contrast.jpg",
+      "height": 385
+    },
+    {
+      "kind": "dark",
+      "status": "holds",
+      "issues": [],
+      "notes": [
+        "looks exactly like the default"
+      ],
+      "file": "shots/dark.jpg",
+      "height": 381
+    }
+  ]
+}

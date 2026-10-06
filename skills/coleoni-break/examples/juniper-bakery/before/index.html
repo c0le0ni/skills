@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today’s menu · Juniper Bakery</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  /* the way cards get built on a deadline: every size fixed to the mockup */
+  :root { --cream: #F6F0E6; --paper: #FBF8F2; --sage: #2F4A3A; --sage-2: #4E6B59; --terracotta: #C8643B; --line: #E4DCCD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--cream); color: #1F2A23; font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 48px 32px; }
+  h1 { font: 600 40px/1.1 Fraunces, Georgia, serif; color: var(--sage); margin-bottom: 8px; }
+  .sub { color: var(--sage-2); margin-bottom: 32px; }
+  .menu { display: grid; grid-template-columns: repeat(3, 300px); gap: 24px; }
+  .card { position: relative; width: 300px; height: 372px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .card img { width: 100%; display: block; }
+  .body { padding: 16px 18px; }
+  .name { font: 600 20px/1.2 Fraunces, Georgia, serif; color: var(--sage); white-space: nowrap; overflow: hidden; width: 190px; }
+  .price { position: absolute; top: 240px; right: 18px; background: var(--terracotta); color: #fff; font-weight: 700; border-radius: 999px; padding: 4px 12px; font-size: 15px; }
+  .meta { color: var(--sage-2); font-size: 14px; height: 21px; overflow: hidden; margin-top: 4px; }
+  .row { display: flex; align-items: center; margin-top: 14px; }
+  .left { font-size: 13px; color: var(--terracotta); font-weight: 600; width: 110px; }
+  .btn { margin-left: auto; width: 128px; height: 38px; line-height: 38px; text-align: center; border-radius: 999px; background: var(--sage); color: var(--cream); font-weight: 600; font-size: 14px; text-decoration: none; overflow: hidden; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <h1>Today’s menu</h1>
+  <p class="sub">Tuesday · ready from 7:00</p>
+  <section class="menu" id="menu">
+    <article class="card">
+      <img src="sourdough.svg" alt="Country sourdough">
+      <span class="price">$9</span>
+      <div class="body">
+        <h2 class="name">Country sourdough</h2>
+        <p class="meta">Ready at 7:00 · 900 g</p>
+        <div class="row"><span class="left">4 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="buns.svg" alt="Cardamom buns">
+      <span class="price">$4.5</span>
+      <div class="body">
+        <h2 class="name">Cardamom buns</h2>
+        <p class="meta">Ready at 8:30 · box of 2</p>
+        <div class="row"><span class="left">12 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="focaccia.svg" alt="Olive focaccia">
+      <span class="price">$8</span>
+      <div class="body">
+        <h2 class="name">Olive focaccia</h2>
+        <p class="meta">Ready at 11:00 · half tray</p>
+        <div class="row"><span class="left">6 left</span><a class="btn" href="#">Reserve</a></div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

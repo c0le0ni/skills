@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Accessibility audit · juniperbakery.com</title><style>
+*{box-sizing:border-box;margin:0}
+body{background:#111214;color:#e8e8ea;font:14.5px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1200px;margin:0 auto;padding:48px 32px 64px;display:grid;gap:36px}
+.k{font:600 12px/1 ui-monospace,"SF Mono",Consolas,monospace;letter-spacing:.06em;text-transform:uppercase;color:#8b8d94}
+h1{font-size:42px;line-height:1.05;letter-spacing:-.025em;font-weight:650;margin-top:14px}
+h1 span{color:#8b8d94}
+h2{font-size:22px;font-weight:620;letter-spacing:-.01em;display:flex;gap:10px;align-items:baseline}
+h2 small{font-size:13px;color:#8b8d94;font-weight:500}
+section{display:grid;gap:14px}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#26272b;border:1px solid #26272b;border-radius:14px;overflow:hidden}
+.nums div{background:#151619;padding:16px 18px;display:grid;gap:2px}
+.nums b{font-size:28px;font-weight:650;letter-spacing:-.02em}
+.nums span{color:#8b8d94;font-size:13px}
+.nums .r b{color:#ff8a7d}.nums .y b{color:#ffc861}.nums .g b{color:#aefa0e}
+ul{list-style:none;padding:0;display:grid;gap:12px}
+li{background:#16171a;border:1px solid #26272b;border-radius:14px;padding:16px 18px;display:grid;gap:10px}
+.hd{display:flex;gap:12px;align-items:baseline}
+.hd i{width:9px;height:9px;border-radius:50%;flex:none;background:#6b6d74;transform:translateY(-1px)}
+li.block .hd i{background:#ff6b5e}li.fix .hd i{background:#f5b84a}
+.hd b{font-size:15.5px;font-weight:600}
+.hd em{margin-left:auto;font-style:normal;font-size:12px;color:#7c7e85;white-space:nowrap}
+li.block .hd em{color:#ff8a7d}li.fix .hd em{color:#ffc861}
+li>p{color:#a9abb2}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sc,.em{font-size:12px;border-radius:999px;padding:2px 9px;background:#1d1f24;color:#c9cacf;border:1px solid #2a2c31}
+.sc i{font-style:normal;color:#8b8d94;margin-left:3px}
+.em{background:#18200c;border-color:#2c3a16;color:#c7e48a}
+.cnt{font-size:12px;color:#7c7e85;margin-left:4px}
+.crops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.crops figure{display:grid;gap:5px;align-content:start}
+.crops img{display:block;max-width:100%;max-height:170px;width:auto;border:1px solid #26272b;border-radius:8px}
+figcaption,.tg{font:11.5px ui-monospace,"SF Mono",Consolas,monospace;color:#7c7e85;overflow-wrap:anywhere}
+.how{font-size:13.5px;color:#c9cacf;border-top:1px solid #222327;padding-top:10px}
+.how small{display:block;font:600 11px system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7c7e85;margin-bottom:2px}
+.how a{color:#aefa0e}
+table{width:100%;border-collapse:collapse;background:#151619;border:1px solid #26272b;border-radius:14px;overflow:hidden;font-size:13.5px}
+th,td{text-align:left;padding:10px 14px;border-top:1px solid #222327}
+th{font-weight:600;color:#8b8d94;font-size:12px;border-top:0}
+td.ok{color:#aefa0e}td.no{color:#ff8a7d}
+code{font:12.5px ui-monospace,"SF Mono",Consolas,monospace}
+.man{display:grid;gap:8px;padding:0}
+.man li{flex-direction:row;display:flex;gap:12px;padding:12px 16px}
+.man li:before{content:"";width:14px;height:14px;border:1.5px solid #4a4c52;border-radius:4px;flex:none;margin-top:3px}
+.note{color:#8b8d94;font-size:13px}
+.pgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pgs figure{display:grid;gap:6px}.pgs img{width:100%;border-radius:10px;border:1px solid #26272b}
+.foot{color:#6b6d74;font-size:12.5px}
+@media (max-width:820px){.w{padding:32px 18px 48px}h1{font-size:30px}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.crops,.pgs{grid-template-columns:minmax(0,1fr)}table{display:block;overflow-x:auto}}
+</style></head><body><div class="w">
+<header><span class="k">Accessibility audit · WCAG 2.2 AA · eMAG 3.1 · 2026-10-06</span><h1>juniperbakery.com <span>1 page</span></h1></header>
+<div class="nums"><div class="r"><b>5</b><span>block people</span></div><div class="y"><b>3</b><span>to fix</span></div><div><b>2</b><span>worth a look</span></div><div class="g"><b>26</b><span>rules passed</span></div></div>
+<section><h2>Fix first <small>grouped by rule, most serious on top</small></h2><ul><li class="block"><div class="hd"><i></i><b>Elements must meet minimum color contrast ratio thresholds</b><em>Blocks people</em></div>
+<p>Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+<div class="chips"><span class="sc">1.4.3 Contrast (Minimum) <i>AA</i></span><span class="em" title="Minimum contrast">eMAG 4.1</span><span class="cnt">21 elements on /</span></div>
+<div class="crops"><figure><img src="shots/el-1.jpg" alt=""><figcaption>header &gt; .btn[href$=&quot;#menu&quot;]</figcaption></figure><figure><img src="shots/el-2.jpg" alt=""><figcaption>.eyebrow</figcaption></figure><figure><img src="shots/el-3.jpg" alt=""><figcaption>.actions &gt; .btn[href$=&quot;#menu&quot;]</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Element has insufficient color contrast of 3.93 (foreground color: #ffffff, background color: #c8643b, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1 <a href="https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI">Details</a></div></li><li class="block"><div class="hd"><i></i><b>Focus is not visible</b><em>Blocks people</em></div>
+<p>When a keyboard user tabs to these elements, nothing on screen shows where they are.</p>
+<div class="chips"><span class="sc">2.4.7 Focus Visible <i>AA</i></span><span class="em" title="Visible focus">eMAG 4.4</span><span class="cnt">11 elements on /</span></div>
+<div class="crops"><figure><img src="shots/el-10.jpg" alt=""><figcaption>a ./</figcaption></figure><figure><img src="shots/el-11.jpg" alt=""><figcaption>button</figcaption></figure><figure><img src="shots/el-12.jpg" alt=""><figcaption>a #menu</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Add a :focus-visible style (outline or ring) with at least 3:1 contrast against the background.</div></li><li class="block"><div class="hd"><i></i><b>Buttons must have discernible text</b><em>Blocks people</em></div>
+<p>Ensure buttons have discernible text</p>
+<div class="chips"><span class="sc">4.1.2 Name, Role, Value <i>A</i></span><span class="em" title="Scripted objects must be accessible">eMAG 2.2</span><span class="cnt">1 element on /</span></div>
+<div class="crops"><figure><img src="shots/el-0.jpg" alt=""><figcaption>.icon-btn</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Element does not have inner text that is visible to screen readers   aria-label attribute does not exist or is empty <a href="https://dequeuniversity.com/rules/axe/4.14/button-name?application=axeAPI">Details</a></div></li><li class="block"><div class="hd"><i></i><b>Images must have alternative text</b><em>Blocks people</em></div>
+<p>Ensure &lt;img&gt; elements have alternative text or a role of none or presentation</p>
+<div class="chips"><span class="sc">1.1.1 Non-text Content <i>A</i></span><span class="em" title="Text alternatives for images">eMAG 3.6</span><span class="cnt">1 element on /</span></div>
+<div class="crops"><figure><img src="shots/el-5.jpg" alt=""><figcaption>img</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Element does not have an alt attribute   aria-label attribute does not exist or is empty <a href="https://dequeuniversity.com/rules/axe/4.14/image-alt?application=axeAPI">Details</a></div></li><li class="block"><div class="hd"><i></i><b>Content does not reflow at 320px</b><em>Blocks people</em></div>
+<p>At 320 CSS pixels wide (400% zoom on a laptop) the page scrolls sideways.</p>
+<div class="chips"><span class="sc">1.4.10 Reflow <i>AA</i></span><span class="em" title="Resizing without losing function">eMAG 4.3</span><span class="cnt">1 element on /</span></div>
+<div class="crops"><figure><img src="shots/reflow-0.jpg" alt=""><figcaption>div · +220px</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Let the element wrap or shrink: max-width: 100%, flexible grids, overflow-x: auto on tables and code.</div></li><li class="fix"><div class="hd"><i></i><b>All page content should be contained by landmarks</b><em>To fix</em></div>
+<p>Ensure all page content is contained by landmarks</p>
+<div class="chips"><span class="em" title="Divide the information areas">eMAG 1.8</span><span class="sc">best practice</span><span class="cnt">10 elements on /</span></div>
+<div class="crops"><figure><img src="shots/el-7.jpg" alt=""><figcaption>.eyebrow</figcaption></figure><figure><img src="shots/el-8.jpg" alt=""><figcaption>h1</figcaption></figure><figure><img src="shots/el-9.jpg" alt=""><figcaption>.lead</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Some page content is not contained by landmarks <a href="https://dequeuniversity.com/rules/axe/4.14/region?application=axeAPI">Details</a></div></li><li class="fix"><div class="hd"><i></i><b>Heading levels should only increase by one</b><em>To fix</em></div>
+<p>Ensure the order of headings is semantically correct</p>
+<div class="chips"><span class="em" title="Use heading levels correctly">eMAG 1.3</span><span class="sc">best practice</span><span class="cnt">1 element on /</span></div>
+<div class="crops"><figure><img src="shots/el-4.jpg" alt=""><figcaption>h4</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Heading order invalid <a href="https://dequeuniversity.com/rules/axe/4.14/heading-order?application=axeAPI">Details</a></div></li><li class="fix"><div class="hd"><i></i><b>Document should have one main landmark</b><em>To fix</em></div>
+<p>Ensure the document has a main landmark</p>
+<div class="chips"><span class="em" title="Divide the information areas">eMAG 1.8</span><span class="sc">best practice</span><span class="cnt">1 element on /</span></div>
+<div class="crops"><figure><img src="shots/el-6.jpg" alt=""><figcaption>html</figcaption></figure></div>
+<div class="how"><small>How to fix</small>Document does not have a main landmark <a href="https://dequeuniversity.com/rules/axe/4.14/landmark-one-main?application=axeAPI">Details</a></div></li><li class="look"><div class="hd"><i></i><b>No skip link</b><em>Worth a look</em></div>
+<p>The first Tab stop is not a link to the main content, so keyboard users go through the whole menu on every page.</p>
+<div class="chips"><span class="sc">2.4.1 Bypass Blocks <i>A</i></span><span class="em" title="Anchors to jump to each content block">eMAG 1.5</span><span class="cnt">1 element on /</span></div>
+<code class="tg">a ./ “Juniper Bakery”</code>
+<div class="how"><small>How to fix</small>Add “Skip to content” as the first focusable element, pointing to &lt;main id=&quot;content&quot;&gt;. eMAG 1.5 asks for it.</div></li><li class="look"><div class="hd"><i></i><b>Animation ignores reduced motion</b><em>Worth a look</em></div>
+<p>With “reduce motion” on in the system, these animations still run. They can cause nausea for people with vestibular disorders.</p>
+<div class="chips"><span class="sc">2.3.3 Animation from Interactions <i>AAA</i></span><span class="sc">2.2.2 Pause, Stop, Hide <i>A</i></span><span class="em" title="Animation control">eMAG 5.5</span><span class="em" title="User control over timed changes">eMAG 2.7</span><span class="cnt">1 element on /</span></div>
+<code class="tg">span.badge</code>
+<div class="how"><small>How to fix</small>Wrap the animation in @media (prefers-reduced-motion: no-preference), or stop it under reduce.</div></li></ul></section>
+<section><h2>Keyboard</h2><table><tr><th></th><th>Tab stops</th><th>Skip link</th><th>No visible focus</th><th>Focus on hidden elements</th><th>Keyboard trap</th></tr><tr><td><code>/</code></td><td>11</td><td class="no">no</td><td class="no">11</td><td class="ok">0</td><td class="ok">no</td></tr></table></section>
+<section><h2>Still to check by hand</h2><ul class="man"><li>Read the page with a screen reader (NVDA, VoiceOver, TalkBack): does the order make sense?</li><li>Alt text says what the image means here, not what it looks like.</li><li>Videos have captions; audio has a transcript.</li><li>Form errors say what went wrong and how to fix it, next to the field.</li><li>Zoom to 200%: nothing is cut, nothing overlaps.</li><li>Every action that works with a mouse also works with the keyboard.</li></ul><p class="note">Automated checks find part of the problems. The rest needs the manual pass above.</p></section>
+<section><h2>Every page</h2><div class="pgs"><figure><img src="shots/page-0.jpg" alt=""><figcaption>/</figcaption></figure></div></section>
+<p class="foot">Made by /coleoni-a11y · skills.coleoni.com</p>
+</div></body></html>

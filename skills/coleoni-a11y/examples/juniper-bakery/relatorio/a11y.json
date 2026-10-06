@@ -1,0 +1,442 @@
+{
+  "site": "juniperbakery.com",
+  "standard": "WCAG 2.2 AA + eMAG 3.1",
+  "date": "2026-10-06T17:32:32.939Z",
+  "counts": {
+    "block": 5,
+    "fix": 3,
+    "look": 2
+  },
+  "passed": [
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "avoid-inline-spacing",
+    "bypass",
+    "document-title",
+    "empty-heading",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "image-redundant-alt",
+    "label-title-only",
+    "label",
+    "landmark-banner-is-top-level",
+    "landmark-contentinfo-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-contentinfo",
+    "landmark-unique",
+    "link-in-text-block",
+    "link-name",
+    "list",
+    "listitem",
+    "meta-viewport-large",
+    "meta-viewport",
+    "nested-interactive",
+    "page-has-heading-one",
+    "target-size"
+  ],
+  "issues": [
+    {
+      "rule": "color-contrast",
+      "impact": "serious",
+      "title": "Os elementos devem ter contraste de cor suficiente",
+      "detail": "Certifique-se de que o contraste entre as cores de primeiro plano e de fundo atenda aos limites de relação de contraste WCAG 2 AA",
+      "sc": [
+        "1.4.3"
+      ],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI&lang=pt-BR",
+      "best": false,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "header > .btn[href$=\"#menu\"]",
+          "html": "<a class=\"btn\" href=\"#menu\">Order for pickup</a>",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.93 (cor do primeiro plano: #ffffff, cor de fundo: #c8643b, tamanho da fonte: 11.3pt (15px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-1.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".eyebrow",
+          "html": "<span class=\"eyebrow\">Alberta St, Portland · open 7 to 3</span>",
+          "summary": "O elemento tem contraste insuficiente no valor de 1.76 (cor do primeiro plano: #e9a98c, cor de fundo: #f6f0e6, tamanho da fonte: 10.5pt (14px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-2.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".actions > .btn[href$=\"#menu\"]",
+          "html": "<a class=\"btn\" href=\"#menu\">See today’s menu</a>",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.93 (cor do primeiro plano: #ffffff, cor de fundo: #c8643b, tamanho da fonte: 11.3pt (15px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-3.jpg",
+          "page": "/"
+        },
+        {
+          "target": "small",
+          "html": "<small>Tuesday · 6 left</small>",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.7 (cor do primeiro plano: #c8643b, cor de fundo: #fbf8f2, tamanho da fonte: 9.8pt (13px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 21,
+      "sev": "block",
+      "emag": [
+        "4.1"
+      ]
+    },
+    {
+      "rule": "focus-visible",
+      "sc": [
+        "2.4.7"
+      ],
+      "impact": "serious",
+      "en": [
+        "Focus is not visible",
+        "When a keyboard user tabs to these elements, nothing on screen shows where they are.",
+        "Add a :focus-visible style (outline or ring) with at least 3:1 contrast against the background."
+      ],
+      "pt": [
+        "O foco não aparece",
+        "Quem navega pelo teclado chega nesses elementos e nada na tela mostra onde está.",
+        "Adicione um estilo :focus-visible (contorno ou anel) com contraste de pelo menos 3:1 com o fundo."
+      ],
+      "title": "O foco não aparece",
+      "detail": "Quem navega pelo teclado chega nesses elementos e nada na tela mostra onde está.",
+      "fixText": "Adicione um estilo :focus-visible (contorno ou anel) com contraste de pelo menos 3:1 com o fundo.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "a ./",
+          "html": "Juniper Bakery",
+          "summary": "",
+          "shot": "shots/el-10.jpg",
+          "page": "/"
+        },
+        {
+          "target": "button",
+          "html": "",
+          "summary": "",
+          "shot": "shots/el-11.jpg",
+          "page": "/"
+        },
+        {
+          "target": "a #menu",
+          "html": "Today",
+          "summary": "",
+          "shot": "shots/el-12.jpg",
+          "page": "/"
+        },
+        {
+          "target": "a #cakes",
+          "html": "Cakes",
+          "summary": "",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 11,
+      "sev": "block",
+      "emag": [
+        "4.4"
+      ]
+    },
+    {
+      "rule": "button-name",
+      "impact": "critical",
+      "title": "Botões devem ter texto discernível",
+      "detail": "Certifique-se de que botões tenham texto discernível",
+      "sc": [
+        "4.1.2"
+      ],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/button-name?application=axeAPI&lang=pt-BR",
+      "best": false,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": ".icon-btn",
+          "html": "<button class=\"icon-btn\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2F4A3A\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"7\"></circle><path d=\"m20 20-3.5-3.5\"></path></svg></bu",
+          "summary": "O elemento não tem texto interno que seja visível aos leitores de tela   O atributo 'aria-label' não existe ou está vazio",
+          "shot": "shots/el-0.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "block",
+      "emag": [
+        "2.2"
+      ]
+    },
+    {
+      "rule": "image-alt",
+      "impact": "critical",
+      "title": "Imagens devem ter texto alternativo",
+      "detail": "Certifique-se de que elementos <img> tenham texto alternativo ou um 'role' igual a 'none' ou 'presentation'",
+      "sc": [
+        "1.1.1"
+      ],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/image-alt?application=axeAPI&lang=pt-BR",
+      "best": false,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "img",
+          "html": "<img src=\"favicon.svg\" width=\"120\" height=\"120\" style=\"margin-bottom:18px\">",
+          "summary": "O elemento não tem um atributo 'alt'   O atributo 'aria-label' não existe ou está vazio",
+          "shot": "shots/el-5.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "block",
+      "emag": [
+        "3.6"
+      ]
+    },
+    {
+      "rule": "reflow",
+      "sc": [
+        "1.4.10"
+      ],
+      "impact": "serious",
+      "en": [
+        "Content does not reflow at 320px",
+        "At 320 CSS pixels wide (400% zoom on a laptop) the page scrolls sideways.",
+        "Let the element wrap or shrink: max-width: 100%, flexible grids, overflow-x: auto on tables and code."
+      ],
+      "pt": [
+        "O conteúdo não se ajusta em 320px",
+        "Com 320 pixels CSS de largura (zoom de 400% num notebook) a página rola pro lado.",
+        "Deixe o elemento quebrar ou encolher: max-width: 100%, grids flexíveis, overflow-x: auto em tabelas e código."
+      ],
+      "title": "O conteúdo não se ajusta em 320px",
+      "detail": "Com 320 pixels CSS de largura (zoom de 400% num notebook) a página rola pro lado.",
+      "fixText": "Deixe o elemento quebrar ou encolher: max-width: 100%, grids flexíveis, overflow-x: auto em tabelas e código.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "div · +220px",
+          "html": "",
+          "summary": "",
+          "shot": "shots/reflow-0.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "block",
+      "emag": [
+        "4.3"
+      ]
+    },
+    {
+      "rule": "region",
+      "impact": "moderate",
+      "title": "Todo o conteúdo da página deve estar contido em regiões (landmarks)",
+      "detail": "Certifique-se de todo o conteúdo da página esteja contido em regiões (landmarks)",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=axeAPI&lang=pt-BR",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": ".eyebrow",
+          "html": "<span class=\"eyebrow\">Alberta St, Portland · open 7 to 3</span>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": "shots/el-7.jpg",
+          "page": "/"
+        },
+        {
+          "target": "h1",
+          "html": "<h1>Bread out of the oven at 7. <em>Cakes by order.</em></h1>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": "shots/el-8.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".lead",
+          "html": "<p class=\"lead\">Order today’s bread before it sells out, or a cake for the weekend with 48 hours’ notice. No account, pay when you pick it up.</p>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": "shots/el-9.jpg",
+          "page": "/"
+        },
+        {
+          "target": ".promo",
+          "html": "<div class=\"promo\">Free cardamom bun with every cake ordered this week. Details <a href=\"#cakes\" style=\"color:#F6F0E6\">here</a>.</div>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 10,
+      "sev": "fix",
+      "emag": [
+        "1.8"
+      ]
+    },
+    {
+      "rule": "heading-order",
+      "impact": "moderate",
+      "title": "Níveis dos títulos devem aumentar de um em um",
+      "detail": "Certifique-se de que a hierarquia dos níveis de títulos seja semanticamente correta",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/heading-order?application=axeAPI&lang=pt-BR",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "h4",
+          "html": "<h4>Order before it sells out</h4>",
+          "summary": "Hierarquia de títulos inválida",
+          "shot": "shots/el-4.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "fix",
+      "emag": [
+        "1.3"
+      ]
+    },
+    {
+      "rule": "landmark-one-main",
+      "impact": "moderate",
+      "title": "O documento deve ter uma região 'main'",
+      "detail": "Certifique-se de que o documento tenha apenas uma região 'main' e que cada 'iframe' na página tenha no náximo uma região 'main'",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-one-main?application=axeAPI&lang=pt-BR",
+      "best": true,
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "html",
+          "html": "<html lang=\"en\">",
+          "summary": "O documento não tem uma região 'main'",
+          "shot": "shots/el-6.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "fix",
+      "emag": [
+        "1.8"
+      ]
+    },
+    {
+      "rule": "skip-link-missing",
+      "sc": [
+        "2.4.1"
+      ],
+      "impact": "minor",
+      "en": [
+        "No skip link",
+        "The first Tab stop is not a link to the main content, so keyboard users go through the whole menu on every page.",
+        "Add “Skip to content” as the first focusable element, pointing to <main id=\"content\">. eMAG 1.5 asks for it."
+      ],
+      "pt": [
+        "Sem link de pular conteúdo",
+        "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página.",
+        "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra <main id=\"conteudo\">. O eMAG pede isso na recomendação 1.5."
+      ],
+      "title": "Sem link de pular conteúdo",
+      "detail": "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página.",
+      "fixText": "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra <main id=\"conteudo\">. O eMAG pede isso na recomendação 1.5.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "a ./ “Juniper Bakery”",
+          "html": "",
+          "summary": "",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "look",
+      "emag": [
+        "1.5"
+      ]
+    },
+    {
+      "rule": "motion",
+      "sc": [
+        "2.3.3",
+        "2.2.2"
+      ],
+      "impact": "minor",
+      "en": [
+        "Animation ignores reduced motion",
+        "With “reduce motion” on in the system, these animations still run. They can cause nausea for people with vestibular disorders.",
+        "Wrap the animation in @media (prefers-reduced-motion: no-preference), or stop it under reduce."
+      ],
+      "pt": [
+        "A animação ignora o movimento reduzido",
+        "Com “reduzir movimento” ligado no sistema, essas animações continuam. Elas podem causar enjoo em quem tem distúrbio vestibular.",
+        "Coloque a animação dentro de @media (prefers-reduced-motion: no-preference), ou pare ela no modo reduce."
+      ],
+      "title": "A animação ignora o movimento reduzido",
+      "detail": "Com “reduzir movimento” ligado no sistema, essas animações continuam. Elas podem causar enjoo em quem tem distúrbio vestibular.",
+      "fixText": "Coloque a animação dentro de @media (prefers-reduced-motion: no-preference), ou pare ela no modo reduce.",
+      "pages": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "span.badge",
+          "html": "",
+          "summary": "",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 1,
+      "sev": "look",
+      "emag": [
+        "5.5",
+        "2.7"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "url": "http://127.0.0.1:56358/",
+      "path": "/",
+      "keyboard": {
+        "stops": 11,
+        "skip": false,
+        "noFocus": 11,
+        "hidden": 0,
+        "trap": false,
+        "order": [
+          "a ./ “Juniper Bakery”",
+          "button",
+          "a #menu “Today”",
+          "a #cakes “Cakes”",
+          "a #visit “Visit”",
+          "a #menu “Order for pickup”",
+          "a #cakes “here”",
+          "a #menu “See today’s menu”",
+          "a #cakes “Order a cake”",
+          "input “Email for the Friday menu”",
+          "button “Sign up”"
+        ]
+      },
+      "shot": "shots/page-0.jpg"
+    }
+  ]
+}

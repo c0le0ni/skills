@@ -1,0 +1,10 @@
+{
+  "name": "coleoni-a11y",
+  "private": true,
+  "type": "module",
+  "description": "Accessibility audit, WCAG 2.2 AA and eMAG 3.1, with a report",
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "playwright-core": "^1.55.0"
+  }
+}

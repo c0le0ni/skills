@@ -49,6 +49,7 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-og`](#coleoni-og) | Share images from your real pages, with the tags checked and every app previewed |
 | [`/coleoni-launch`](#coleoni-launch) | Checks a whole site before it goes live, with a verdict and screenshots |
 | [`/coleoni-copy`](#coleoni-copy) | Rewrites hype and vague copy into plain, specific text, in English or Portuguese |
+| [`/coleoni-a11y`](#coleoni-a11y) | Accessibility audit for WCAG 2.2 AA and eMAG, with keyboard checks and a report |
 
 <br>
 
@@ -247,6 +248,33 @@ to itself instead of to them.
 /coleoni-copy https://yoursite.com
 /coleoni-copy src/ (the app's buttons, errors and empty states), apply it
 ```
+
+<br>
+
+### `/coleoni-a11y`
+
+<a href="https://skills.coleoni.com/coleoni-a11y/">
+  <img src=".github/assets/coleoni-a11y-report.jpg" alt="An accessibility report made by coleoni-a11y, with each problem cropped from the page" width="100%">
+</a>
+
+Checks whether everyone can use the product: on a keyboard, on a screen
+reader, with low vision, at 320px, sensitive to motion.
+
+- **WCAG 2.2 AA and eMAG 3.1.** Every problem mapped to both, so it works for
+  any client and for Brazilian public bodies and companies under the LBI.
+- **More than a rule engine.** axe-core on every page, plus a keyboard walk
+  (visible focus, traps, skip link), reflow at 320px and reduced motion.
+- **Each problem cropped from the page**, outlined, with who it blocks and the fix.
+- **A manual pass after the script**: headings, alt text that means something,
+  link text, forms and media. Reports in English or Portuguese.
+
+```text
+/coleoni-a11y https://yoursite.com
+/coleoni-a11y ./dist, report in Portuguese, fix the contrast and the focus
+```
+
+skills.coleoni.com went through it: 268 low-contrast elements, a skip link
+and keyboard access to scrolling boxes, all fixed.
 
 ## Made by
 

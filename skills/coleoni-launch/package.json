@@ -1,0 +1,9 @@
+{
+  "name": "coleoni-launch",
+  "private": true,
+  "type": "module",
+  "description": "A pre-launch check of a whole site, with a report and screenshots",
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

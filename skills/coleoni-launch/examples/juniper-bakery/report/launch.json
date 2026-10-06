@@ -1,0 +1,182 @@
+{
+  "site": "juniperbakery.com",
+  "base": null,
+  "date": "2026-10-06T17:08:48.328Z",
+  "verdict": "blocked",
+  "counts": {
+    "blocker": 3,
+    "fix": 12,
+    "info": 5,
+    "ok": 0
+  },
+  "links": {
+    "internal": 3,
+    "external": 0
+  },
+  "pages": [
+    {
+      "url": "/",
+      "status": 200,
+      "title": "Juniper Bakery",
+      "lang": "en",
+      "h1": "Bread out of the oven at 7. Cakes by order.",
+      "weight": 9158,
+      "load": 21,
+      "shot": "shots/00",
+      "images": 1
+    },
+    {
+      "url": "/cakes/",
+      "status": 200,
+      "title": "Juniper Bakery",
+      "lang": "en",
+      "h1": "Cakes by order, 48 hours ahead.",
+      "weight": 4194,
+      "load": 13,
+      "shot": "shots/01",
+      "images": 0
+    }
+  ],
+  "findings": [
+    {
+      "level": "blocker",
+      "area": "Site",
+      "title": "robots.txt blocks the whole site",
+      "detail": "`Disallow: /` for every crawler, usually left over from staging. Nothing will be indexed.",
+      "page": null
+    },
+    {
+      "level": "info",
+      "area": "Site",
+      "title": "robots.txt has no Sitemap line",
+      "detail": "Add `Sitemap: https://…/sitemap.xml`.",
+      "page": null
+    },
+    {
+      "level": "fix",
+      "area": "Site",
+      "title": "sitemap.xml missing",
+      "detail": "Without it, search engines find pages only through links.",
+      "page": null
+    },
+    {
+      "level": "fix",
+      "area": "Site",
+      "title": "404 page",
+      "detail": "returns 404, but with the server's bare error page. Add a page with a way back.",
+      "page": null
+    },
+    {
+      "level": "info",
+      "area": "Site",
+      "title": "HTTPS, redirects and headers",
+      "detail": "Checked on the live domain only. Run again after deploy.",
+      "page": null
+    },
+    {
+      "level": "info",
+      "area": "Search",
+      "title": "No canonical",
+      "detail": "Copies of the page with query strings compete with it.",
+      "page": "/"
+    },
+    {
+      "level": "fix",
+      "area": "Sharing",
+      "title": "No share image",
+      "detail": "Links to this page share without a picture. /coleoni-og makes one from the page.",
+      "page": "/"
+    },
+    {
+      "level": "fix",
+      "area": "Errors",
+      "title": "1 console error",
+      "detail": "initMap is not defined",
+      "page": "/"
+    },
+    {
+      "level": "fix",
+      "area": "Content",
+      "title": "Old copyright year",
+      "detail": "Footer says 2024.",
+      "page": "/"
+    },
+    {
+      "level": "fix",
+      "area": "Links",
+      "title": "1 link to nowhere",
+      "detail": "“Instagram” points to #.",
+      "page": "/"
+    },
+    {
+      "level": "fix",
+      "area": "Images",
+      "title": "1 image without alt",
+      "detail": "Screen readers read the file name. Describe it, or `alt=\"\"` if it is decoration. /coleoni-a11y checks the rest.",
+      "page": "/"
+    },
+    {
+      "level": "blocker",
+      "area": "Search",
+      "title": "noindex is on",
+      "detail": "`noindex, nofollow`. Usually left over from staging; the page will not appear in search.",
+      "page": "/cakes/"
+    },
+    {
+      "level": "fix",
+      "area": "Search",
+      "title": "No meta description",
+      "detail": "Search results and previews make one up from random text.",
+      "page": "/cakes/"
+    },
+    {
+      "level": "info",
+      "area": "Search",
+      "title": "No canonical",
+      "detail": "Copies of the page with query strings compete with it.",
+      "page": "/cakes/"
+    },
+    {
+      "level": "fix",
+      "area": "Sharing",
+      "title": "No share image",
+      "detail": "Links to this page share without a picture. /coleoni-og makes one from the page.",
+      "page": "/cakes/"
+    },
+    {
+      "level": "fix",
+      "area": "Mobile",
+      "title": "Page scrolls sideways on the phone",
+      "detail": "350px wider than the screen, starting at `table`.",
+      "page": "/cakes/"
+    },
+    {
+      "level": "fix",
+      "area": "Content",
+      "title": "Placeholder: Lorem ipsum",
+      "detail": "“…kes by order, 48 hours ahead. Lorem ipsum dolor sit amet, consectetur a…”",
+      "page": "/cakes/"
+    },
+    {
+      "level": "blocker",
+      "area": "Links",
+      "title": "Page answers 404",
+      "detail": "“Visit” on / leads here.",
+      "page": "/visit/"
+    },
+    {
+      "level": "fix",
+      "area": "Search",
+      "title": "Same title on several pages",
+      "detail": "“Juniper Bakery” on 2 pages; search results look identical.",
+      "page": null
+    },
+    {
+      "level": "info",
+      "area": "Site",
+      "title": "No analytics found",
+      "detail": "Fine if on purpose. Without it, there is no way to know if the launch worked.",
+      "page": null
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Launch check · juniperbakery.com</title><style>
+*{box-sizing:border-box;margin:0}
+body{background:#111214;color:#e8e8ea;font:14.5px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1240px;margin:0 auto;padding:48px 32px 64px;display:grid;gap:40px}
+header{display:grid;gap:18px}
+.k{font:600 12px/1 ui-monospace,"SF Mono",Consolas,monospace;letter-spacing:.06em;text-transform:uppercase;color:#8b8d94}
+h1{font-size:44px;line-height:1.05;letter-spacing:-.025em;font-weight:650}
+h1 span{color:#8b8d94}
+.v{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;width:max-content}
+.v.blocked{background:#3a1715;color:#ff8a7d}.v.fixes{background:#3a2c12;color:#ffc861}.v.ready{background:#20300c;color:#aefa0e}
+.v i{width:9px;height:9px;border-radius:50%;background:currentColor}
+.nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#26272b;border:1px solid #26272b;border-radius:14px;overflow:hidden}
+.nums div{background:#151619;padding:16px 18px;display:grid;gap:2px}
+.nums b{font-size:28px;font-weight:650;letter-spacing:-.02em}
+.nums span{color:#8b8d94;font-size:13px}
+.nums .r b{color:#ff8a7d}.nums .y b{color:#ffc861}.nums .g b{color:#aefa0e}
+h2{font-size:22px;letter-spacing:-.01em;font-weight:620;display:flex;gap:10px;align-items:baseline}
+h2 small{font-size:13px;color:#8b8d94;font-weight:500}
+section{display:grid;gap:16px}
+ul{list-style:none;padding:0}
+.list{border:1px solid #26272b;border-radius:14px;overflow:hidden}
+.list li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:14px;padding:14px 18px;border-top:1px solid #222327;align-items:start}
+.list li:first-child{border-top:0}
+.list i,.mini i,.pt i{width:9px;height:9px;border-radius:50%;margin-top:6px;background:#6b6d74}
+.blocker i,i.blocker{background:#ff6b5e}.fix i,i.fix{background:#f5b84a}.ok i,i.ok{background:#aefa0e}
+.list b{display:block;font-weight:600}
+.list span{display:block;color:#a9abb2}
+.list small{display:block;color:#7c7e85;font:12px ui-monospace,Consolas,monospace;margin-top:4px;overflow-wrap:anywhere}
+.list em{font-style:normal;font-size:12px;color:#7c7e85;white-space:nowrap}
+.list li.blocker em{color:#ff8a7d}.list li.fix em{color:#ffc861}
+code{font:12.5px ui-monospace,"SF Mono",Consolas,monospace;background:#1d1e22;padding:1px 5px;border-radius:5px;color:#d9dade}
+.oks{display:flex;flex-wrap:wrap;gap:8px}
+.oks span{display:inline-flex;gap:8px;align-items:center;background:#16180f;border:1px solid #2a3318;color:#c7d6a8;border-radius:999px;padding:5px 12px;font-size:13px}
+.oks span:before{content:"";width:7px;height:7px;border-radius:50%;background:#aefa0e}
+.pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pg{background:#151619;border:1px solid #26272b;border-radius:14px;overflow:hidden;display:grid}
+.shots{position:relative;background:#0c0d0f;aspect-ratio:16/9.6;overflow:hidden}
+.shots img{display:block;width:100%}
+.shots .ph{position:absolute;right:14px;bottom:-40%;width:22%;border-radius:12px;border:3px solid #2a2b30;box-shadow:0 20px 40px -10px rgb(0 0 0 / .7)}
+.pi{padding:14px 16px 16px;display:grid;gap:6px}
+.pt{display:flex;gap:10px;align-items:baseline}
+.pt i{flex:none;transform:translateY(-1px)}
+.pt b{font:600 13.5px ui-monospace,"SF Mono",Consolas,monospace;overflow-wrap:anywhere}
+.pt span{margin-left:auto;color:#7c7e85;font-size:12px;white-space:nowrap}
+.pi p{color:#a9abb2;font-size:13.5px}
+.mini{display:grid;gap:3px}
+.mini li{display:flex;gap:9px;font-size:13px;color:#c9cacf}
+.mini i{flex:none;margin-top:6px}
+.clean{color:#aefa0e!important}
+footer{color:#6b6d74;font-size:12.5px}
+@media (max-width:820px){.w{padding:32px 18px 48px}h1{font-size:32px}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.nums div:last-child{grid-column:1/-1}.pages{grid-template-columns:minmax(0,1fr)}.list li{grid-template-columns:12px minmax(0,1fr)}.list em{grid-column:2}}
+</style></head><body><div class="w">
+<header><span class="k">Launch check · 2026-10-06</span><h1>juniperbakery.com <span>2 pages</span></h1><span class="v blocked"><i></i>Not ready</span></header>
+<div class="nums"><div class="r"><b>3</b><span>block launch</span></div><div class="y"><b>12</b><span>to fix</span></div><div><b>5</b><span>worth a look</span></div><div class="g"><b>0</b><span>site checks ok</span></div><div><b>3</b><span>links checked</span></div></div>
+<section><h2>Fix first <small>grouped, most serious on top</small></h2><ul class="list"><li class="blocker"><i></i><div><b>robots.txt blocks the whole site</b><span><code>Disallow: /</code> for every crawler, usually left over from staging. Nothing will be indexed.</span></div><em>Blocks launch</em></li><li class="blocker"><i></i><div><b>noindex is on</b><span><code>noindex, nofollow</code>. Usually left over from staging; the page will not appear in search.</span><small>/cakes/</small></div><em>Blocks launch</em></li><li class="blocker"><i></i><div><b>Page answers 404</b><span>“Visit” on / leads here.</span><small>/visit/</small></div><em>Blocks launch</em></li><li class="fix"><i></i><div><b>sitemap.xml missing</b><span>Without it, search engines find pages only through links.</span></div><em>To fix</em></li><li class="fix"><i></i><div><b>404 page</b><span>returns 404, but with the server's bare error page. Add a page with a way back.</span></div><em>To fix</em></li><li class="fix"><i></i><div><b>No share image</b><span>Links to this page share without a picture. /coleoni-og makes one from the page.</span><small>/, /cakes/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>1 console error</b><span>initMap is not defined</span><small>/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>Old copyright year</b><span>Footer says 2024.</span><small>/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>1 link to nowhere</b><span>“Instagram” points to #.</span><small>/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>1 image without alt</b><span>Screen readers read the file name. Describe it, or <code>alt=&quot;&quot;</code> if it is decoration. /coleoni-a11y checks the rest.</span><small>/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>No meta description</b><span>Search results and previews make one up from random text.</span><small>/cakes/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>Page scrolls sideways on the phone</b><span>350px wider than the screen, starting at <code>table</code>.</span><small>/cakes/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>Placeholder: Lorem ipsum</b><span>“…kes by order, 48 hours ahead. Lorem ipsum dolor sit amet, consectetur a…”</span><small>/cakes/</small></div><em>To fix</em></li><li class="fix"><i></i><div><b>Same title on several pages</b><span>“Juniper Bakery” on 2 pages; search results look identical.</span></div><em>To fix</em></li><li class="info"><i></i><div><b>robots.txt has no Sitemap line</b><span>Add <code>Sitemap: https://…/sitemap.xml</code>.</span></div><em>Worth a look</em></li><li class="info"><i></i><div><b>HTTPS, redirects and headers</b><span>Checked on the live domain only. Run again after deploy.</span></div><em>Worth a look</em></li><li class="info"><i></i><div><b>No canonical</b><span>Copies of the page with query strings compete with it.</span><small>/, /cakes/</small></div><em>Worth a look</em></li><li class="info"><i></i><div><b>No analytics found</b><span>Fine if on purpose. Without it, there is no way to know if the launch worked.</span></div><em>Worth a look</em></li></ul></section>
+
+<section><h2>Every page <small>desktop and phone</small></h2><div class="pages"><article class="pg"><div class="shots"><img src="shots/00-desktop.jpg" alt=""><img class="ph" src="shots/00-phone.jpg" alt=""></div><div class="pi"><div class="pt"><i class="fix"></i><b>/</b><span>200 · 9 KB · 0.0s</span></div><p>Juniper Bakery</p><ul class="mini"><li class="info"><i></i>No canonical</li><li class="fix"><i></i>No share image</li><li class="fix"><i></i>1 console error</li><li class="fix"><i></i>Old copyright year</li><li class="fix"><i></i>1 link to nowhere</li><li class="fix"><i></i>1 image without alt</li></ul></div></article><article class="pg"><div class="shots"><img src="shots/01-desktop.jpg" alt=""><img class="ph" src="shots/01-phone.jpg" alt=""></div><div class="pi"><div class="pt"><i class="blocker"></i><b>/cakes/</b><span>200 · 4 KB · 0.0s</span></div><p>Juniper Bakery</p><ul class="mini"><li class="blocker"><i></i>noindex is on</li><li class="fix"><i></i>No meta description</li><li class="info"><i></i>No canonical</li><li class="fix"><i></i>No share image</li><li class="fix"><i></i>Page scrolls sideways on the phone</li><li class="fix"><i></i>Placeholder: Lorem ipsum</li></ul></div></article></div></section>
+<footer>Made by /coleoni-launch · skills.coleoni.com</footer>
+</div></body></html>

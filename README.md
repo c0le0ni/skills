@@ -47,6 +47,7 @@ installer. Requires Node.js 18 or newer.
 | [`/coleoni-init`](#coleoni-init) | Sets up a new project's docs before any code, with a one-page overview |
 | [`/coleoni-favicon`](#coleoni-favicon) | The complete favicon set from a logo, checked in tabs and home screens |
 | [`/coleoni-og`](#coleoni-og) | Share images from your real pages, with the tags checked and every app previewed |
+| [`/coleoni-launch`](#coleoni-launch) | Checks a whole site before it goes live, with a verdict and screenshots |
 
 <br>
 
@@ -194,6 +195,31 @@ its headline, its logo, its fonts and colors, and the page in a browser frame.
 
 The share images of [skills.coleoni.com](https://skills.coleoni.com) were made
 by this skill.
+
+<br>
+
+### `/coleoni-launch`
+
+<a href="https://skills.coleoni.com/coleoni-launch/">
+  <img src=".github/assets/coleoni-launch-report.jpg" alt="A launch report made by coleoni-launch, in a browser and on a phone" width="100%">
+</a>
+
+Opens every page like a careful first visitor and a search engine would, then
+says plainly whether the site is ready.
+
+- **Blockers first:** `noindex` and `Disallow: /` left from staging, pages and
+  links that 404, scripts that fail, no HTTPS, no viewport.
+- **Then the rest:** console errors, mixed content, Lorem ipsum and other
+  placeholders, missing titles and share images, sideways scroll on the phone,
+  heavy images, sitemap, 404 page, redirects, security headers, compression.
+- **A report you can send:** verdict, issues grouped across pages, and every
+  page on desktop and phone.
+- **Live sites, staging, dev servers or a build folder**, which it serves itself.
+
+```text
+/coleoni-launch https://yoursite.com
+/coleoni-launch ./dist, domain yoursite.com, fix what you can
+```
 
 ## Made by
 

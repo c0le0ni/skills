@@ -231,8 +231,15 @@ function readPage() {
 /** The brand in the header (logo, or logo + name), as a transparent PNG */
 async function captureBrand(page) {
   const handle = await page.evaluateHandle(() => {
+    const marked = () => {
+      const ok = (el) => {
+        const r = el.getBoundingClientRect();
+        return r.width >= 12 && r.height >= 10 && r.width <= 640 && r.height <= 240;
+      };
+      return [...document.querySelectorAll("[class*=logo i], [id*=logo i], img[alt*=logo i], img[src*=logo i]")].find(ok) ?? null;
+    };
     const scope = document.querySelector("header, [role=banner], nav, [class*=header], [class*=navbar]");
-    if (!scope) return null;
+    if (!scope) return marked();
     const base = new URL("./", location.href).pathname;
     const links = [...scope.querySelectorAll("a[href]")];
     const home = (a) => {
@@ -254,7 +261,8 @@ async function captureBrand(page) {
       links.find((a) => home(a) && media(a) && fits(a)) ??
       links.find((a) => media(a) && fits(a)) ??
       links.find((a) => home(a) && a.innerText.trim().length > 1 && a.innerText.trim().length < 40 && fits(a)) ??
-      [...scope.querySelectorAll("svg, img")].find(fits);
+      [...scope.querySelectorAll("svg, img")].find(fits) ??
+      marked();
     return el ?? null;
   });
   const el = handle.asElement();
@@ -316,10 +324,15 @@ function design(info, brand, o, url) {
 }
 
 function ogHtml(layout, d, info, brand, heroSrc) {
+  // no logo on the page: the site icon (apple-touch-icon, then SVG, then the largest)
+  const icon = [...info.icons].sort((a, b) => {
+    const score = (i) => (/apple/.test(i.rel) ? 3000 : /\.svg/i.test(i.href) ? 2000 : 0) + (parseInt(i.sizes) || 0);
+    return score(b) - score(a);
+  })[0];
   const logo = brand
     ? `<img class="logo" src="${brand.src}" style="height:${Math.round(Math.max(26, Math.min(brand.h * 1.35, 54)))}px" alt="">`
-    : d.domain
-      ? `<span class="wordmark">${esc(d.domain)}</span>`
+    : icon
+      ? `<img class="logo" src="${esc(icon.href)}" style="height:52px;border-radius:12px" alt="">`
       : "";
   const base = `
   :host{all:initial}

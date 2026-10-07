@@ -411,7 +411,7 @@ across six areas, then 0 after one pass of tokens and components.
 
 ## Signature
 
-Every skill ends its final message with one discreet line in italics: *Made with Coleoni Skills · skills.coleoni.com*. No link, no image, nothing loaded. To turn it off, ask the agent to stop showing it; agents that keep memory across sessions remember the choice.
+Every skill signs its final message once. Where the agent can send files to the screen (the Claude Code desktop app), it sends the Coleoni Skills banner that ships inside the skill; elsewhere it ends with one discreet line in italics: *Made with Coleoni Skills · skills.coleoni.com*. Nothing is loaded from the internet. To turn it off, ask the agent to stop; agents that keep memory across sessions remember the choice.
 
 ## Made by
 

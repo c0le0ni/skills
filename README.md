@@ -411,7 +411,7 @@ across six areas, then 0 after one pass of tokens and components.
 
 ## Signature
 
-Every skill ends its final message with one line: the Coleoni Skills banner, linked to the site. Where images do not render (a terminal), it shows as the text "Coleoni Skills · skills.coleoni.com · github.com/c0le0ni/skills". The image loads from skills.coleoni.com, so that server sees the request, as with any image on the web. To turn it off, ask the agent to stop showing it; agents that keep memory across sessions remember the choice.
+Every skill ends its final message with one discreet line in italics: *Made with Coleoni Skills · skills.coleoni.com*. No link, no image, nothing loaded. To turn it off, ask the agent to stop showing it; agents that keep memory across sessions remember the choice.
 
 ## Made by
 

@@ -86,6 +86,7 @@ Use that list to pick `--column`.
 | `--force-visible` | Forces entrance-animation elements (AOS, `.reveal`, `.wow`…) that stayed transparent to show |
 | `--motion` | Captures without reduced motion. The default is reduced, which avoids catching an animation halfway |
 | `--wait 800` | Extra wait before capturing (slow sites) |
+| `--scheme dark` | Opens the site in the dark color scheme. The default is light, so a site or app that is dark by default needs this |
 | `--desktop 1440x900` `--mobile 390x844` | Viewports |
 | `--reuse` | Reuses the captures and only recomposes. Use it to try backgrounds and layouts quickly |
 

@@ -41,6 +41,8 @@ node thumb.mjs <url> [options]
   --force-visible                forces entrance-animation elements to show (AOS, reveal…)
   --motion                       captures without reduced motion (default: reduced)
   --wait 800                     extra wait (ms) before capturing
+  --scheme light|dark            color scheme the site is opened in (default light; use dark for a site or
+                                 app that is dark by default)
   --desktop 1440x900 --mobile 390x844   viewports
   --reuse                        reuses the previous captures (only recomposes)
 
@@ -64,6 +66,7 @@ function parseArgs(argv) {
     forceVisible: false,
     motion: false,
     wait: 800,
+    scheme: "light",
     desktop: "1440x900",
     mobile: "390x844",
     reuse: false,
@@ -118,6 +121,9 @@ function parseArgs(argv) {
         break;
       case "--wait":
         o.wait = Number(val());
+        break;
+      case "--scheme":
+        o.scheme = val() === "dark" ? "dark" : "light";
         break;
       case "--desktop":
         o.desktop = val();
@@ -252,7 +258,7 @@ async function capture(o, dir) {
 
   // desktop
   {
-    const ctx = await browser.newContext({ viewport: { width: dw, height: dh }, deviceScaleFactor: 2, reducedMotion });
+    const ctx = await browser.newContext({ viewport: { width: dw, height: dh }, deviceScaleFactor: 2, reducedMotion, colorScheme: o.scheme });
     const page = await ctx.newPage();
     await prepare(page, o.url, o);
     meta.palette = await page.evaluate(readPalette);
@@ -278,6 +284,7 @@ async function capture(o, dir) {
       isMobile: true,
       hasTouch: true,
       reducedMotion,
+      colorScheme: o.scheme,
     });
     const page = await ctx.newPage();
     await prepare(page, o.url, o);

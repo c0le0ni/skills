@@ -66,7 +66,8 @@ first. If Chrome is not found, set `CHROME_PATH`.
 Other options: `--logo file.svg` (when the header logo is not the right one),
 `--bg` and `--accent` (when the page's colors are read wrong), `--hide
 ".cookie-banner,#chat"` (anything covering the page), `--wait 1500` (slow
-pages), `--format png`.
+pages), `--scheme dark` (an app that is dark by default: the page is opened in
+light, like a link preview bot, unless told otherwise), `--format png`.
 
 Output:
 

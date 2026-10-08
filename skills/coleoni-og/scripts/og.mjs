@@ -33,12 +33,14 @@ node og.mjs <url|file|folder ...> --out <folder> [options]
   --format jpg|png             image format (default jpg)
   --hide "sel,sel"             hide elements (cookie banners, chat widgets) before capture
   --wait 600                   extra wait after load, in ms
+  --scheme light|dark          color scheme the page is opened in (default light, like a link preview bot);
+                               use dark for an app that is dark by default
   --no-preview                 skip preview.html/.png
 `;
 
 // ---------------------------------------------------------------- arguments
 function parseArgs(argv) {
-  const o = { targets: [], out: "og", layout: "screen", sitemap: null, limit: 12, title: null, subtitle: null, domain: null, logo: null, bg: null, accent: null, base: null, format: "jpg", hide: [], wait: 600, preview: true };
+  const o = { targets: [], out: "og", layout: "screen", sitemap: null, limit: 12, title: null, subtitle: null, domain: null, logo: null, bg: null, accent: null, base: null, format: "jpg", hide: [], wait: 600, scheme: "light", preview: true };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     const val = () => argv[++i] ?? "";
@@ -64,6 +66,7 @@ function parseArgs(argv) {
       case "--format": o.format = val(); break;
       case "--hide": o.hide = val().split(",").map((s) => s.trim()).filter(Boolean); break;
       case "--wait": o.wait = Number(val()); break;
+      case "--scheme": o.scheme = val() === "dark" ? "dark" : "light"; break;
       case "--no-preview": o.preview = false; break;
       default:
         console.error(`unknown option: ${a}`);
@@ -607,7 +610,7 @@ if (urls.length > 1 && (o.title || o.subtitle)) console.log("note: --title/--sub
 
 const browser = await launch();
 // Link previews are fetched by bots with no locale and US time, so the pages are read the same way
-const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, bypassCSP: true, reducedMotion: "reduce", locale: "en-US", timezoneId: "UTC" });
+const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, bypassCSP: true, reducedMotion: "reduce", colorScheme: o.scheme, locale: "en-US", timezoneId: "UTC" });
 const pages = [];
 const used = new Set();
 for (const url of urls) {

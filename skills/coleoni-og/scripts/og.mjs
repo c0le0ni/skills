@@ -181,16 +181,27 @@ async function prepare(page, url, o) {
 function readPage() {
   const q = (s) => document.querySelector(s);
   const meta = (k) => (q(`meta[property="${k}"]`) || q(`meta[name="${k}"]`))?.getAttribute("content")?.trim() || null;
+  // computed colors can come back as oklch(), lab() or color(); a canvas turns any of them into sRGB
+  const cx = Object.assign(document.createElement("canvas"), { width: 1, height: 1 }).getContext("2d", { willReadFrequently: true });
+  const toRgb = (c) => {
+    if (!c || c === "transparent") return c;
+    cx.clearRect(0, 0, 1, 1);
+    cx.fillStyle = "#000";
+    cx.fillStyle = c;
+    cx.fillRect(0, 0, 1, 1);
+    const [r, g, b, a] = cx.getImageData(0, 0, 1, 1).data;
+    return a === 0 ? "transparent" : a < 255 ? `rgba(${r}, ${g}, ${b}, ${+(a / 255).toFixed(3)})` : `rgb(${r}, ${g}, ${b})`;
+  };
   const clear = (c) => !c || c === "transparent" || /rgba\(.*,\s*0\)$/.test(c);
   const h1el = [...document.querySelectorAll("h1")].find((h) => h.getBoundingClientRect().height > 0);
   const hcs = getComputedStyle(h1el ?? document.body);
   const bcs = getComputedStyle(document.body);
-  let bodyBg = bcs.backgroundColor;
-  if (clear(bodyBg)) bodyBg = getComputedStyle(document.documentElement).backgroundColor;
+  let bodyBg = toRgb(bcs.backgroundColor);
+  if (clear(bodyBg)) bodyBg = toRgb(getComputedStyle(document.documentElement).backgroundColor);
   if (clear(bodyBg)) bodyBg = "rgb(255, 255, 255)";
   const counts = new Map();
   for (const el of document.querySelectorAll("a, button, [class*=btn], [class*=button]")) {
-    const c = getComputedStyle(el).backgroundColor;
+    const c = toRgb(getComputedStyle(el).backgroundColor);
     if (clear(c)) continue;
     const [r, g, b] = c.match(/[\d.]+/g).map(Number);
     const max = Math.max(r, g, b);
@@ -201,7 +212,7 @@ function readPage() {
   if (!counts.size) {
     for (const el of [...document.querySelectorAll("body *")].slice(0, 3000)) {
       if (!el.childNodes.length || !el.getBoundingClientRect().height) continue;
-      const c = getComputedStyle(el).color;
+      const c = toRgb(getComputedStyle(el).color);
       const [r, g, b] = c.match(/[\d.]+/g).map(Number);
       if (Math.max(r, g, b) - Math.min(r, g, b) < 60) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
@@ -221,8 +232,8 @@ function readPage() {
     themeColor: meta("theme-color"),
     icons,
     bodyBg,
-    text: bcs.color,
-    h1Color: hcs.color,
+    text: toRgb(bcs.color),
+    h1Color: toRgb(hcs.color),
     accent: [...counts].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
     headFont: hcs.fontFamily,
     headWeight: hcs.fontWeight,

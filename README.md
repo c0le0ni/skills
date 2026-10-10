@@ -74,6 +74,8 @@ Nothing is AI-generated: the image shows exactly what was shipped.
 - **6 layouts:** `split`, `devices`, `wall`, `phones`, `focus` and `tilt`.
 - **7 backgrounds:** `auto`, `dark`, `brand`, `mesh`, `grid`, `blur` or any hex color.
 - **JPG at 1× and 2×**, in the size you ask for: 3:2, 16:9, 4:3, 4:5 feed or square.
+- **Light or dark.** `--scheme dark|light` sets the color scheme the site opens
+  in. Light is the default; use `dark` for a site or app that is dark by default.
 - **No browser download.** It uses the Chrome or Edge already on the machine.
   The only package is `playwright-core`, which the agent installs on first use.
 
@@ -197,6 +199,9 @@ its headline, its logo, its fonts and colors, and the page in a browser frame.
   and Discord, today and with the new tags.
 - **A whole site at once** from its sitemap, then installed the way the
   framework expects.
+- **Light or dark.** `--scheme dark|light` sets the color scheme the page opens
+  in. Light is the default, the way a link preview bot reads it; use `dark` for
+  an app that is dark by default.
 
 ```text
 /coleoni-og https://yoursite.com

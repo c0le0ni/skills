@@ -36,7 +36,7 @@ them to. To skip the questions:
 | See the list without installing | `npx skills add c0le0ni/skills --list` |
 
 It uses [`skills`](https://github.com/vercel-labs/skills), Vercel's open skills
-installer. Requires Node.js 18 or newer.
+installer. Requires Node.js 22.20 or newer.
 
 ## Skills
 

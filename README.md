@@ -427,8 +427,9 @@ Every skill signs its final message once. Where the agent can send files to the 
   </picture>
 </a>
 
-**Michel Coleoni**, a developer who builds custom websites. These skills come
-out of Coleoni's projects and are open for anyone to use.
+I'm **Michel Coleoni**. I design and build sites, systems and products end to
+end: the interface, the code, the server and what happens after launch. These
+skills come out of that work and are free for anyone to use.
 
 - Website: [coleoni.com](https://coleoni.com)
 - Skills: [skills.coleoni.com](https://skills.coleoni.com)

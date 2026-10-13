@@ -1,0 +1,180 @@
+{
+  "skill": "coleoni-polish",
+  "page": "skills.coleoni.com/coleoni-polish",
+  "findings": [
+    {
+      "level": "medium",
+      "title": "5 different corner radii",
+      "detail": "In use: <code>3px</code> ×3, <code>5px</code> ×7, <code>8px</code> ×15, <code>10px</code> ×1, <code>12px</code> ×9. Close values (10, 12, 16) read as mistakes, not choices.",
+      "fix": "A scale of 3 or 4 tokens (<code>--r-sm</code>, <code>--r-md</code>, <code>--r-lg</code>, <code>--r-pill</code>), and each component picks one.",
+      "shots": [
+        "shots/polish-0.jpg",
+        "shots/polish-1.jpg",
+        "shots/polish-2.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "14 spacings off the 4px grid",
+      "detail": "Values like <code>14px</code> ×80, <code>57px</code> ×20, <code>18px</code> ×18, <code>115.2px</code> ×14, <code>19.5px</code> ×5, <code>7px</code> ×4, <code>51.2px</code> ×4, <code>50px</code> ×2. Almost equal to their neighbors on the scale, they create 1 to 3px misalignments.",
+      "fix": "A spacing scale in multiples of 4 (<code>4 8 12 16 24 32 48 64</code>) and tokens for it.",
+      "shots": [
+        "shots/polish-3.jpg",
+        "shots/polish-4.jpg",
+        "shots/polish-5.jpg"
+      ]
+    }
+  ],
+  "scales": {
+    "radii": [
+      {
+        "k": "3",
+        "n": 3
+      },
+      {
+        "k": "5",
+        "n": 7
+      },
+      {
+        "k": "8",
+        "n": 15
+      },
+      {
+        "k": "10",
+        "n": 1
+      },
+      {
+        "k": "12",
+        "n": 9
+      },
+      {
+        "k": "pill",
+        "n": 9
+      }
+    ],
+    "shadows": [
+      {
+        "k": "rgba(174, 250, 14, 0.12) 0px 0px 0px 4px",
+        "n": 5
+      },
+      {
+        "k": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+        "n": 3
+      }
+    ],
+    "spacing": [
+      {
+        "k": 2,
+        "n": 16
+      },
+      {
+        "k": 4,
+        "n": 6
+      },
+      {
+        "k": 6,
+        "n": 36
+      },
+      {
+        "k": 7,
+        "n": 4
+      },
+      {
+        "k": 8,
+        "n": 43
+      },
+      {
+        "k": 10,
+        "n": 34
+      },
+      {
+        "k": 12,
+        "n": 37
+      },
+      {
+        "k": 14,
+        "n": 80
+      },
+      {
+        "k": 16,
+        "n": 36
+      },
+      {
+        "k": 18,
+        "n": 18
+      },
+      {
+        "k": 19.5,
+        "n": 5
+      },
+      {
+        "k": 20,
+        "n": 72
+      },
+      {
+        "k": 21,
+        "n": 2
+      },
+      {
+        "k": 22,
+        "n": 2
+      },
+      {
+        "k": 24,
+        "n": 5
+      },
+      {
+        "k": 28,
+        "n": 4
+      },
+      {
+        "k": 32,
+        "n": 2
+      },
+      {
+        "k": 40,
+        "n": 1
+      },
+      {
+        "k": 50,
+        "n": 2
+      },
+      {
+        "k": 51.2,
+        "n": 4
+      },
+      {
+        "k": 52,
+        "n": 5
+      },
+      {
+        "k": 57,
+        "n": 20
+      },
+      {
+        "k": 64,
+        "n": 5
+      },
+      {
+        "k": 76.8,
+        "n": 1
+      },
+      {
+        "k": 89.6,
+        "n": 1
+      },
+      {
+        "k": 102.4,
+        "n": 1
+      },
+      {
+        "k": 115.2,
+        "n": 14
+      },
+      {
+        "k": 140.8,
+        "n": 1
+      }
+    ]
+  }
+}

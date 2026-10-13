@@ -1,0 +1,231 @@
+--- site-before/assets/css/site.css	2026-10-13 08:54:52.183529400 -0300
++++ site-after/assets/css/site.css	2026-10-13 09:00:34.667906500 -0300
+@@ -73,7 +73,15 @@
+   --r-3: 8px;
+   --r-4: 12px;
+ 
+-  --page-pad: clamp(1rem, 4.45vw, 4rem);
++  /* espaço: só múltiplos de 4 */
++  --s-1: 4px;
++  --s-2: 8px;
++  --s-3: 12px;
++  --s-4: 16px;
++  --s-5: 20px;
++  --s-6: 24px;
++
++  --page-pad: round(clamp(1rem, 4.45vw, 4rem), 4px);
+   --page-max: 80rem;
+   --nav-h: 64px;
+ 
+@@ -279,8 +287,8 @@
+    O rodapé usa o mesmo .nav-link e fica como está. */
+ .nav .nav-link {
+   height: 32px;
+-  padding: 0 10px;
+-  border-radius: 6px;
++  padding: 0 var(--s-3);
++  border-radius: var(--r-2);
+ }
+ 
+ .nav .nav-link:active {
+@@ -383,7 +391,7 @@
+   justify-content: center;
+   gap: 8px;
+   height: 44px;
+-  padding: 0 18px;
++  padding: 0 var(--s-4);
+   border-radius: var(--r-3);
+   border: 1px solid transparent;
+   font-size: 0.9375rem;
+@@ -432,7 +440,7 @@
+ 
+ .hero {
+   position: relative;
+-  padding: clamp(4.5rem, 11vw, 9.5rem) 0 clamp(3.5rem, 7vw, 6rem);
++  padding: round(clamp(4.5rem, 11vw, 9.5rem), 4px) 0 round(clamp(3.5rem, 7vw, 6rem), 4px);
+   isolation: isolate;
+ }
+ 
+@@ -456,7 +464,7 @@
+ .hero-meta {
+   display: flex;
+   flex-wrap: wrap;
+-  gap: 8px 22px;
++  gap: var(--s-2) var(--s-6);
+   margin-top: 10px;
+   font-family: var(--font-mono);
+   font-size: 0.8125rem;
+@@ -478,7 +486,7 @@
+ /* ---------------------------------------------------------------- seções */
+ 
+ .section {
+-  padding: clamp(4rem, 9vw, 8rem) 0;
++  padding: round(clamp(4rem, 9vw, 8rem), 4px) 0;
+   border-top: 1px solid var(--line);
+ }
+ 
+@@ -487,11 +495,11 @@
+   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+   gap: 24px 64px;
+   align-items: end;
+-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
++  margin-bottom: round(clamp(2rem, 4vw, 3.5rem), 4px);
+ }
+ 
+ .section-head .eyebrow {
+-  margin-bottom: 18px;
++  margin-bottom: var(--s-4);
+ }
+ 
+ @media (max-width: 860px) {
+@@ -806,7 +814,7 @@
+ /* ---------------------------------------------------------------- galeria do hero */
+ 
+ .showcase {
+-  margin-top: clamp(3rem, 6vw, 5rem);
++  margin-top: round(clamp(3rem, 6vw, 5rem), 4px);
+ }
+ 
+ .stage {
+@@ -953,9 +961,9 @@
+ .terminal-bar {
+   display: flex;
+   align-items: center;
+-  gap: 7px;
++  gap: var(--s-2);
+   height: 40px;
+-  padding: 0 14px;
++  padding: 0 var(--s-4);
+   border-bottom: 1px solid var(--line);
+   background: var(--surface);
+ }
+@@ -977,7 +985,7 @@
+ 
+ .terminal pre {
+   margin: 0;
+-  padding: 20px 22px 24px;
++  padding: var(--s-5) var(--s-6) var(--s-6);
+   font-size: 0.8125rem;
+   line-height: 1.75;
+   color: var(--text-2);
+@@ -1302,7 +1310,7 @@
+   align-items: center;
+   justify-content: space-between;
+   gap: 16px;
+-  padding: 14px 0;
++  padding: var(--s-4) 0;
+   border-bottom: 1px solid var(--line);
+   font-size: 0.9375rem;
+ }
+@@ -1333,13 +1341,16 @@
+ }
+ 
+ .code.cmd pre {
+-  padding: 10px 50px 10px 16px;
++  /* 8 + 23.8 + 8 + borda = 41.8: o min-height de 44px manda, igual ao .btn */
++  padding: var(--s-2) 52px var(--s-2) var(--s-4);
+   font-size: 0.875rem;
+ }
+ 
+ .code.cmd .copy {
+   top: 50%;
+   transform: translateY(-50%);
++  /* concêntrico: 8 de fora − 7 de folga = 1, arredonda pro menor token */
++  border-radius: var(--r-1);
+ }
+ 
+ .cta .code.cmd {
+@@ -1378,7 +1389,7 @@
+ .code-list {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr);
+-  gap: 14px;
++  gap: var(--s-4);
+ }
+ 
+ .code-step {
+@@ -1408,7 +1419,7 @@
+ 
+ .code pre {
+   margin: 0;
+-  padding: 14px 52px 14px 16px;
++  padding: var(--s-3) 52px var(--s-3) var(--s-4);
+   font-size: 0.8125rem;
+   line-height: 1.7;
+   color: var(--text);
+@@ -1507,7 +1518,7 @@
+ 
+ th,
+ td {
+-  padding: 14px 20px;
++  padding: var(--s-3) var(--s-5);
+   text-align: left;
+   vertical-align: top;
+   border-top: 1px solid var(--line);
+@@ -1576,7 +1587,7 @@
+   justify-items: center;
+   gap: 28px;
+   text-align: center;
+-  padding: clamp(4rem, 9vw, 7.5rem) var(--page-pad);
++  padding: round(clamp(4rem, 9vw, 7.5rem), 4px) var(--page-pad);
+   border: 1px solid var(--line);
+   border-radius: var(--r-4);
+   background: var(--surface);
+@@ -1602,7 +1613,7 @@
+ /* ---------------------------------------------------------------- rodapé */
+ 
+ .footer {
+-  margin-top: clamp(4rem, 8vw, 7rem);
++  margin-top: round(clamp(4rem, 8vw, 7rem), 4px);
+   border-top: 1px solid var(--line);
+   padding: 32px 0 40px;
+ }
+@@ -2104,7 +2115,7 @@
+   margin: 0;
+   max-height: 560px;
+   overflow: auto;
+-  padding: 18px 20px 22px;
++  padding: var(--s-5) var(--s-5) var(--s-6);
+   font-size: 0.78rem;
+   line-height: 1.7;
+   color: var(--text-2);
+@@ -2143,7 +2154,7 @@
+ .fact {
+   display: grid;
+   gap: 2px;
+-  padding: 14px 16px;
++  padding: var(--s-4);
+   border-left: 1px solid var(--line);
+ }
+ 
+@@ -2204,8 +2215,8 @@
+   left: 16px;
+   top: -64px;
+   z-index: 1000;
+-  padding: 10px 16px;
+-  border-radius: 10px;
++  padding: var(--s-3) var(--s-4);
++  border-radius: var(--r-3);
+   background: var(--accent);
+   color: #0a0a0a;
+   font-weight: 600;
+@@ -2241,7 +2252,7 @@
+   grid-area: 1 / 1;
+   display: inline-flex;
+   align-items: center;
+-  gap: 7px;
++  gap: var(--s-2);
+   white-space: nowrap;
+   color: var(--text);
+   opacity: 0;
+--- site-before/coleoni-polish/index.html	2026-10-13 08:54:52.149938800 -0300
++++ site-after/coleoni-polish/index.html	2026-10-13 08:58:33.283867800 -0300
+@@ -199,7 +199,7 @@
+         <div class="wrap install">
+           <div>
+             <span class="eyebrow reveal"><span class="dot"></span>Install</span>
+-            <h2 class="h2 reveal" style="--d: 60ms; margin-top: 18px">One command, any agent.</h2>
++            <h2 class="h2 reveal" style="--d: 60ms; margin-top: var(--s-4)">One command, any agent.</h2>
+             <p class="lead reveal" style="--d: 120ms; margin-top: 20px">The only package is <code class="mono">playwright-core</code>, installed by the agent on first use. Part of the interface family: <a href="/coleoni-interface/">/coleoni-interface</a> runs it with type, color and layout.</p>
+             <div class="reqs reveal" style="--d: 180ms">
+               <div class="req"><span>Agent</span><span>Claude Code, Codex, Cursor…</span></div>

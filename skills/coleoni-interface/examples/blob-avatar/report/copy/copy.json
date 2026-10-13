@@ -1,0 +1,347 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "lang": "en",
+      "voice": {
+        "we": 0,
+        "you": 2
+      },
+      "flag": null
+    }
+  ],
+  "counts": {},
+  "items": [
+    {
+      "page": "/",
+      "role": "title",
+      "text": "Blob Avatar: make your own animated avatar",
+      "where": "head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "description",
+      "text": "Make an animated blob avatar: pick a shape, an expression, a color and animations. Export PNG, GIF or SVG, or put it on your site. Free, no sign-up.",
+      "where": "head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "h1",
+      "text": "Blob Avatar: make your own animated avatar",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Customize",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Animate",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Switch to the dark theme",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Language: EN",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Export PNG",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "More export options",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Randomize",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Undo",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Redo",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Settings",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Lime circle, neutral",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Purple pebble, happy",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Blue squircle, attentive",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Amber triangle, excited",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Pink cloud, laughing",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Turquoise droplet, curious",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Grey ghost, scared",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Red heart, shy",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Shape",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Expression",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Color",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Circle",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Pebble",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Squircle",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Capsule",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Triangle",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Diamond",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Hexagon",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Star",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Cloud",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Droplet",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Heart",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "button",
+      "text": "Ghost",
+      "where": "section",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "GitHub (opens in a new tab)",
+      "where": "header",
+      "flags": [],
+      "also": [
+        "/"
+      ]
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Coleoni (opens in a new tab)",
+      "where": "footer",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Coleoni Skills",
+      "where": "footer",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "nav",
+      "text": "Loaders",
+      "where": "footer",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/",
+      "role": "text",
+      "text": "Made by Coleoni (opens in a new tab)",
+      "where": "footer",
+      "css": "none",
+      "flags": [],
+      "also": []
+    }
+  ]
+}

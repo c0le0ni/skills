@@ -1,0 +1,26 @@
+{
+  "skill": "coleoni-layout",
+  "page": "blob.coleoni.com",
+  "findings": [],
+  "edges": [
+    {
+      "x": 745,
+      "n": 1
+    }
+  ],
+  "gaps": [
+    -804
+  ],
+  "widths": [
+    {
+      "w": 390,
+      "extra": 0,
+      "el": null
+    },
+    {
+      "w": 768,
+      "extra": 0,
+      "el": null
+    }
+  ]
+}

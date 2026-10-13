@@ -1,0 +1,346 @@
+{
+  "skill": "coleoni-color",
+  "page": "blob.coleoni.com",
+  "findings": [
+    {
+      "level": "high",
+      "title": "Contraste 3.04:1 em “Made by\nColeoni\n(opens in a ”",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#898C92;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#898C92</code> sobre <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F2F3F5;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F2F3F5</code>, 11px. Precisa de 4.5:1 (WCAG AA).",
+      "fix": "A mesma cor um pouco mais escura: <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#6C6F74;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#6C6F74</code> (4.57:1).",
+      "shots": [
+        "shots/color-0.jpg",
+        "shots/color-1.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "2 grupos de cores quase iguais",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FFFFFF;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#FFFFFF</code> ×18 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F9FAFB;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F9FAFB</code> ×4 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FDFDFE;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#FDFDFE</code> ×2<br><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#EDEEF0;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#EDEEF0</code> ×2 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F2F3F5;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F2F3F5</code> ×1<br>Ninguém vê a diferença; o código mantém as duas pra sempre.",
+      "fix": "Fique com a mais usada de cada grupo e transforme em token.",
+      "shots": [
+        "shots/color-2.jpg",
+        "shots/color-3.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "7 cores com saturação",
+      "detail": "Muitas cores fortes competem pela atenção; o destaque deixa de destacar.",
+      "fix": "Uma cor de destaque, uma de apoio, e o resto neutro.",
+      "shots": []
+    },
+    {
+      "level": "low",
+      "title": "Sem modo escuro",
+      "detail": "Nenhuma regra <code>prefers-color-scheme: dark</code>. Não é obrigatório; se for fazer, os tokens abaixo já trazem a versão escura.",
+      "fix": "Tokens com valores claros e escuros, trocados por <code>@media (prefers-color-scheme: dark)</code>.",
+      "shots": []
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#606369",
+      "n": 53,
+      "roles": {
+        "icon": 35,
+        "text": 18
+      },
+      "oklch": [
+        0.499,
+        0.01,
+        264.476
+      ]
+    },
+    {
+      "hex": "#141416",
+      "n": 30,
+      "roles": {
+        "icon": 30
+      },
+      "oklch": [
+        0.192,
+        0.004,
+        286.018
+      ]
+    },
+    {
+      "hex": "#FFFFFF",
+      "n": 18,
+      "roles": {
+        "background": 4,
+        "icon": 14
+      },
+      "oklch": [
+        1,
+        0,
+        89.876
+      ]
+    },
+    {
+      "hex": "#AEFA0E",
+      "n": 16,
+      "roles": {
+        "icon": 16
+      },
+      "oklch": [
+        0.901,
+        0.236,
+        128.61
+      ]
+    },
+    {
+      "hex": "#17181B",
+      "n": 11,
+      "roles": {
+        "text": 3,
+        "icon": 6,
+        "background": 2
+      },
+      "oklch": [
+        0.209,
+        0.006,
+        271.116
+      ]
+    },
+    {
+      "hex": "#898C92",
+      "n": 11,
+      "roles": {
+        "icon": 3,
+        "text": 8
+      },
+      "oklch": [
+        0.639,
+        0.01,
+        264.499
+      ]
+    },
+    {
+      "hex": "#000000",
+      "n": 5,
+      "roles": {
+        "background": 2,
+        "icon": 1,
+        "border": 2
+      },
+      "oklch": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hex": "#F9FAFB",
+      "n": 4,
+      "roles": {
+        "icon": 3,
+        "text": 1
+      },
+      "oklch": [
+        0.985,
+        0.002,
+        247.839
+      ]
+    },
+    {
+      "hex": "#EDEEF0",
+      "n": 2,
+      "roles": {
+        "background": 2
+      },
+      "oklch": [
+        0.949,
+        0.003,
+        264.542
+      ]
+    },
+    {
+      "hex": "#FDFDFE",
+      "n": 2,
+      "roles": {
+        "background": 2
+      },
+      "oklch": [
+        0.994,
+        0.001,
+        286.376
+      ]
+    },
+    {
+      "hex": "#F2F3F5",
+      "n": 1,
+      "roles": {
+        "background": 1
+      },
+      "oklch": [
+        0.964,
+        0.003,
+        264.542
+      ]
+    },
+    {
+      "hex": "#8B5CF6",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.606,
+        0.219,
+        292.717
+      ]
+    },
+    {
+      "hex": "#3B93F0",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.656,
+        0.162,
+        252.676
+      ]
+    },
+    {
+      "hex": "#F0B429",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.804,
+        0.156,
+        82.538
+      ]
+    },
+    {
+      "hex": "#E152B0",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.658,
+        0.203,
+        343.773
+      ]
+    },
+    {
+      "hex": "#2FBFA0",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.723,
+        0.126,
+        174.294
+      ]
+    },
+    {
+      "hex": "#A3A3A3",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.715,
+        0,
+        89.876
+      ]
+    },
+    {
+      "hex": "#E8483F",
+      "n": 1,
+      "roles": {
+        "icon": 1
+      },
+      "oklch": [
+        0.628,
+        0.198,
+        27.562
+      ]
+    }
+  ],
+  "duplicates": [
+    [
+      "#FFFFFF",
+      "#F9FAFB",
+      "#FDFDFE"
+    ],
+    [
+      "#EDEEF0",
+      "#F2F3F5"
+    ]
+  ],
+  "contrast": [
+    {
+      "fg": "#17181B",
+      "bg": "#F2F3F5",
+      "ratio": 15.99
+    },
+    {
+      "fg": "#17181B",
+      "bg": "#EDEEF0",
+      "ratio": 15.29
+    },
+    {
+      "fg": "#606369",
+      "bg": "#EDEEF0",
+      "ratio": 5.19
+    },
+    {
+      "fg": "#606369",
+      "bg": "#F2F3F5",
+      "ratio": 5.43
+    },
+    {
+      "fg": "#F9FAFB",
+      "bg": "#17181B",
+      "ratio": 16.99
+    },
+    {
+      "fg": "#17181B",
+      "bg": "#FFFFFF",
+      "ratio": 17.75
+    },
+    {
+      "fg": "#606369",
+      "bg": "#FDFDFE",
+      "ratio": 5.93
+    },
+    {
+      "fg": "#898C92",
+      "bg": "#F2F3F5",
+      "ratio": 3.04
+    }
+  ],
+  "tokens": {
+    "declared": {
+      "--tw-ring-offset-color": "#fff",
+      "--pulse-background": "lab(95.9308% -.162244 -1.12436)",
+      "--pulse-surface": "lab(99.417% -.0547469 -.375164)",
+      "--pulse-surface-raised": "lab(100% 0 0)",
+      "--pulse-surface-sunken": "lab(94.1907% -.162154 -1.12433)",
+      "--pulse-overlay": "lab(7.19015% -.368543 -3.62587/.4)",
+      "--pulse-border": "lab(0% 0 0/.09)",
+      "--pulse-border-strong": "lab(0% 0 0/.16)",
+      "--pulse-foreground": "lab(8.33892% -.278197 -2.22374)",
+      "--pulse-foreground-muted": "lab(41.9663% -.489771 -3.71957)",
+      "--pulse-foreground-subtle": "lab(58.207% -.503033 -3.72663)",
+      "--pulse-hover": "lab(0% 0 0/.04)",
+      "--pulse-pressed": "lab(0% 0 0/.08)",
+      "--pulse-accent": "lab(8.33892% -.278197 -2.22374)",
+      "--pulse-accent-foreground": "lab(98.2539% -.108749 -.74997)",
+      "--pulse-accent-emphasis": "lab(8.33892% -.278197 -2.22374)",
+      "--pulse-accent-soft": "lab(0% 0 0/.07)",
+      "--pulse-ring": "lab(18.7722% -.375614 -2.96731)",
+      "--pulse-selection": "lab(0% 0 0/.14)",
+      "--pulse-danger": "lab(45.8049% 62.9533 44.1)"
+    },
+    "literal": 10,
+    "token": 61
+  },
+  "palette": "palette.css"
+}

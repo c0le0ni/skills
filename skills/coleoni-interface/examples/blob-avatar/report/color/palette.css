@@ -1,0 +1,54 @@
+/* palette made by /coleoni-color from #AEFA0E, #8B5CF6 (OKLCH scales) */
+:root {
+  --primary-50: #F2FAEA;
+  --primary-100: #E1F3CE;
+  --primary-200: #AEFA0E; /* brand */
+  --primary-300: #A0D05E;
+  --primary-400: #7DB600;
+  --primary-500: #6A9B02;
+  --primary-600: #578002;
+  --primary-700: #456700;
+  --primary-800: #344F00;
+  --primary-900: #233800;
+  --primary-950: #162500;
+  --secondary-50: #F7F5FE;
+  --secondary-100: #EBE8FE;
+  --secondary-200: #D8D0FF;
+  --secondary-300: #C0B0FF;
+  --secondary-400: #A68AFF;
+  --secondary-500: #8B5CF6; /* brand */
+  --secondary-600: #7B4CDE;
+  --secondary-700: #6339B8;
+  --secondary-800: #4C2A90;
+  --secondary-900: #351D67;
+  --secondary-950: #221246;
+  --neutral-50: #F6F7F6;
+  --neutral-100: #EAEBEA;
+  --neutral-200: #D6D8D5;
+  --neutral-300: #BCBFB9;
+  --neutral-400: #9FA39C;
+  --neutral-500: #878B83;
+  --neutral-600: #6F736C;
+  --neutral-700: #595C56;
+  --neutral-800: #444641;
+  --neutral-900: #2F312D;
+  --neutral-950: #1E201D;
+  --bg: var(--neutral-50);
+  --surface: var(--neutral-100);
+  --text: var(--neutral-950);
+  --text-muted: var(--neutral-700);
+  --border: var(--neutral-200);
+  --accent: var(--primary-700);
+  --on-accent: var(--x);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1E201D;
+    --surface: #2F312D;
+    --text: #F6F7F6;
+    --text-muted: #BCBFB9;
+    --border: #444641;
+    --accent: #7DB600;
+    --on-accent: #1E201D;
+  }
+}

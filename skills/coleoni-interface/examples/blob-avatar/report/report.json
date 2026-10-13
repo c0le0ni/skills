@@ -1,0 +1,142 @@
+{
+  "skill": "coleoni-interface",
+  "page": "blob.coleoni.com",
+  "areas": [
+    {
+      "key": "polish",
+      "script": "polish.mjs",
+      "name": [
+        "Polish",
+        "Acabamento"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 1
+    },
+    {
+      "key": "type",
+      "script": "type.mjs",
+      "name": [
+        "Typography",
+        "Tipografia"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "color",
+      "script": "color.mjs",
+      "name": [
+        "Color",
+        "Cor"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 4
+    },
+    {
+      "key": "layout",
+      "script": "layout.mjs",
+      "name": [
+        "Layout",
+        "Layout"
+      ],
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "copy",
+      "script": "copy.mjs",
+      "name": [
+        "Copy",
+        "Texto"
+      ],
+      "optional": true,
+      "ok": true,
+      "err": "",
+      "count": 0
+    },
+    {
+      "key": "a11y",
+      "script": "a11y.mjs",
+      "name": [
+        "Accessibility",
+        "Acessibilidade"
+      ],
+      "optional": true,
+      "ok": true,
+      "err": "",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "level": "high",
+      "title": "Contraste 3.04:1 em “Made by\nColeoni\n(opens in a ”",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#898C92;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#898C92</code> sobre <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F2F3F5;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F2F3F5</code>, 11px. Precisa de 4.5:1 (WCAG AA).",
+      "fix": "A mesma cor um pouco mais escura: <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#6C6F74;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#6C6F74</code> (4.57:1).",
+      "shots": [
+        "color/shots/color-0.jpg",
+        "color/shots/color-1.jpg"
+      ],
+      "skill": "coleoni-color"
+    },
+    {
+      "level": "medium",
+      "title": "2 grupos de cores quase iguais",
+      "detail": "<span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FFFFFF;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#FFFFFF</code> ×18 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F9FAFB;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F9FAFB</code> ×4 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#FDFDFE;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#FDFDFE</code> ×2<br><span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#EDEEF0;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#EDEEF0</code> ×2 <span style=\"display:inline-block;width:14px;height:14px;border-radius:4px;background:#F2F3F5;vertical-align:-2px;margin-right:4px;border:1px solid #ffffff22\"></span><code>#F2F3F5</code> ×1<br>Ninguém vê a diferença; o código mantém as duas pra sempre.",
+      "fix": "Fique com a mais usada de cada grupo e transforme em token.",
+      "shots": [
+        "color/shots/color-2.jpg",
+        "color/shots/color-3.jpg"
+      ],
+      "skill": "coleoni-color"
+    },
+    {
+      "level": "medium",
+      "title": "Todo o conteúdo da página deve estar contido em regiões (landmarks)",
+      "detail": "Certifique-se de todo o conteúdo da página esteja contido em regiões (landmarks)",
+      "fix": "Algum conteúdo da página não está contido em regiões (landmarks)",
+      "shots": [
+        "a11y/shots/el-3.jpg"
+      ],
+      "skill": "coleoni-a11y"
+    },
+    {
+      "level": "low",
+      "title": "1 espaçamentos fora da grade de 4px",
+      "detail": "Valores como <code>5.5px</code> ×2. Quase iguais aos vizinhos da escala, criam desalinhamentos de 1 a 3px.",
+      "fix": "Uma escala de espaço em múltiplos de 4 (<code>4 8 12 16 24 32 48 64</code>) e tokens pra ela.",
+      "shots": [
+        "polish/shots/polish-0.jpg"
+      ],
+      "skill": "coleoni-polish"
+    },
+    {
+      "level": "low",
+      "title": "7 cores com saturação",
+      "detail": "Muitas cores fortes competem pela atenção; o destaque deixa de destacar.",
+      "fix": "Uma cor de destaque, uma de apoio, e o resto neutro.",
+      "shots": [],
+      "skill": "coleoni-color"
+    },
+    {
+      "level": "low",
+      "title": "Sem modo escuro",
+      "detail": "Nenhuma regra <code>prefers-color-scheme: dark</code>. Não é obrigatório; se for fazer, os tokens abaixo já trazem a versão escura.",
+      "fix": "Tokens com valores claros e escuros, trocados por <code>@media (prefers-color-scheme: dark)</code>.",
+      "shots": [],
+      "skill": "coleoni-color"
+    },
+    {
+      "level": "low",
+      "title": "Sem link de pular conteúdo",
+      "detail": "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página. <code>WCAG 2.4.1</code>",
+      "fix": "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra &lt;main id=&quot;conteudo&quot;&gt;. O eMAG pede isso na recomendação 1.5.",
+      "shots": [],
+      "skill": "coleoni-a11y"
+    }
+  ]
+}

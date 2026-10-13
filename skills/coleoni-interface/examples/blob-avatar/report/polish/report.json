@@ -1,0 +1,87 @@
+{
+  "skill": "coleoni-polish",
+  "page": "blob.coleoni.com",
+  "findings": [
+    {
+      "level": "low",
+      "title": "1 espaçamentos fora da grade de 4px",
+      "detail": "Valores como <code>5.5px</code> ×2. Quase iguais aos vizinhos da escala, criam desalinhamentos de 1 a 3px.",
+      "fix": "Uma escala de espaço em múltiplos de 4 (<code>4 8 12 16 24 32 48 64</code>) e tokens pra ela.",
+      "shots": [
+        "shots/polish-0.jpg"
+      ]
+    }
+  ],
+  "scales": {
+    "radii": [
+      {
+        "k": "6",
+        "n": 3
+      },
+      {
+        "k": "8",
+        "n": 5
+      },
+      {
+        "k": "10",
+        "n": 1
+      }
+    ],
+    "shadows": [
+      {
+        "k": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, lab(0 0 0 / 0.1) 0px 0px 0px 1px, lab(0 0 0 / 0.06) 0px 1px 1px 0px, lab(0 0 0 / 0.1) 0px 2px 6px 0px, lab(100 0 0 / 0.9) 0px 1px 0px 0px inset",
+        "n": 4
+      },
+      {
+        "k": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, lab(0 0 0 / 0.05) 0px 1px 2px 0px, lab(0 0 0 / 0.03) 0px 1px 1px 0px",
+        "n": 1
+      },
+      {
+        "k": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, lab(0 0 0 / 0.14) 0px 12px 32px 0px, lab(0 0 0 / 0.08) 0px 2px 6px 0px",
+        "n": 1
+      }
+    ],
+    "spacing": [
+      {
+        "k": 2,
+        "n": 18
+      },
+      {
+        "k": 2.8,
+        "n": 2
+      },
+      {
+        "k": 4,
+        "n": 64
+      },
+      {
+        "k": 5.5,
+        "n": 2
+      },
+      {
+        "k": 6,
+        "n": 52
+      },
+      {
+        "k": 8,
+        "n": 5
+      },
+      {
+        "k": 10,
+        "n": 3
+      },
+      {
+        "k": 12,
+        "n": 23
+      },
+      {
+        "k": 16,
+        "n": 4
+      },
+      {
+        "k": 20,
+        "n": 4
+      }
+    ]
+  }
+}

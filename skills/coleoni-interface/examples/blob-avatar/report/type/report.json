@@ -1,0 +1,24 @@
+{
+  "skill": "coleoni-type",
+  "page": "blob.coleoni.com",
+  "findings": [],
+  "sizes": [
+    11,
+    13
+  ],
+  "families": [
+    {
+      "family": "Geist Variable",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  ],
+  "missing": [],
+  "faces": [
+    "Geist Variable 100 900 normal (loaded)",
+    "Geist Variable 100 900 normal (unloaded)",
+    "Geist Mono Variable 100 900 normal (unloaded)"
+  ]
+}

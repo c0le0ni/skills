@@ -108,7 +108,7 @@ the subheading to make sense is two weak lines.
 
 | Weak | Better |
 | --- | --- |
-| Welcome to Juniper Bakery | Bread out of the oven at 7. Cakes by order. |
+| Welcome to our website | Sites built by one person, from the first draft to launch. |
 | Innovative solutions for your business | Invoices sent, paid and filed, without a spreadsheet. |
 | Your journey starts here | Open an account in 4 minutes. |
 

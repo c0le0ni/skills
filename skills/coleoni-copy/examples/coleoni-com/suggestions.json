@@ -1,0 +1,86 @@
+{
+  "project": "coleoni.com/pt",
+  "language": "pt",
+  "voice": "I",
+  "summary": "O texto já segue a voz do projeto (eu, você, frase curta, sem exagero). Dos 6 alertas do script, só o botão Enviar era problema; os outros 5 são rótulos em caixa-alta via CSS, um nome de produto e o \"de ponta a ponta\". A leitura achou mais 4: um termo em inglês onde a página diz código aberto, o \"stack\" que o guia de voz proíbe (a frase de baixo acompanha a troca), dois nomes para o mesmo convite e um erro que não diz o que falhou.",
+  "counts": [
+    [
+      "149",
+      "trechos lidos"
+    ],
+    [
+      "6",
+      "alertas, 1 de verdade"
+    ],
+    [
+      "6",
+      "reescritas"
+    ],
+    [
+      "0",
+      "fatos inventados"
+    ]
+  ],
+  "items": [
+    {
+      "where": "/pt · hero",
+      "role": "button",
+      "before": "Ver o open source",
+      "after": "Ver o código aberto",
+      "why": [
+        "consistency"
+      ],
+      "note": "A página diz \"código aberto\" no menu, no rótulo e no título da seção. Só este botão diz open source."
+    },
+    {
+      "where": "/pt · #about",
+      "role": "h3",
+      "before": "Minha stack, em órbita.",
+      "after": "Minhas ferramentas, em órbita.",
+      "why": [
+        "jargon"
+      ],
+      "note": "docs/20: stack não entra na copy pro cliente. O texto logo abaixo já chama de ferramentas."
+    },
+    {
+      "where": "/pt · #about",
+      "role": "text",
+      "before": "As ferramentas que eu uso todo dia, da tela ao banco de dados.",
+      "after": "As que eu uso todo dia, da tela ao banco de dados.",
+      "why": [
+        "consistency"
+      ],
+      "note": "Com o título novo, ferramentas apareceria duas vezes seguidas. Mesmo molde do card de Skills: \"As que uso pra entregar projeto\"."
+    },
+    {
+      "where": "/pt · contato",
+      "role": "button",
+      "before": "Enviar",
+      "after": "Enviar mensagem",
+      "why": [
+        "vague"
+      ],
+      "note": "Verbo e objeto. Casa com a confirmação que já existe: \"Mensagem enviada.\""
+    },
+    {
+      "where": "/pt · contato",
+      "role": "error",
+      "before": "Não foi. Tente de novo, ou me escreva em",
+      "after": "A mensagem não foi enviada. Tente de novo, ou me escreva em",
+      "why": [
+        "vague"
+      ],
+      "note": "Diz o que falhou. O resto da frase já diz o que fazer."
+    },
+    {
+      "where": "/pt · contato",
+      "role": "link",
+      "before": "Jogue agora",
+      "after": "Jogar agora",
+      "why": [
+        "consistency"
+      ],
+      "note": "O mesmo convite no topo da página diz \"Jogar agora\", e o botão da seção do jogo diz \"Jogar streak\". Mesmo gesto, mesma forma."
+    }
+  ]
+}

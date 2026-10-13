@@ -1,0 +1,1332 @@
+{
+  "pages": [
+    {
+      "path": "/pt",
+      "lang": "pt",
+      "voice": {
+        "we": 0,
+        "you": 7
+      },
+      "flag": null
+    }
+  ],
+  "counts": {
+    "caps": 3,
+    "titlecase": 1,
+    "vague": 1,
+    "hype": 1
+  },
+  "items": [
+    {
+      "page": "/pt",
+      "role": "title",
+      "text": "Coleoni | Michel Coleoni",
+      "where": "head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "description",
+      "text": "Eu construo sites, sistemas e ferramentas para a web, do primeiro rascunho ao ar. Parte disso é de graça e de código aberto.",
+      "where": "head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h1",
+      "text": "Eu construo para a web. Parte disso é de graça.",
+      "where": "#top",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h2",
+      "text": "Código aberto? Sim, aceito.",
+      "where": "#open-source",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h2",
+      "text": "Oi, eu sou o Michel.",
+      "where": "#about",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h3",
+      "text": "Minha stack, em órbita.",
+      "where": "#about",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h2",
+      "text": "Tudo aqui é código aberto.",
+      "where": "#oss-head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h3",
+      "text": "AS SKILLS",
+      "where": "#open-source-projects",
+      "flags": [
+        {
+          "rule": "caps",
+          "note": "shouting in capitals"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h3",
+      "text": "COLOQUE UM NO SEU SITE",
+      "where": "#open-source-projects",
+      "flags": [
+        {
+          "rule": "caps",
+          "note": "shouting in capitals"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "h2",
+      "text": "Tem algo em mente?",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Produtos",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Idioma: PT",
+      "where": "header",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Fale comigo",
+      "where": "header",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Ver todos os projetos",
+      "where": "#about",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Copiar",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Abrir Skills",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Abrir Blob Avatar",
+      "where": "#open-source-projects",
+      "flags": [
+        {
+          "rule": "titlecase",
+          "note": "Title Case"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Abrir Loaders",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Jogar streak",
+      "where": "#streak",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "Enviar",
+      "where": "form",
+      "flags": [
+        {
+          "rule": "vague",
+          "note": "“Enviar” doesn't say what happens"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "button",
+      "text": "michel@coleoni.com , Copiar e-mail",
+      "where": "#contact",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Pular para o conteúdo",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Até onde você segue o pixel verde? Jogar agora",
+      "where": "page",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Portfólio",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Contato",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Discord Discord, abre em nova aba",
+      "where": "nav",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "GitHub GitHub, abre em nova aba",
+      "where": "nav",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Instagram Instagram, abre em nova aba",
+      "where": "nav",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Novo Loaders, 27 animações de carregamento",
+      "where": "#top",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Ver o open source",
+      "where": "#top",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Meu GitHub , abre em nova aba",
+      "where": "#about",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "github.com/c0le0ni , abre em nova aba",
+      "where": "#oss-head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Skills",
+      "where": "#oss-head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Blob Avatar",
+      "where": "#oss-head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "Loaders",
+      "where": "#oss-head",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "01 Skills",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "02 Blob Avatar",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "03 Loaders",
+      "where": "nav",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-a11y Todo mundo consegue usar? Conferido no teclado, em 320px e com movimento reduzido.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-break Faça com o componente o que o conteúdo real vai fazer, antes dele.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-briefing Do briefing bagunçado a um escopo que se sustenta.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-color Toda cor que a sua página usa, o que dá pra ler, e uma paleta que se sustenta.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-copy Toda frase que fala sozinha, reescrita pra falar com quem lê.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-favicon Uma logo entra, todos os ícones saem, cada um conferido onde aparece.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-init A documentação do projeto, antes da primeira linha de código.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-interface Acabamento, tipografia, cor, layout, texto e acessibilidade, num relatório só.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-launch Tudo o que envergonharia o lançamento, achado antes dos visitantes.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-layout Os 2px que ninguém vê e todo mundo sente, desenhados na sua página.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-og A imagem que o seu link mostra, feita da própria página.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-polish Os detalhes que as pessoas sentem e não sabem nomear, medidos na página real.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-states Carregando, vazio, erro, sem internet: todo estado, lado a lado, pela API real.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-thumb Thumbnails de portfólio com as telas reais do projeto.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-type O que quem visita realmente lê: as fontes, a escala, as linhas.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "/coleoni-variants Três versões reais de um componente, na página real. Escolha uma.",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "GitHub , abre em nova aba",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Arc",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Atom",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Blocks",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Bouncing dots",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Cascade",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Circular dots",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Classic",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Classic v2",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Clock",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Coleoni",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Comet",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Dual",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Eclipse",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Flip",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Gather",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Leap",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Linear dots",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Morph",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Orbit",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Pulse",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Ring",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Ripple",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Slide",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Snake",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Swirl",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Trace",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Wave",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "npm , abre em nova aba",
+      "where": "#open-source-projects",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "streak.coleoni.com",
+      "where": "#streak",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "link",
+      "text": "Jogue agora",
+      "where": "#contact",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "nav",
+      "text": "VOLTAR AO TOPO",
+      "where": "footer",
+      "flags": [
+        {
+          "rule": "caps",
+          "note": "shouting in capitals"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Sites, sistemas e ferramentas, do primeiro rascunho ao ar, feitos por uma pessoa só. Alguns são de clientes, outros são meus, e alguns você usa agora mesmo.",
+      "where": "#top",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Skills, skills.coleoni.com Código aberto Skills gratuitas para Claude Code Codex Cursor Gemini CLI Claude Code, Codex, Cursor, Gemini CLI e mais. As que uso pra entregar projeto, abertas a todos: escopo, capas, favicon, checklist de lançamento e mais. skills.coleoni.com Skills no GitHub, abre em nova aba",
+      "where": "#open-source",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Blob Avatar, blob.coleoni.com Código aberto Crie seu avatar animado. Escolha a forma, o rosto e alguns movimentos e exporte como foto de perfil, GIF, SVG ou uma tag para o seu site. blob.coleoni.com Blob Avatar no GitHub, abre em nova aba",
+      "where": "#open-source",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Loaders, loaders.coleoni.com Código aberto 27 loaders prontos para copiar. Escolha um, ajuste tamanho, cor e velocidade e copie como componente React ou HTML puro. loaders.coleoni.com Loaders no GitHub, abre em nova aba",
+      "where": "#open-source",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "PORTFÓLIO",
+      "where": "#about",
+      "css": "uppercase",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Eu desenho e construo sites, sistemas e produtos de ponta a ponta: a interface, o código, o servidor e o que acontece depois do lançamento. Uma pessoa, do começo ao fim.",
+      "where": "#about",
+      "css": "none",
+      "flags": [
+        {
+          "rule": "hype",
+          "note": "“de ponta”"
+        }
+      ],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "As ferramentas que eu uso todo dia, da tela ao banco de dados.",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "TypeScript",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "React",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Next.js",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Node.js",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "PostgreSQL",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Tailwind CSS",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "NestJS",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Prisma",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Vite",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Tauri",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Docker",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Claude",
+      "where": "#about",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "O que cada um faz, como funciona e como começar a usar hoje. De graça, com licença MIT e o código no GitHub.",
+      "where": "#oss-head",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Ferramentas do meu fluxo, abertas.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "As skills que eu uso pra entregar projeto, de graça. Seguem o padrão aberto SKILL.md, então funcionam no Claude Code, no Codex, no Cursor, no Gemini CLI e em qualquer agente que leia esse formato. Cada uma vem com o código, um passo a passo e exemplos reais.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "16",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "MIT",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Claude Code",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Codex",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Cursor",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Gemini CLI",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Crie seu avatar animado.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Escolha a forma, o rosto, as cores e os movimentos, e exporte ou coloque no seu site. Grátis, sem cadastro, tudo no navegador. Tudo é desenhado do zero, quadro a quadro, por um motor pequeno e sem dependências.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "14",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Eles seguem o seu cursor.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "27 loaders prontos para copiar.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Escolha um, ajuste tamanho, cor e velocidade, e copie como componente React ou HTML puro. Não tem loop de animação em JavaScript: todo loader roda em CSS, fica nítido em qualquer tamanho e para numa pose fixa para quem pede menos movimento.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "27",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "9 KB",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Cada loader desta página é o próprio pacote.",
+      "where": "#open-source-projects",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "UM JOGO",
+      "where": "#streak",
+      "css": "uppercase",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Até onde você segue o pixel verde?",
+      "where": "#streak",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Um pixel, um tabuleiro. Encoste nele com o cursor e ele foge. Cada pegada seguida vale mais, e o que você ganha compra upgrades entre uma partida e outra.",
+      "where": "#streak",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "15",
+      "where": "#streak",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "18",
+      "where": "#streak",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Grátis, no computador e no celular.",
+      "where": "#streak",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "CONTATO",
+      "where": "header",
+      "css": "uppercase",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Me conta o que você tem em mente. Eu leio cada mensagem e respondo pessoalmente.",
+      "where": "header",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Nome",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "E-mail",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "WhatsApp (opcional)",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "(opcional)",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Site",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Sistema ou produto",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Automação",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Outra coisa",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Mensagem",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "label",
+      "text": "Website",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Uso seus dados só para te responder.",
+      "where": "form",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "Prefere escrever direto?",
+      "where": "#contact",
+      "css": "none",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "text",
+      "text": "© 2026 COLEONI",
+      "where": "footer",
+      "css": "uppercase",
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "placeholder",
+      "text": "O que você quer construir, como está hoje, se tem prazo.",
+      "where": "form",
+      "noLabel": false,
+      "flags": [],
+      "also": []
+    },
+    {
+      "page": "/pt",
+      "role": "alt",
+      "text": "streak",
+      "where": "page",
+      "flags": [],
+      "also": [
+        "/pt",
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "alt",
+      "text": "Skills",
+      "where": "#open-source",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "alt",
+      "text": "Blob Avatar",
+      "where": "#open-source",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    },
+    {
+      "page": "/pt",
+      "role": "alt",
+      "text": "Loaders",
+      "where": "#open-source",
+      "flags": [],
+      "also": [
+        "/pt"
+      ]
+    }
+  ]
+}

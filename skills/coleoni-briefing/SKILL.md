@@ -94,10 +94,10 @@ back in).
 ## 7. Write the document
 
 Use `template.md` as the structure. Keep it short enough to be read in ten
-minutes. Calibrate the level of cutting with `examples/streak/`: the briefing
-asked for a complete web game with accounts, a global ranking, a CRM and a way
-to make money, and the scope delivers one loop (follow the pixel, keep the
-streak, buy upgrades) with progress kept in the browser.
+minutes. Calibrate the level of cutting with `examples/demo/`: the briefing
+asks for a web game plus accounts, a global ranking, a daily challenge and a share
+card, and the scope delivers one loop (follow the pixel, keep the streak, buy
+upgrades) with progress kept in the browser.
 
 Before finishing, reread it and ask: *would a developer reading only this build
 a copy of a tool the client already has?* If yes, step 3 failed. Fix "Out of

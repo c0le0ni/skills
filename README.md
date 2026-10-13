@@ -103,7 +103,7 @@ Every image on this page was made by the skill itself.
 ### `/coleoni-briefing`
 
 <a href="https://skills.coleoni.com/coleoni-briefing/">
-  <img src=".github/assets/coleoni-briefing-cover.jpg" alt="coleoni-briefing on Streak: my real messages about the game with the pain marked, and the same sentence large below" width="100%">
+  <img src=".github/assets/coleoni-briefing-cover.jpg" alt="coleoni-briefing on Streak: a fictional client's messages about the game with the pain marked, and the same sentence large below" width="100%">
 </a>
 
 Clients describe the product they imagine. Their answers reveal a smaller,
@@ -124,12 +124,12 @@ call notes, emails, chat exports) and writes a scope you can defend.
 /coleoni-briefing client-notes.md --pdf
 ```
 
-The example is real: my own WhatsApp messages and loose notes about
-[Streak](https://streak.coleoni.com), my web game, from before it existed. I asked
-for a complete game with accounts, a ranking, a CRM and a way to make money; the
-scope kept one loop for the first release and sent the rest to the roadmap, each
-with a reason:
-[`skills/coleoni-briefing/examples/streak`](skills/coleoni-briefing/examples/streak).
+The example is a fictional client brief for
+[Streak](https://streak.coleoni.com), my web game: WhatsApp messages and loose
+notes asking for the game plus accounts, a global ranking, a daily challenge and a
+share card. The scope kept one loop for the first release and sent the rest to the
+roadmap, each with a reason:
+[`skills/coleoni-briefing/examples/demo`](skills/coleoni-briefing/examples/demo).
 
 <br>
 
@@ -157,11 +157,11 @@ the mockups or brand, when there are any) and writes that skeleton.
 /coleoni-init ./my-project --write --overview
 ```
 
-The example continues Streak from `/coleoni-briefing`: its scope and six real
-screens of the game became ten documents and the overview page, with the stack
-left as ADR-0001, to record, and no privacy note because the first release keeps
-no personal data:
-[`skills/coleoni-init/examples/streak`](skills/coleoni-init/examples/streak).
+The example continues Streak from `/coleoni-briefing`: the scope of its fictional
+brief and six real screens of the game became ten documents and the overview page,
+with the stack left as ADR-0001, to record, and no privacy note because the first
+release keeps no personal data:
+[`skills/coleoni-init/examples/demo`](skills/coleoni-init/examples/demo).
 
 <br>
 

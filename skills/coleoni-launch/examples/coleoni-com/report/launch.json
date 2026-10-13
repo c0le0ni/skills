@@ -1,0 +1,119 @@
+{
+  "site": "coleoni.com",
+  "base": "https://coleoni.com/",
+  "date": "2026-10-12T22:33:55.394Z",
+  "verdict": "fixes",
+  "counts": {
+    "blocker": 0,
+    "fix": 2,
+    "info": 4,
+    "ok": 5
+  },
+  "links": {
+    "internal": 2,
+    "external": 80
+  },
+  "pages": [
+    {
+      "url": "https://coleoni.com/",
+      "status": 200,
+      "title": "Coleoni | Michel Coleoni",
+      "lang": "en",
+      "h1": "I build for the web.\nSome of it is free.",
+      "weight": 491636,
+      "load": 6367,
+      "shot": "shots/00",
+      "images": 25
+    },
+    {
+      "url": "https://coleoni.com/pt",
+      "status": 200,
+      "title": "Coleoni | Michel Coleoni",
+      "lang": "pt-BR",
+      "h1": "Eu construo para a web.\nParte disso é de graça.",
+      "weight": 385752,
+      "load": 1117,
+      "shot": "shots/01",
+      "images": 25
+    }
+  ],
+  "findings": [
+    {
+      "level": "ok",
+      "area": "Site",
+      "title": "robots.txt",
+      "detail": "allows crawling and points to the sitemap",
+      "page": null
+    },
+    {
+      "level": "ok",
+      "area": "Site",
+      "title": "sitemap.xml",
+      "detail": "2 URLs",
+      "page": null
+    },
+    {
+      "level": "ok",
+      "area": "Site",
+      "title": "404 page",
+      "detail": "returns 404 with a page of its own",
+      "page": null
+    },
+    {
+      "level": "ok",
+      "area": "Site",
+      "title": "HTTP goes to HTTPS",
+      "detail": "301 → https://coleoni.com/",
+      "page": null
+    },
+    {
+      "level": "fix",
+      "area": "Site",
+      "title": "www.coleoni.com answers without redirecting",
+      "detail": "The same site on two addresses splits links and search ranking. Redirect one to the other.",
+      "page": null
+    },
+    {
+      "level": "fix",
+      "area": "Site",
+      "title": "Security headers",
+      "detail": "missing: Strict-Transport-Security, X-Content-Type-Options, Referrer-Policy, X-Frame-Options or frame-ancestors, Content-Security-Policy",
+      "page": null
+    },
+    {
+      "level": "ok",
+      "area": "Site",
+      "title": "Compression",
+      "detail": "HTML sent with gzip",
+      "page": null
+    },
+    {
+      "level": "info",
+      "area": "Content",
+      "title": "Placeholder: coming soon",
+      "detail": "“…iteTauriDockerClaudePortfolio coming soonMy GitHub , opens in a new tab…”",
+      "page": "https://coleoni.com/"
+    },
+    {
+      "level": "info",
+      "area": "Speed",
+      "title": "Slow load",
+      "detail": "6.4s until load.",
+      "page": "https://coleoni.com/"
+    },
+    {
+      "level": "info",
+      "area": "Content",
+      "title": "Placeholder: coming soon",
+      "detail": "“…iteTauriDockerClaudePortfólio em breveMeu GitHub , abre em nova abag…”",
+      "page": "https://coleoni.com/pt"
+    },
+    {
+      "level": "info",
+      "area": "Site",
+      "title": "No analytics found",
+      "detail": "Fine if on purpose. Without it, there is no way to know if the launch worked.",
+      "page": null
+    }
+  ]
+}

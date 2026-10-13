@@ -230,14 +230,25 @@ function findSections(minHeight) {
 
 /** Palette: background, text and accent (the most common background color on buttons/links) */
 function readPalette() {
+  // computed colors can come back as oklch(), lab() or color(); a canvas turns any of them into sRGB
+  const cx = Object.assign(document.createElement("canvas"), { width: 1, height: 1 }).getContext("2d", { willReadFrequently: true });
+  const toRgb = (c) => {
+    if (!c || c === "transparent") return c;
+    cx.clearRect(0, 0, 1, 1);
+    cx.fillStyle = "#000";
+    cx.fillStyle = c;
+    cx.fillRect(0, 0, 1, 1);
+    const [r, g, b, a] = cx.getImageData(0, 0, 1, 1).data;
+    return a === 0 ? "transparent" : a < 255 ? `rgba(${r}, ${g}, ${b}, ${+(a / 255).toFixed(3)})` : `rgb(${r}, ${g}, ${b})`;
+  };
   const clear = (c) => !c || c === "transparent" || /rgba\(.*,\s*0\)$/.test(c);
-  let bg = getComputedStyle(document.body).backgroundColor;
-  if (clear(bg)) bg = getComputedStyle(document.documentElement).backgroundColor;
+  let bg = toRgb(getComputedStyle(document.body).backgroundColor);
+  if (clear(bg)) bg = toRgb(getComputedStyle(document.documentElement).backgroundColor);
   if (clear(bg)) bg = "rgb(255, 255, 255)";
-  const text = getComputedStyle(document.body).color;
+  const text = toRgb(getComputedStyle(document.body).color);
   const counts = new Map();
   for (const el of document.querySelectorAll("a, button, [class*=btn], [class*=button]")) {
-    const c = getComputedStyle(el).backgroundColor;
+    const c = toRgb(getComputedStyle(el).backgroundColor);
     if (clear(c)) continue;
     const [r, g, b] = c.match(/[\d.]+/g).map(Number);
     const max = Math.max(r, g, b);

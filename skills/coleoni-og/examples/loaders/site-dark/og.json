@@ -1,0 +1,1839 @@
+[
+  {
+    "url": "https://loaders.coleoni.com/pt/",
+    "image": "pt.jpg",
+    "kb": 75,
+    "imageUrl": "https://loaders.coleoni.com/og/pt.jpg",
+    "title": "Loaders: 27 animações de carregamento para React e HTML",
+    "subtitle": "27 animações de carregamento para React e HTML puro. Escolha uma, ajuste tamanho, cor e velocidade e copie o código. Grátis e de código aberto, da Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "55 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "155 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "67 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 67 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/pt/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/pt/\">",
+      "<meta property=\"og:title\" content=\"Loaders\">",
+      "<meta property=\"og:description\" content=\"27 animações de carregamento para React e HTML. Grátis, da Coleoni.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:locale\" content=\"pt_BR\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/pt.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 animações de carregamento para React e HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/arc/",
+    "image": "arc.jpg",
+    "kb": 69,
+    "imageUrl": "https://loaders.coleoni.com/og/arc.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Arc: One open stroke spinning around. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "50 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "124 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Arc · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "32 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/arc/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/arc/\">",
+      "<meta property=\"og:title\" content=\"Arc · Loaders\">",
+      "<meta property=\"og:description\" content=\"One open stroke spinning around.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/arc.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/atom/",
+    "image": "atom.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/atom.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Atom: A circle with three rings turning in depth inside it. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "146 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Atom · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/atom/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/atom/\">",
+      "<meta property=\"og:title\" content=\"Atom · Loaders\">",
+      "<meta property=\"og:description\" content=\"A circle with three rings turning in depth inside it.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/atom.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/blocks/",
+    "image": "blocks.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/blocks.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Blocks: Nine squares that shrink away and come back in a wave. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "149 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Blocks · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "54 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/blocks/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/blocks/\">",
+      "<meta property=\"og:title\" content=\"Blocks · Loaders\">",
+      "<meta property=\"og:description\" content=\"Nine squares that shrink away and come back in a wave.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/blocks.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/bouncing-dots/",
+    "image": "bouncing-dots.jpg",
+    "kb": 72,
+    "imageUrl": "https://loaders.coleoni.com/og/bouncing-dots.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Bouncing dots: Three dots rising and falling one after another. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "60 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "150 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Bouncing dots · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "48 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/bouncing-dots/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/bouncing-dots/\">",
+      "<meta property=\"og:title\" content=\"Bouncing dots · Loaders\">",
+      "<meta property=\"og:description\" content=\"Three dots rising and falling one after another.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/bouncing-dots.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/cascade/",
+    "image": "cascade.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/cascade.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Cascade: Three arcs that fan out into a spiral and line up again. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "54 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "152 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Cascade · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "56 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/cascade/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/cascade/\">",
+      "<meta property=\"og:title\" content=\"Cascade · Loaders\">",
+      "<meta property=\"og:description\" content=\"Three arcs that fan out into a spiral and line up again.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/cascade.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/circular-dots/",
+    "image": "circular-dots.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/circular-dots.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Circular dots: A light running around a ring of eight dots. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "60 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "146 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Circular dots · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "44 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/circular-dots/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/circular-dots/\">",
+      "<meta property=\"og:title\" content=\"Circular dots · Loaders\">",
+      "<meta property=\"og:description\" content=\"A light running around a ring of eight dots.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/circular-dots.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/classic/",
+    "image": "classic.jpg",
+    "kb": 72,
+    "imageUrl": "https://loaders.coleoni.com/og/classic.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Classic: Twelve spokes fading one after another, the spinner everyone knows. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "54 characters"
+      },
+      {
+        "level": "warn",
+        "label": "meta description",
+        "detail": "163 characters; aim for 50 to 160"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Classic · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "67 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/classic/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/classic/\">",
+      "<meta property=\"og:title\" content=\"Classic · Loaders\">",
+      "<meta property=\"og:description\" content=\"Twelve spokes fading one after another, the spinner everyone knows.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/classic.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/classic-v2/",
+    "image": "classic-v2.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/classic-v2.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Classic v2: Eight short spokes with the light stepping around them. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "57 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "154 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Classic v2 · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "55 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/classic-v2/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/classic-v2/\">",
+      "<meta property=\"og:title\" content=\"Classic v2 · Loaders\">",
+      "<meta property=\"og:description\" content=\"Eight short spokes with the light stepping around them.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/classic-v2.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/clock/",
+    "image": "clock.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/clock.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Clock: A slice sweeping around a faint dial like a hand. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "143 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Clock · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "49 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/clock/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/clock/\">",
+      "<meta property=\"og:title\" content=\"Clock · Loaders\">",
+      "<meta property=\"og:description\" content=\"A slice sweeping around a faint dial like a hand.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/clock.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/comet/",
+    "image": "comet.jpg",
+    "kb": 70,
+    "imageUrl": "https://loaders.coleoni.com/og/comet.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Comet: A ring that fades into its own tail as it spins. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "142 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Comet · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "48 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/comet/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/comet/\">",
+      "<meta property=\"og:title\" content=\"Comet · Loaders\">",
+      "<meta property=\"og:description\" content=\"A ring that fades into its own tail as it spins.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/comet.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/dual/",
+    "image": "dual.jpg",
+    "kb": 70,
+    "imageUrl": "https://loaders.coleoni.com/og/dual.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Dual: Two arcs turning in opposite directions. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "133 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Dual · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "40 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/dual/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/dual/\">",
+      "<meta property=\"og:title\" content=\"Dual · Loaders\">",
+      "<meta property=\"og:description\" content=\"Two arcs turning in opposite directions.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/dual.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/eclipse/",
+    "image": "eclipse.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/eclipse.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Eclipse: Two dots trading sides, one passing in front of the other. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "54 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "154 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Eclipse · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "58 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/eclipse/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/eclipse/\">",
+      "<meta property=\"og:title\" content=\"Eclipse · Loaders\">",
+      "<meta property=\"og:description\" content=\"Two dots trading sides, one passing in front of the other.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/eclipse.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/flip/",
+    "image": "flip.jpg",
+    "kb": 72,
+    "imageUrl": "https://loaders.coleoni.com/og/flip.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Flip: A square turning over top to bottom, then side to side. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "148 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Flip · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "55 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/flip/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/flip/\">",
+      "<meta property=\"og:title\" content=\"Flip · Loaders\">",
+      "<meta property=\"og:description\" content=\"A square turning over top to bottom, then side to side.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/flip.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/gather/",
+    "image": "gather.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/gather.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Gather: Four blocks that draw in, turn a quarter and spread out. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "151 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Gather · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "56 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/gather/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/gather/\">",
+      "<meta property=\"og:title\" content=\"Gather · Loaders\">",
+      "<meta property=\"og:description\" content=\"Four blocks that draw in, turn a quarter and spread out.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/gather.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/leap/",
+    "image": "leap.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/leap.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Leap: Three dots in a row, the first one jumping over to the end. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "152 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Leap · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "59 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/leap/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/leap/\">",
+      "<meta property=\"og:title\" content=\"Leap · Loaders\">",
+      "<meta property=\"og:description\" content=\"Three dots in a row, the first one jumping over to the end.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/leap.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/linear-dots/",
+    "image": "linear-dots.jpg",
+    "kb": 69,
+    "imageUrl": "https://loaders.coleoni.com/og/linear-dots.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Linear dots: Three dots lighting up in turn. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "58 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "131 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Linear dots · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "31 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/linear-dots/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/linear-dots/\">",
+      "<meta property=\"og:title\" content=\"Linear dots · Loaders\">",
+      "<meta property=\"og:description\" content=\"Three dots lighting up in turn.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/linear-dots.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/morph/",
+    "image": "morph.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/morph.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Morph: A square that rounds into a circle and back as it turns. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "150 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Morph · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "56 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/morph/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/morph/\">",
+      "<meta property=\"og:title\" content=\"Morph · Loaders\">",
+      "<meta property=\"og:description\" content=\"A square that rounds into a circle and back as it turns.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/morph.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/orbit/",
+    "image": "orbit.jpg",
+    "kb": 70,
+    "imageUrl": "https://loaders.coleoni.com/og/orbit.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Orbit: Half a ring fading into its tail around a dot. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "140 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Orbit · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "46 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/orbit/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/orbit/\">",
+      "<meta property=\"og:title\" content=\"Orbit · Loaders\">",
+      "<meta property=\"og:description\" content=\"Half a ring fading into its tail around a dot.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/orbit.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/pulse/",
+    "image": "pulse.jpg",
+    "kb": 69,
+    "imageUrl": "https://loaders.coleoni.com/og/pulse.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Pulse: A dot sending out a wave that fades. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "130 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Pulse · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "36 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/pulse/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/pulse/\">",
+      "<meta property=\"og:title\" content=\"Pulse · Loaders\">",
+      "<meta property=\"og:description\" content=\"A dot sending out a wave that fades.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/pulse.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/ring/",
+    "image": "ring.jpg",
+    "kb": 69,
+    "imageUrl": "https://loaders.coleoni.com/og/ring.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Ring: An arc going around a faint track. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "127 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Ring · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "34 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/ring/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/ring/\">",
+      "<meta property=\"og:title\" content=\"Ring · Loaders\">",
+      "<meta property=\"og:description\" content=\"An arc going around a faint track.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/ring.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/ripple/",
+    "image": "ripple.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/ripple.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Ripple: Rings spreading out from the center and fading. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "142 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Ripple · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "47 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/ripple/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/ripple/\">",
+      "<meta property=\"og:title\" content=\"Ripple · Loaders\">",
+      "<meta property=\"og:description\" content=\"Rings spreading out from the center and fading.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/ripple.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/slide/",
+    "image": "slide.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/slide.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Slide: Three dots taking turns to slide into the empty corner. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "149 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Slide · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "55 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/slide/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/slide/\">",
+      "<meta property=\"og:title\" content=\"Slide · Loaders\">",
+      "<meta property=\"og:description\" content=\"Three dots taking turns to slide into the empty corner.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/slide.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/snake/",
+    "image": "snake.jpg",
+    "kb": 71,
+    "imageUrl": "https://loaders.coleoni.com/og/snake.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Snake: An arc that stretches and shrinks as it goes around. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "146 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Snake · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/snake/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/snake/\">",
+      "<meta property=\"og:title\" content=\"Snake · Loaders\">",
+      "<meta property=\"og:description\" content=\"An arc that stretches and shrinks as it goes around.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/snake.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/swirl/",
+    "image": "swirl.jpg",
+    "kb": 70,
+    "imageUrl": "https://loaders.coleoni.com/og/swirl.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Swirl: A light running around the edge of a square of cells. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "147 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Swirl · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/swirl/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/swirl/\">",
+      "<meta property=\"og:title\" content=\"Swirl · Loaders\">",
+      "<meta property=\"og:description\" content=\"A light running around the edge of a square of cells.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/swirl.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/trace/",
+    "image": "trace.jpg",
+    "kb": 70,
+    "imageUrl": "https://loaders.coleoni.com/og/trace.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Trace: A dash running along the outline of a rounded square. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "52 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "147 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Trace · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "53 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/trace/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/trace/\">",
+      "<meta property=\"og:title\" content=\"Trace · Loaders\">",
+      "<meta property=\"og:description\" content=\"A dash running along the outline of a rounded square.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/trace.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  },
+  {
+    "url": "https://loaders.coleoni.com/wave/",
+    "image": "wave.jpg",
+    "kb": 69,
+    "imageUrl": "https://loaders.coleoni.com/og/wave.jpg",
+    "title": "Loaders: 27 loading animations for React and HTML",
+    "subtitle": "Wave: Five bars rising and falling in a wave. Set its size, color and speed, then copy it for React or plain HTML. Free, by Coleoni.",
+    "domain": "loaders.coleoni.com",
+    "colors": {
+      "bg": "#030001",
+      "text": "#E6E8EB",
+      "accent": "#ACFA16"
+    },
+    "checks": [
+      {
+        "level": "ok",
+        "label": "<title>",
+        "detail": "51 characters"
+      },
+      {
+        "level": "ok",
+        "label": "meta description",
+        "detail": "132 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:title",
+        "detail": "“Wave · Loaders”"
+      },
+      {
+        "level": "ok",
+        "label": "og:description",
+        "detail": "39 characters"
+      },
+      {
+        "level": "ok",
+        "label": "og:image",
+        "detail": "1200x630, 62 KB"
+      },
+      {
+        "level": "ok",
+        "label": "og:url / canonical",
+        "detail": "https://loaders.coleoni.com/wave/"
+      },
+      {
+        "level": "ok",
+        "label": "og:type",
+        "detail": "website"
+      },
+      {
+        "level": "ok",
+        "label": "twitter:card",
+        "detail": "summary_large_image"
+      }
+    ],
+    "tags": [
+      "<meta property=\"og:type\" content=\"website\">",
+      "<meta property=\"og:url\" content=\"https://loaders.coleoni.com/wave/\">",
+      "<meta property=\"og:title\" content=\"Wave · Loaders\">",
+      "<meta property=\"og:description\" content=\"Five bars rising and falling in a wave.\">",
+      "<meta property=\"og:site_name\" content=\"Loaders\">",
+      "<meta property=\"og:image\" content=\"https://loaders.coleoni.com/og/wave.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"Loaders: 27 loading animations for React and HTML\">",
+      "<meta name=\"twitter:card\" content=\"summary_large_image\">"
+    ]
+  }
+]

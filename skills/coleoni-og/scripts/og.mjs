@@ -177,13 +177,14 @@ async function prepare(page, url, o) {
   return res;
 }
 
-/** Everything a link preview reads, plus what the image needs */
-function readPage() {
-  const q = (s) => document.querySelector(s);
-  const meta = (k) => (q(`meta[property="${k}"]`) || q(`meta[name="${k}"]`))?.getAttribute("content")?.trim() || null;
-  // computed colors can come back as oklch(), lab() or color(); a canvas turns any of them into sRGB
+/**
+ * Runs in the page before any color is read. Computed colors can come back as
+ * oklch(), lab() or color() (Chrome reports lab() for many light themes); a
+ * canvas turns any of them into sRGB, so the rest of the script only sees rgb().
+ */
+function installRgb() {
   const cx = Object.assign(document.createElement("canvas"), { width: 1, height: 1 }).getContext("2d", { willReadFrequently: true });
-  const toRgb = (c) => {
+  window.__coleoniRgb = (c) => {
     if (!c || c === "transparent") return c;
     cx.clearRect(0, 0, 1, 1);
     cx.fillStyle = "#000";
@@ -192,6 +193,13 @@ function readPage() {
     const [r, g, b, a] = cx.getImageData(0, 0, 1, 1).data;
     return a === 0 ? "transparent" : a < 255 ? `rgba(${r}, ${g}, ${b}, ${+(a / 255).toFixed(3)})` : `rgb(${r}, ${g}, ${b})`;
   };
+}
+
+/** Everything a link preview reads, plus what the image needs */
+function readPage() {
+  const q = (s) => document.querySelector(s);
+  const meta = (k) => (q(`meta[property="${k}"]`) || q(`meta[name="${k}"]`))?.getAttribute("content")?.trim() || null;
+  const toRgb = window.__coleoniRgb;
   const clear = (c) => !c || c === "transparent" || /rgba\(.*,\s*0\)$/.test(c);
   const h1el = [...document.querySelectorAll("h1")].find((h) => h.getBoundingClientRect().height > 0);
   const hcs = getComputedStyle(h1el ?? document.body);
@@ -229,7 +237,7 @@ function readPage() {
     canonical: q("link[rel=canonical]")?.href || null,
     og: Object.fromEntries([...document.querySelectorAll("meta[property^='og:']")].map((m) => [m.getAttribute("property"), m.content?.trim()])),
     twitter: Object.fromEntries([...document.querySelectorAll("meta[name^='twitter:'], meta[property^='twitter:']")].map((m) => [m.getAttribute("name") || m.getAttribute("property"), m.content?.trim()])),
-    themeColor: meta("theme-color"),
+    themeColor: ((t) => (t && CSS.supports("color", t) ? toRgb(t) : null))(meta("theme-color")),
     icons,
     bodyBg,
     text: toRgb(bcs.color),
@@ -281,11 +289,13 @@ async function captureBrand(page) {
   });
   const el = handle.asElement();
   if (!el) return null;
+  await page.evaluate(installRgb);
   const info = await el.evaluate((n) => {
+    const toRgb = window.__coleoniRgb;
     const clear = (c) => !c || c === "transparent" || /rgba\(.*,\s*0\)$/.test(c);
     let bg = null;
     for (let p = n; p && !bg; p = p.parentElement) {
-      const c = getComputedStyle(p).backgroundColor;
+      const c = toRgb(getComputedStyle(p).backgroundColor);
       if (!clear(c)) bg = c;
     }
     for (let p = n; p; p = p.parentElement) {
@@ -628,6 +638,7 @@ for (const url of urls) {
   const page = await ctx.newPage();
   try {
     const response = await prepare(page, url, o);
+    await page.evaluate(installRgb);
     const info = await page.evaluate(readPage);
     const { checks, current } = await audit(ctx, page, info, response, url);
     let slug = slugOf(info.finalUrl);

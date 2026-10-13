@@ -1,0 +1,91 @@
+{
+  "url": "http://127.0.0.1:5391/?desafio",
+  "select": ".challenge__board",
+  "api": [
+    "**/api/challenge/board*"
+  ],
+  "date": "2026-10-13T11:50:32.741Z",
+  "results": [
+    {
+      "state": "ready",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/ready.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66",
+      "busy": false
+    },
+    {
+      "state": "loading",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/loading.jpg",
+      "text": "Ranking Oct 12",
+      "busy": true
+    },
+    {
+      "state": "empty",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "text": "Ranking Oct 12 No one on the ranking yet. The top spot is open.",
+      "busy": false
+    },
+    {
+      "state": "one",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66",
+      "busy": false
+    },
+    {
+      "state": "many",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 c",
+      "busy": false
+    },
+    {
+      "state": "partial",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/partial.jpg",
+      "text": "Ranking Oct 12 1 no name 66",
+      "busy": false
+    },
+    {
+      "state": "error",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/error.jpg",
+      "text": "Ranking Oct 12 500The ranking didn't load. The server had a problem; your run isn't affected. Try again",
+      "busy": false
+    },
+    {
+      "state": "offline",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/offline.jpg",
+      "text": "Ranking Oct 12 OFFLINEYou're offline. The ranking comes back with the connection. Try again",
+      "busy": false
+    },
+    {
+      "state": "denied",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/denied.jpg",
+      "text": "Ranking Oct 12 401Your session ended. The ranking is public: try again, and sign in to see your place. Try again",
+      "busy": false
+    }
+  ]
+}

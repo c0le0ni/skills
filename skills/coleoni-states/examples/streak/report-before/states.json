@@ -1,0 +1,99 @@
+{
+  "url": "http://127.0.0.1:5391/?desafio",
+  "select": ".challenge__board",
+  "api": [
+    "**/api/challenge/board*"
+  ],
+  "date": "2026-10-13T11:47:52.328Z",
+  "results": [
+    {
+      "state": "ready",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/ready.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66",
+      "busy": false
+    },
+    {
+      "state": "loading",
+      "status": "problem",
+      "issues": [
+        "gives no sign that it is loading"
+      ],
+      "notes": [],
+      "file": "shots/loading.jpg",
+      "text": "Ranking Oct 12",
+      "busy": false
+    },
+    {
+      "state": "empty",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/empty.jpg",
+      "text": "Ranking Oct 12 No one on the ranking yet. The top spot is open.",
+      "busy": false
+    },
+    {
+      "state": "one",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/one.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66",
+      "busy": false
+    },
+    {
+      "state": "many",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/many.jpg",
+      "text": "Ranking Oct 12 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 coleoni 66 1 c",
+      "busy": false
+    },
+    {
+      "state": "partial",
+      "status": "ok",
+      "issues": [],
+      "notes": [],
+      "file": "shots/partial.jpg",
+      "text": "Ranking Oct 12 The daily challenge needs a connection.",
+      "busy": false
+    },
+    {
+      "state": "error",
+      "status": "problem",
+      "issues": [
+        "looks exactly like “Missing fields”"
+      ],
+      "notes": [],
+      "file": "shots/error.jpg",
+      "text": "Ranking Oct 12 The daily challenge needs a connection.",
+      "busy": false
+    },
+    {
+      "state": "offline",
+      "status": "problem",
+      "issues": [
+        "looks exactly like “Missing fields”"
+      ],
+      "notes": [],
+      "file": "shots/offline.jpg",
+      "text": "Ranking Oct 12 The daily challenge needs a connection.",
+      "busy": false
+    },
+    {
+      "state": "denied",
+      "status": "problem",
+      "issues": [
+        "looks exactly like “Missing fields”"
+      ],
+      "notes": [],
+      "file": "shots/denied.jpg",
+      "text": "Ranking Oct 12 The daily challenge needs a connection.",
+      "busy": false
+    }
+  ]
+}

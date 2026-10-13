@@ -144,7 +144,7 @@ function analyze(sel) {
       const k = `${solid(cs.color)}|${bgOf(el)}`;
       const fs = parseFloat(cs.fontSize);
       const large = fs >= 24 || (fs >= 18.66 && Number(cs.fontWeight) >= 700);
-      if (!pairs.has(k)) pairs.set(k, { fg: solid(cs.color), bg: bgOf(el), large, ids: [], sample: el.innerText.trim().slice(0, 40), fs });
+      if (!pairs.has(k)) pairs.set(k, { fg: solid(cs.color), bg: bgOf(el), large, ids: [], sample: el.innerText.trim().replace(/\s+/g, " ").slice(0, 40), fs });
       const p = pairs.get(k);
       p.large = p.large && large;
       if (p.ids.length < 4) p.ids.push(idOf(el));
@@ -247,7 +247,7 @@ if (total >= 15 && d.literal / total > 0.5)
     fix: pt ? "Tokens semânticos (<code>--bg</code>, <code>--text</code>, <code>--accent</code>…) em cima de uma escala; veja <code>palette.css</code>." : "Semantic tokens (<code>--bg</code>, <code>--text</code>, <code>--accent</code>…) on top of a scale; see <code>palette.css</code>.",
   });
 const chromatic = groups.filter((g) => g[0].lch[1] > 0.04);
-if (chromatic.length > 6) F.push({ level: "low", title: pt ? `${chromatic.length} cores com saturação` : `${chromatic.length} saturated colors`, detail: pt ? "Muitas cores fortes competem pela atenção; o destaque deixa de destacar." : "Many strong colors compete for attention; the accent stops standing out.", fix: pt ? "Uma cor de destaque, uma de apoio, e o resto neutro." : "One accent, one supporting color, and neutrals for the rest." });
+if (chromatic.length > 6) F.push({ level: "low", title: pt ? `${chromatic.length} cores saturadas` : `${chromatic.length} saturated colors`, detail: pt ? "Muitas cores fortes competem pela atenção; o destaque deixa de destacar." : "Many strong colors compete for attention; the accent stops standing out.", fix: pt ? "Uma cor de destaque, uma de apoio e o resto neutro." : "One accent, one supporting color, and neutrals for the rest." });
 if (!d.dark) F.push({ level: "low", title: pt ? "Sem modo escuro" : "No dark mode", detail: pt ? "Nenhuma regra <code>prefers-color-scheme: dark</code>. Não é obrigatório; se for fazer, os tokens abaixo já trazem a versão escura." : "No <code>prefers-color-scheme: dark</code> rule. Not required; if you want one, the tokens below include the dark version.", fix: pt ? "Tokens com valores claros e escuros, trocados por <code>@media (prefers-color-scheme: dark)</code>." : "Tokens with light and dark values, switched by <code>@media (prefers-color-scheme: dark)</code>." });
 
 await shootFindings(page, F, out, "color");
@@ -273,36 +273,46 @@ const names = ["primary", "secondary", "tertiary"];
 const scales = brand.map((b, i) => ({ name: names[i], hex: hex(b), steps: scale(b) }));
 const neutral = { name: "neutral", steps: scale(brand[0] ?? [128, 128, 128], 0.012) };
 const at = (sc, st) => sc.steps.find((s) => s.step === st).rgb;
-const accentFor = (bg) => {
-  for (const st of [500, 600, 700, 800]) if (ratio(at(scales[0], st), bg) >= 4.5) return st;
-  return 800;
+// the accent is the brand color itself whenever it reads on the background (4.5:1);
+// only when it does not, the nearest step of its scale that does
+const accentOn = (bg, steps) => {
+  if (ratio(brand[0], bg) >= 4.5) return brand[0];
+  for (const st of steps) if (ratio(at(scales[0], st), bg) >= 4.5) return at(scales[0], st);
+  return at(scales[0], steps.at(-1));
 };
-const accentDark = (bg) => {
-  for (const st of [400, 300, 200]) if (ratio(at(scales[0], st), bg) >= 4.5) return st;
-  return 200;
-};
+// text on the accent: white or the darkest neutral, whichever reads better
+const onAccent = (accent) => [[255, 255, 255], at(neutral, 950)].sort((a, b) => ratio(b, accent) - ratio(a, accent))[0];
 const lightBg = at(neutral, 50);
 const darkBg = at(neutral, 950);
+const lightAccent = scales.length ? accentOn(lightBg, [500, 600, 700, 800]) : null;
+const darkAccent = scales.length ? accentOn(darkBg, [400, 300, 200]) : null;
 const sem = scales.length
   ? {
-      light: { bg: at(neutral, 50), surface: at(neutral, 100), text: at(neutral, 950), "text-muted": at(neutral, 700), border: at(neutral, 200), accent: at(scales[0], accentFor(lightBg)), "on-accent": [255, 255, 255] },
-      dark: { bg: darkBg, surface: at(neutral, 900), text: at(neutral, 50), "text-muted": at(neutral, 300), border: at(neutral, 800), accent: at(scales[0], accentDark(darkBg)), "on-accent": at(neutral, 950) },
+      light: { bg: lightBg, surface: at(neutral, 100), text: at(neutral, 950), "text-muted": at(neutral, 700), border: at(neutral, 200), accent: lightAccent, "on-accent": onAccent(lightAccent) },
+      dark: { bg: darkBg, surface: at(neutral, 900), text: at(neutral, 50), "text-muted": at(neutral, 300), border: at(neutral, 800), accent: darkAccent, "on-accent": onAccent(darkAccent) },
     }
   : null;
+// a semantic token points at its scale step; a value outside the scales (white) is written as is
+const ref = (rgb) => {
+  const v = hex(rgb);
+  for (const s of [...scales, neutral]) for (const x of s.steps) if (hex(x.rgb) === v) return `var(--${s.name}-${x.step})`;
+  return v;
+};
 const css = [
   `/* palette made by /coleoni-color from ${scales.map((s) => s.hex).join(", ") || "the page"} (OKLCH scales) */`,
   `:root {`,
   ...[...scales, neutral].flatMap((s) => s.steps.map((x) => `  --${s.name}-${x.step}: ${hex(x.rgb)};${x.brand ? " /* brand */" : ""}`)),
-  ...(sem ? Object.keys(sem.light).map((k) => `  --${k}: var(--${(() => { const v = hex(sem.light[k]); for (const s of [...scales, neutral]) for (const x of s.steps) if (hex(x.rgb) === v) return `${s.name}-${x.step}`; return "x"; })()});`) : []),
+  ...(sem ? Object.keys(sem.light).map((k) => `  --${k}: ${ref(sem.light[k])};`) : []),
   `}`,
-  ...(sem ? [`@media (prefers-color-scheme: dark) {`, `  :root {`, ...Object.keys(sem.dark).map((k) => `    --${k}: ${hex(sem.dark[k])};`), `  }`, `}`] : []),
+  ...(sem ? [`@media (prefers-color-scheme: dark) {`, `  :root {`, ...Object.keys(sem.dark).map((k) => `    --${k}: ${ref(sem.dark[k])};`), `  }`, `}`] : []),
 ].join("\n");
 writeFileSync(resolve(out, "palette.css"), css + "\n");
 
 // ---------------------------------------------------------------- drawings
+const ROLE = pt ? { text: "t", background: "f", border: "b", icon: "i" } : { text: "t", background: "b", border: "l", icon: "i" };
 const inUse = `<div class="panel" style="display:flex;flex-wrap:wrap;gap:10px">${groups
   .sort((a, b) => b[0].lch[0] - a[0].lch[0])
-  .map((g) => `<div style="display:flex;gap:2px;padding:4px;border-radius:12px;${g.length > 1 ? "outline:2px solid #ff6b5e;" : ""}">${g.map((c) => `<figure style="display:grid;gap:4px;width:70px"><div style="height:46px;border-radius:9px;background:${c.hex};border:1px solid #ffffff1a"></div><figcaption style="font:10.5px/1.3 ui-monospace,monospace;color:#c9cacf">${c.hex}<br><span style="color:#7c7e85">×${c.n} ${Object.keys(c.roles).map((r) => r[0]).join("")}</span></figcaption></figure>`).join("")}</div>`)
+  .map((g) => `<div style="display:flex;gap:2px;padding:4px;border-radius:12px;${g.length > 1 ? "outline:2px solid #ff6b5e;" : ""}">${g.map((c) => `<figure style="display:grid;gap:4px;width:70px"><div style="height:46px;border-radius:9px;background:${c.hex};border:1px solid #ffffff1a"></div><figcaption style="font:10.5px/1.3 ui-monospace,monospace;color:#c9cacf">${c.hex}<br><span style="color:#7c7e85">×${c.n} ${Object.keys(c.roles).map((r) => ROLE[r]).join("")}</span></figcaption></figure>`).join("")}</div>`)
   .join("")}</div>`;
 const pairsHtml = `<div class="panel" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px">${d.pairs
   .map((p) => ({ ...p, r: ratio(parse(p.fg), parse(p.bg)) }))
@@ -313,7 +323,7 @@ const pairsHtml = `<div class="panel" style="display:grid;grid-template-columns:
 const scaleHtml = `<div class="panel" style="display:grid;gap:10px">${[...scales, neutral]
   .map((s) => `<div style="display:grid;grid-template-columns:90px repeat(11,minmax(0,1fr));gap:4px;align-items:center"><span style="font:12px ui-monospace,monospace;color:#c9cacf">${s.name}</span>${s.steps.map((x) => `<div title="${hex(x.rgb)}" style="height:44px;border-radius:7px;background:${hex(x.rgb)};display:grid;place-items:end start;padding:4px;font:9.5px ui-monospace,monospace;color:${toLch(x.rgb)[0] > 0.6 ? "#111" : "#fff"};${x.brand ? "outline:2px solid #aefa0e;outline-offset:1px" : ""}">${x.step}</div>`).join("")}</div>`)
   .join("")}</div>`;
-const semCard = (mode, t) => `<div style="background:${hex(t.bg)};border-radius:14px;padding:18px;display:grid;gap:10px;border:1px solid ${hex(t.border)}"><span style="font:600 11px system-ui;letter-spacing:.08em;text-transform:uppercase;color:${hex(t["text-muted"])}">${mode}</span><div style="background:${hex(t.surface)};border:1px solid ${hex(t.border)};border-radius:10px;padding:14px;display:grid;gap:6px"><b style="font:600 18px Georgia,serif;color:${hex(t.text)}">${pt ? "Bolo pra sábado" : "A cake for Saturday"}</b><span style="font:14px system-ui;color:${hex(t["text-muted"])}">${pt ? "Texto secundário" : "Muted text"} · ${ratio(t["text-muted"], t.surface).toFixed(1)}:1</span><span style="justify-self:start;margin-top:4px;background:${hex(t.accent)};color:${hex(t["on-accent"])};border-radius:999px;padding:7px 14px;font:600 13px system-ui">${pt ? "Botão" : "Button"} · ${ratio(t["on-accent"], t.accent).toFixed(1)}:1</span></div></div>`;
+const semCard = (mode, t) => `<div style="background:${hex(t.bg)};border-radius:14px;padding:18px;display:grid;gap:10px;border:1px solid ${hex(t.border)}"><span style="font:600 11px system-ui;letter-spacing:.08em;text-transform:uppercase;color:${hex(t["text-muted"])}">${mode}</span><div style="background:${hex(t.surface)};border:1px solid ${hex(t.border)};border-radius:10px;padding:14px;display:grid;gap:6px"><b style="font:600 18px Georgia,serif;color:${hex(t.text)}">${pt ? "Texto principal" : "Main text"} · ${ratio(t.text, t.surface).toFixed(1)}:1</b><span style="font:14px system-ui;color:${hex(t["text-muted"])}">${pt ? "Texto secundário" : "Muted text"} · ${ratio(t["text-muted"], t.surface).toFixed(1)}:1</span><span style="justify-self:start;margin-top:4px;background:${hex(t.accent)};color:${hex(t["on-accent"])};border-radius:999px;padding:7px 14px;font:600 13px system-ui">${pt ? "Botão" : "Button"} · ${ratio(t["on-accent"], t.accent).toFixed(1)}:1</span></div></div>`;
 const semHtml = sem ? `<div class="panel" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">${semCard(pt ? "Claro" : "Light", sem.light)}${semCard(pt ? "Escuro" : "Dark", sem.dark)}</div>` : "";
 
 const high = F.filter((f) => f.level === "high").length;
@@ -323,10 +333,10 @@ const html = report({
   kicker: pt ? "Cor" : "Color",
   title: target.name,
   sub: o.select !== "body" ? o.select : "",
-  chips: [[fails.length, pt ? "pares sem contraste" : "low-contrast pairs", "r"], [dupes.length, pt ? "grupos quase iguais" : "near-duplicate groups", "y"], [colors.length, pt ? "cores em uso" : "colors in use"], [`${d.token}/${total}`, pt ? "declarações com token" : "declarations with tokens"]],
+  chips: [[fails.length, pt ? "pares com pouco contraste" : "low-contrast pairs", "r"], [dupes.length, pt ? "grupos quase iguais" : "near-duplicate groups", "y"], [colors.length, pt ? "cores em uso" : "colors in use"], [`${d.token}/${total}`, pt ? "declarações com token" : "declarations with tokens"]],
   findings: F,
   sections: [
-    { title: pt ? "Cores em uso" : "Colors in use", note: pt ? "contornadas em vermelho, as quase iguais · t texto, b fundo, i ícone" : "near-duplicates outlined in red · t text, b background, i icon", html: inUse, first: true },
+    { title: pt ? "Cores em uso" : "Colors in use", note: pt ? "contornadas em vermelho, as quase iguais · t texto, f fundo, b borda, i ícone" : "near-duplicates outlined in red · t text, b background, l border line, i icon", html: inUse, first: true },
     { title: pt ? "Contraste de cada texto" : "Contrast of every text", note: pt ? "no fundo real, do pior pro melhor" : "on its real background, worst first", html: pairsHtml },
     { title: pt ? "Paleta proposta" : "Proposed palette", note: pt ? "escalas OKLCH a partir da marca (contorno verde) · palette.css" : "OKLCH scales from the brand (green outline) · palette.css", html: scaleHtml },
     ...(sem ? [{ title: pt ? "Tokens semânticos" : "Semantic tokens", note: pt ? "claro e escuro, contraste conferido" : "light and dark, contrast checked", html: semHtml }] : []),

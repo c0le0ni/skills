@@ -63,6 +63,9 @@ passes. For near-duplicates, decide which value survives (usually the most
 used, or the one in the brand guide). Look at the proposed palette: the brand
 color sits on its own step (green outline); check that the steps around it
 still feel like the brand, and that the semantic tokens read well in both modes.
+`--accent` is the brand color itself in each mode where it passes 4.5:1 on
+the background, and the nearest step that passes only where it does not;
+`--on-accent` is white or the darkest neutral, whichever reads better on it.
 
 ## 3. Fix (only when the user asks, or with `--fix`)
 

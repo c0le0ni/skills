@@ -94,9 +94,10 @@ back in).
 ## 7. Write the document
 
 Use `template.md` as the structure. Keep it short enough to be read in ten
-minutes. Calibrate the level of cutting with `examples/juniper-bakery/`: the
-client asked for "an app like a delivery platform" and the scope delivers an
-order page, a daily order list and a WhatsApp confirmation.
+minutes. Calibrate the level of cutting with `examples/streak/`: the briefing
+asked for a complete web game with accounts, a global ranking, a CRM and a way
+to make money, and the scope delivers one loop (follow the pixel, keep the
+streak, buy upgrades) with progress kept in the browser.
 
 Before finishing, reread it and ask: *would a developer reading only this build
 a copy of a tool the client already has?* If yes, step 3 failed. Fix "Out of

@@ -1,0 +1,34 @@
+diff --git a/src/ui/primitives/segmented.tsx b/src/ui/primitives/segmented.tsx
+index 55bfb72..9e4f3fc 100644
+--- a/src/ui/primitives/segmented.tsx
++++ b/src/ui/primitives/segmented.tsx
+@@ -65 +65 @@ export function Segmented<T extends string>({ label, options, value, onChange, t
+-      className={cn('relative flex items-center gap-0.5 rounded-lg bg-surface-sunken p-0.5', className)}
++      className={cn('relative flex items-stretch gap-0.5 rounded-lg bg-surface-sunken p-0.5', className)}
+@@ -86 +86 @@ export function Segmented<T extends string>({ label, options, value, onChange, t
+-              'relative flex flex-1 items-center justify-center gap-1.5 rounded-md font-medium whitespace-nowrap text-foreground-muted',
++              'relative flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md text-center font-medium text-foreground-muted [overflow-wrap:anywhere]',
+@@ -88 +88 @@ export function Segmented<T extends string>({ label, options, value, onChange, t
+-              size === 'sm' ? 'h-6 px-2.5 text-xs touch:h-9' : 'h-7 px-3 text-sm touch:h-9',
++              size === 'sm' ? 'min-h-6 px-2.5 py-1 text-xs touch:min-h-9' : 'min-h-7 px-3 py-1 text-sm touch:min-h-9',
+diff --git a/src/ui/inspector.tsx b/src/ui/inspector.tsx
+index 21637d4..0ff320f 100644
+--- a/src/ui/inspector.tsx
++++ b/src/ui/inspector.tsx
+@@ -29 +29 @@ export function Inspector({ name, settings, onSettings, onReset, color, onColor,
+-    <section aria-label={S.settings} className={cn('flex flex-col gap-4 rounded-xl border border-border bg-surface p-4 shadow-lg md:max-h-full md:min-h-0', className)}>
++    <section aria-label={S.settings} className={cn('flex flex-col gap-4 rounded-xl border border-border bg-surface p-4 shadow-lg [overflow-wrap:anywhere] md:max-h-full md:min-h-0', className)}>
+@@ -78,3 +78,3 @@ export function Inspector({ name, settings, onSettings, onReset, color, onColor,
+-          <div className="flex items-center justify-between gap-2">
+-            <Segmented label={S.code} value={lang} onChange={setLang} tabs options={[{ value: 'react', label: S.react, controls: 'code-panel' }, { value: 'html', label: S.html, controls: 'code-panel' }]} className="w-40" />
+-            <Button variant="primary" size="md" onClick={() => copy(code, S.copiedCode(label), S.copyFailed)}>
++          <div className="flex flex-wrap items-center justify-between gap-2">
++            <Segmented label={S.code} value={lang} onChange={setLang} tabs options={[{ value: 'react', label: S.react, controls: 'code-panel' }, { value: 'html', label: S.html, controls: 'code-panel' }]} className="max-w-full min-w-40" />
++            <Button variant="primary" size="md" className="h-auto min-h-control max-w-full shrink py-1 whitespace-normal touch:h-auto touch:min-h-10" onClick={() => copy(code, S.copiedCode(label), S.copyFailed)}>
+diff --git a/src/ui/primitives/slider.tsx b/src/ui/primitives/slider.tsx
+index bb2bf5b..645b0f3 100644
+--- a/src/ui/primitives/slider.tsx
++++ b/src/ui/primitives/slider.tsx
+@@ -21 +21 @@ export function Slider({ label, value, min, max, step, onChange, show, className
+-      <span className="flex items-baseline justify-between text-xs">
++      <span className="flex flex-wrap items-baseline justify-between gap-x-3 text-xs">

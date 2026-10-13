@@ -108,10 +108,23 @@ function check(sel) {
   const issues = [];
   const side = document.documentElement.scrollWidth - document.documentElement.clientWidth;
   if (side > 2) issues.push(`sideways ${side}px`);
+  // text meant only for screen readers (.sr-only, .visually-hidden) is cut on purpose
+  const hiddenOnPurpose = (el) => {
+    for (let p = el; p && p !== document.documentElement; p = p.parentElement) {
+      const cs = getComputedStyle(p);
+      const out = cs.position === "absolute" || cs.position === "fixed";
+      const r = p.getBoundingClientRect();
+      if (out && /rect\(/.test(cs.clip)) return true;
+      if (/inset\((50|100)%/.test(cs.clipPath)) return true;
+      if (out && r.width <= 1 && r.height <= 1) return true;
+      if (out && (r.right <= 0 || r.bottom <= 0 || parseFloat(cs.left) <= -999 || parseFloat(cs.top) <= -999)) return true;
+    }
+    return false;
+  };
   for (const el of [root, ...root.querySelectorAll("*")]) {
     const cs = getComputedStyle(el);
     const hasText = [...el.childNodes].some((n) => n.nodeType === 3 && n.nodeValue.trim());
-    if (hasText && el.scrollWidth > el.clientWidth + 2 && /hidden|clip/.test(cs.overflowX + cs.overflow) && cs.textOverflow !== "ellipsis") {
+    if (hasText && el.scrollWidth > el.clientWidth + 2 && /hidden|clip/.test(cs.overflowX + cs.overflow) && cs.textOverflow !== "ellipsis" && !hiddenOnPurpose(el)) {
       issues.push("clipped");
       break;
     }

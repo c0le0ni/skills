@@ -81,7 +81,8 @@ node SKILL_DIR/scripts/variants.mjs <url|file|folder> --select "#menu" --variant
 `SKILL_DIR` is the folder that holds this `SKILL.md`. It writes `board.html`
 and `board.png`: the current version and the three variations, each on
 desktop and on a 390px phone, the first screen around it, and a flag if one
-scrolls sideways, cuts text or throws an error. Open `board.png` and fix any
+scrolls sideways, cuts text (text hidden for screen readers does not count)
+or throws an error. Open `board.png` and fix any
 variation that broke or looks off before showing it.
 
 ## 4. Let the user choose

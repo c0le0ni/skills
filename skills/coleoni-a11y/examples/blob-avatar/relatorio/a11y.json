@@ -1,0 +1,264 @@
+{
+  "site": "blob.coleoni.com",
+  "standard": "WCAG 2.2 AA + eMAG 3.1",
+  "date": "2026-10-12T20:58:51.075Z",
+  "counts": {
+    "block": 1,
+    "fix": 1,
+    "look": 1
+  },
+  "passed": [
+    "aria-allowed-attr",
+    "aria-allowed-role",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "document-title",
+    "duplicate-id-aria",
+    "empty-heading",
+    "heading-order",
+    "html-has-lang",
+    "html-lang-valid",
+    "landmark-banner-is-top-level",
+    "landmark-contentinfo-is-top-level",
+    "landmark-main-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-contentinfo",
+    "landmark-no-duplicate-main",
+    "landmark-one-main",
+    "landmark-unique",
+    "link-name",
+    "meta-viewport-large",
+    "meta-viewport",
+    "nested-interactive",
+    "page-has-heading-one",
+    "role-img-alt",
+    "tabindex",
+    "target-size"
+  ],
+  "issues": [
+    {
+      "rule": "color-contrast",
+      "impact": "serious",
+      "title": "Os elementos devem ter contraste de cor suficiente",
+      "detail": "Certifique-se de que o contraste entre as cores de primeiro plano e de fundo atenda aos limites de relação de contraste WCAG 2 AA",
+      "sc": [
+        "1.4.3"
+      ],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI&lang=pt-BR",
+      "best": false,
+      "pages": [
+        "/pt/",
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": ".gap-\\[0\\.25em\\]",
+          "html": "<span class=\"flex items-center gap-[0.25em]\">",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.03 (cor do primeiro plano: #898c92, cor de fundo: #f2f3f5, tamanho da fonte: 8.3pt (11px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-0.jpg",
+          "page": "/pt/"
+        },
+        {
+          "target": "footer > a[target=\"_blank\"][rel=\"noopener noreferrer\"]",
+          "html": "<a href=\"https://github.com/c0le0ni/blob-avatar\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1 transition-colors hover:text-foreground\">",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.03 (cor do primeiro plano: #898c92, cor de fundo: #f2f3f5, tamanho da fonte: 8.3pt (11px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-1.jpg",
+          "page": "/pt/"
+        },
+        {
+          "target": "a[rel=\"noopener\"][href$=\"pt/\"]:nth-child(5)",
+          "html": "<a href=\"https://skills.coleoni.com/pt/\" rel=\"noopener\" class=\"transition-colors hover:text-foreground\">Coleoni Skills</a>",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.03 (cor do primeiro plano: #898c92, cor de fundo: #f2f3f5, tamanho da fonte: 8.3pt (11px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": "shots/el-2.jpg",
+          "page": "/pt/"
+        },
+        {
+          "target": "a[rel=\"noopener\"]:nth-child(7)",
+          "html": "<a href=\"https://loaders.coleoni.com/pt/\" rel=\"noopener\" class=\"transition-colors hover:text-foreground\">Loaders</a>",
+          "summary": "O elemento tem contraste insuficiente no valor de 3.03 (cor do primeiro plano: #898c92, cor de fundo: #f2f3f5, tamanho da fonte: 8.3pt (11px), normal/negrito: normal). Contraste esperado no valor de 4.5:1",
+          "shot": null,
+          "page": "/pt/"
+        }
+      ],
+      "count": 8,
+      "sev": "block",
+      "emag": [
+        "4.1"
+      ]
+    },
+    {
+      "rule": "region",
+      "impact": "moderate",
+      "title": "Todo o conteúdo da página deve estar contido em regiões (landmarks)",
+      "detail": "Certifique-se de todo o conteúdo da página esteja contido em regiões (landmarks)",
+      "sc": [],
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/region?application=axeAPI&lang=pt-BR",
+      "best": true,
+      "pages": [
+        "/pt/",
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "h1",
+          "html": "<h1 class=\"sr-only\">Blob Avatar: crie seu avatar animado</h1>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": "shots/el-3.jpg",
+          "page": "/pt/"
+        },
+        {
+          "target": "h1",
+          "html": "<h1 class=\"sr-only\">Blob Avatar: make your own animated avatar</h1>",
+          "summary": "Algum conteúdo da página não está contido em regiões (landmarks)",
+          "shot": "shots/el-7.jpg",
+          "page": "/"
+        }
+      ],
+      "count": 2,
+      "sev": "fix",
+      "emag": [
+        "1.8"
+      ]
+    },
+    {
+      "rule": "skip-link-missing",
+      "sc": [
+        "2.4.1"
+      ],
+      "impact": "minor",
+      "en": [
+        "No skip link",
+        "The first Tab stop is not a link to the main content, so keyboard users go through the whole menu on every page.",
+        "Add “Skip to content” as the first focusable element, pointing to <main id=\"content\">. eMAG 1.5 asks for it."
+      ],
+      "pt": [
+        "Sem link de pular conteúdo",
+        "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página.",
+        "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra <main id=\"conteudo\">. O eMAG pede isso na recomendação 1.5."
+      ],
+      "title": "Sem link de pular conteúdo",
+      "detail": "A primeira parada do Tab não é um link pro conteúdo principal, então quem usa teclado passa pelo menu inteiro em toda página.",
+      "fixText": "Adicione “Ir para o conteúdo” como primeiro elemento focável, apontando pra <main id=\"conteudo\">. O eMAG pede isso na recomendação 1.5.",
+      "pages": [
+        "/pt/",
+        "/"
+      ],
+      "nodes": [
+        {
+          "target": "a https://coleoni.com/pt “Coleoni”",
+          "html": "",
+          "summary": "",
+          "shot": null,
+          "page": "/pt/"
+        },
+        {
+          "target": "a https://coleoni.com “Coleoni”",
+          "html": "",
+          "summary": "",
+          "shot": null,
+          "page": "/"
+        }
+      ],
+      "count": 2,
+      "sev": "look",
+      "emag": [
+        "1.5"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://blob.coleoni.com/pt/",
+      "path": "/pt/",
+      "keyboard": {
+        "stops": 27,
+        "skip": false,
+        "noFocus": 0,
+        "hidden": 0,
+        "trap": false,
+        "order": [
+          "a https://coleoni.com/pt “Coleoni”",
+          "a /pt/ “Blob Avatar da Coleoni, início”",
+          "button “Personalizar”",
+          "button “Animar”",
+          "button “Mudar para o tema escuro”",
+          "button “Idioma: PT”",
+          "a https://github.com/c0le0ni/blob-avatar “GitHub (abre em outra aba)”",
+          "button “Exportar PNG”",
+          "button “Mais opções de exportação”",
+          "button “Sortear”",
+          "button “Desfazer”",
+          "button “Refazer”",
+          "button “Ajustes”",
+          "button “Círculo lima, neutro”",
+          "button “Seixo roxo, feliz”",
+          "button “Quadrado azul, atento”",
+          "button “Triângulo âmbar, animado”",
+          "button “Nuvem rosa, rindo”",
+          "button “Gota turquesa, curioso”",
+          "button “Fantasma cinza, assustado”",
+          "button “Coração vermelho, tímido”",
+          "button “Forma”",
+          "button “Círculo”",
+          "a https://coleoni.com/pt “Coleoni (abre em outra aba)”",
+          "a https://github.com/c0le0ni/blob-avatar “GitHub (abre em outra aba)”",
+          "a https://skills.coleoni.com/pt/ “Coleoni Skills”",
+          "a https://loaders.coleoni.com/pt/ “Loaders”"
+        ]
+      },
+      "shot": "shots/page-0.jpg"
+    },
+    {
+      "url": "https://blob.coleoni.com/",
+      "path": "/",
+      "keyboard": {
+        "stops": 27,
+        "skip": false,
+        "noFocus": 0,
+        "hidden": 0,
+        "trap": false,
+        "order": [
+          "a https://coleoni.com “Coleoni”",
+          "a / “Blob Avatar by Coleoni, home”",
+          "button “Customize”",
+          "button “Animate”",
+          "button “Switch to the dark theme”",
+          "button “Language: EN”",
+          "a https://github.com/c0le0ni/blob-avatar “GitHub (opens in a new tab)”",
+          "button “Export PNG”",
+          "button “More export options”",
+          "button “Randomize”",
+          "button “Undo”",
+          "button “Redo”",
+          "button “Settings”",
+          "button “Lime circle, neutral”",
+          "button “Purple pebble, happy”",
+          "button “Blue squircle, attentive”",
+          "button “Amber triangle, excited”",
+          "button “Pink cloud, laughing”",
+          "button “Turquoise droplet, curious”",
+          "button “Grey ghost, scared”",
+          "button “Red heart, shy”",
+          "button “Shape”",
+          "button “Circle”",
+          "a https://coleoni.com “Coleoni (opens in a new tab)”",
+          "a https://github.com/c0le0ni/blob-avatar “GitHub (opens in a new tab)”",
+          "a https://skills.coleoni.com “Coleoni Skills”",
+          "a https://loaders.coleoni.com “Loaders”"
+        ]
+      },
+      "shot": "shots/page-1.jpg"
+    }
+  ]
+}

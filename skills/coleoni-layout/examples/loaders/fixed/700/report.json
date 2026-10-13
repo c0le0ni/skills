@@ -1,0 +1,30 @@
+{
+  "skill": "coleoni-layout",
+  "page": "localhost",
+  "findings": [],
+  "edges": [
+    {
+      "x": 29,
+      "n": 2
+    },
+    {
+      "x": 182,
+      "n": 1
+    }
+  ],
+  "gaps": [
+    -1637
+  ],
+  "widths": [
+    {
+      "w": 390,
+      "extra": 0,
+      "el": null
+    },
+    {
+      "w": 768,
+      "extra": 0,
+      "el": null
+    }
+  ]
+}

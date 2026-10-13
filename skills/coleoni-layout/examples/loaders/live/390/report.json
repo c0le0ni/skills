@@ -1,0 +1,40 @@
+{
+  "skill": "coleoni-layout",
+  "page": "loaders.coleoni.com",
+  "findings": [
+    {
+      "level": "medium",
+      "title": "1 edges that almost line up",
+      "detail": "<code>27px</code> instead of <code>29px</code> (-2px, 1 block)<br>Nobody notices the number; everyone feels the page is crooked.",
+      "fix": "One container (<code>max-width</code> + <code>margin-inline: auto</code> + one <code>padding-inline</code> token) for every section, instead of padding per section.",
+      "shots": [
+        "shots/layout-0.jpg"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "x": 27,
+      "n": 1
+    },
+    {
+      "x": 29,
+      "n": 2
+    }
+  ],
+  "gaps": [
+    -1910
+  ],
+  "widths": [
+    {
+      "w": 390,
+      "extra": 0,
+      "el": null
+    },
+    {
+      "w": 768,
+      "extra": 0,
+      "el": null
+    }
+  ]
+}

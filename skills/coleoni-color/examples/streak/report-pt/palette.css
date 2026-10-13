@@ -1,0 +1,43 @@
+/* palette made by /coleoni-color from #AEFA0E (OKLCH scales) */
+:root {
+  --primary-50: #F2FAEA;
+  --primary-100: #E1F3CE;
+  --primary-200: #AEFA0E; /* brand */
+  --primary-300: #A0D05E;
+  --primary-400: #7DB600;
+  --primary-500: #6A9B02;
+  --primary-600: #578002;
+  --primary-700: #456700;
+  --primary-800: #344F00;
+  --primary-900: #233800;
+  --primary-950: #162500;
+  --neutral-50: #F6F7F6;
+  --neutral-100: #EAEBEA;
+  --neutral-200: #D6D8D5;
+  --neutral-300: #BCBFB9;
+  --neutral-400: #9FA39C;
+  --neutral-500: #878B83;
+  --neutral-600: #6F736C;
+  --neutral-700: #595C56;
+  --neutral-800: #444641;
+  --neutral-900: #2F312D;
+  --neutral-950: #1E201D;
+  --bg: var(--neutral-50);
+  --surface: var(--neutral-100);
+  --text: var(--neutral-950);
+  --text-muted: var(--neutral-700);
+  --border: var(--neutral-200);
+  --accent: var(--primary-700);
+  --on-accent: #FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--neutral-950);
+    --surface: var(--neutral-900);
+    --text: var(--neutral-50);
+    --text-muted: var(--neutral-300);
+    --border: var(--neutral-800);
+    --accent: var(--primary-200);
+    --on-accent: var(--neutral-950);
+  }
+}

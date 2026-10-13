@@ -9,8 +9,6 @@ local copy, on 13/10/2026. The component is `#open-source`: the three cards
 - `board/`: the board it generated. Open `board/board.html`: the current cards
   and the three directions on desktop and on a 390px phone, plus each one in the
   page. `board/variants.md` is the same in text.
-- `index-built.patch`: Index built into the source (`globals.css` and
-  `ProductCards.tsx`), no injected CSS left.
 - `built.json` and `built/`: the same board run again after the build, to check
   the built version against the injected one.
 

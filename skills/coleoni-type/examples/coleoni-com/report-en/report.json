@@ -1,0 +1,106 @@
+{
+  "skill": "coleoni-type",
+  "page": "coleoni.com",
+  "findings": [
+    {
+      "level": "medium",
+      "title": "23 tamanhos de letra, 14 quase iguais",
+      "detail": "Em uso: <code>11</code> <code>11.5</code> <code>12</code> <code>12.5</code> <code>13</code> <code>13.5</code> <code>14</code> <code>14.5</code> <code>15</code> <code>16</code> <code>16.5</code> <code>17</code> <code>17.5</code> <code>18</code> <code>18.5</code> <code>25.5</code> <code>33.5</code> <code>43.5</code> <code>64</code> <code>70.5</code> <code>84.5</code> <code>94</code> <code>262.5</code>. Pares que ninguém distingue: 11/11.5, 11.5/12, 12/12.5, 12.5/13, 13/13.5, 13.5/14, 14/14.5, 14.5/15, 15/16, 16/16.5, 16.5/17, 17/17.5, 17.5/18, 18/18.5.",
+      "fix": "Uma escala de 5 a 7 passos com razão constante (1,2 a 1,33), em tokens <code>rem</code>: por exemplo 13 · 15 · 17 · 21 · 28 · 44.",
+      "shots": [
+        "shots/type-0.jpg",
+        "shots/type-1.jpg",
+        "shots/type-2.jpg",
+        "shots/type-3.jpg"
+      ]
+    },
+    {
+      "level": "medium",
+      "title": "Linhas longas demais",
+      "detail": "Cerca de 87 caracteres por linha. Acima de 75, ler cansa e o olho erra a próxima linha.",
+      "fix": "<code>max-width: 34em</code> (cerca de 65 caracteres) nos parágrafos.",
+      "shots": [
+        "shots/type-4.jpg",
+        "shots/type-5.jpg"
+      ]
+    },
+    {
+      "level": "low",
+      "title": "Caixa-alta sem espaçamento",
+      "detail": "Letras maiúsculas pequenas grudam umas nas outras sem um pouco de espaço entre elas.",
+      "fix": "<code>letter-spacing: .06em</code> a <code>.1em</code> em rótulos em caixa-alta.",
+      "shots": [
+        "shots/type-6.jpg"
+      ]
+    }
+  ],
+  "sizes": [
+    11,
+    11.5,
+    12,
+    12.5,
+    13,
+    13.5,
+    14,
+    14.5,
+    15,
+    16,
+    16.5,
+    17,
+    17.5,
+    18,
+    18.5,
+    25.5,
+    33.5,
+    43.5,
+    64,
+    70.5,
+    84.5,
+    94,
+    262.5
+  ],
+  "families": [
+    {
+      "family": "Geist",
+      "weights": [
+        600,
+        400,
+        700,
+        500,
+        510,
+        550,
+        560,
+        620
+      ]
+    },
+    {
+      "family": "Geist Mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    {
+      "family": "monospace",
+      "weights": [
+        400
+      ]
+    }
+  ],
+  "missing": [],
+  "faces": [
+    "Geist 100 900 normal (unloaded)",
+    "Geist 100 900 normal (unloaded)",
+    "Geist 100 900 normal (unloaded)",
+    "Geist 100 900 normal (unloaded)",
+    "Geist 100 900 normal (loaded)",
+    "Geist Fallback normal normal (loaded)",
+    "Geist Mono 100 900 normal (unloaded)",
+    "Geist Mono 100 900 normal (unloaded)",
+    "Geist Mono 100 900 normal (unloaded)",
+    "Geist Mono 100 900 normal (unloaded)",
+    "Geist Mono 100 900 normal (unloaded)",
+    "Geist Mono 100 900 normal (loaded)",
+    "Geist Mono Fallback normal normal (loaded)"
+  ]
+}

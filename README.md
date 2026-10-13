@@ -103,7 +103,7 @@ Every image on this page was made by the skill itself.
 ### `/coleoni-briefing`
 
 <a href="https://skills.coleoni.com/coleoni-briefing/">
-  <img src=".github/assets/coleoni-briefing-phones.jpg" alt="A scope document made by coleoni-briefing, shown on three phones" width="100%">
+  <img src=".github/assets/coleoni-briefing-cover.jpg" alt="coleoni-briefing on Streak: my real messages about the game with the pain marked, and the same sentence large below" width="100%">
 </a>
 
 Clients describe the product they imagine. Their answers reveal a smaller,
@@ -124,15 +124,19 @@ call notes, emails, chat exports) and writes a scope you can defend.
 /coleoni-briefing client-notes.md --pdf
 ```
 
-A full example, from messy briefing to scope, lives in
-[`skills/coleoni-briefing/examples/juniper-bakery`](skills/coleoni-briefing/examples/juniper-bakery).
+The example is real: my own WhatsApp messages and loose notes about
+[Streak](https://streak.coleoni.com), my web game, from before it existed. I asked
+for a complete game with accounts, a ranking, a CRM and a way to make money; the
+scope kept one loop for the first release and sent the rest to the roadmap, each
+with a reason:
+[`skills/coleoni-briefing/examples/streak`](skills/coleoni-briefing/examples/streak).
 
 <br>
 
 ### `/coleoni-init`
 
 <a href="https://skills.coleoni.com/coleoni-init/">
-  <img src=".github/assets/coleoni-init-phones.jpg" alt="The project overview made by coleoni-init, shown on three phones" width="100%">
+  <img src=".github/assets/coleoni-init-cover.jpg" alt="coleoni-init on Streak: the end-of-run screen with seven points where each color was read, next to the design tokens" width="100%">
 </a>
 
 Before the first line of code, a project needs to say what it is, what it is
@@ -153,15 +157,18 @@ the mockups or brand, when there are any) and writes that skeleton.
 /coleoni-init ./my-project --write --overview
 ```
 
-The example continues the bakery from `/coleoni-briefing`:
-[`skills/coleoni-init/examples/juniper-bakery`](skills/coleoni-init/examples/juniper-bakery).
+The example continues Streak from `/coleoni-briefing`: its scope and six real
+screens of the game became ten documents and the overview page, with the stack
+left as ADR-0001, to record, and no privacy note because the first release keeps
+no personal data:
+[`skills/coleoni-init/examples/streak`](skills/coleoni-init/examples/streak).
 
 <br>
 
 ### `/coleoni-favicon`
 
 <a href="https://skills.coleoni.com/coleoni-favicon/">
-  <img src=".github/assets/coleoni-favicon-devices.jpg" alt="The favicon preview sheet made by coleoni-favicon, in a browser and on a phone" width="100%">
+  <img src=".github/assets/coleoni-favicon-cover.jpg" alt="coleoni-favicon on the Coleoni symbol: the 16px favicon enlarged 42 times, half vector, half its real pixels" width="100%">
 </a>
 
 One logo in, every icon out, each one checked where it actually appears.
@@ -180,12 +187,16 @@ One logo in, every icon out, each one checked where it actually appears.
 /coleoni-favicon brand/mark.svg on #0a0a0a, rounded, install it
 ```
 
+The example is the Coleoni symbol itself, on a `#0a0a0a` rounded tile: the
+input and every file of the set, preview sheet included, are in
+[`skills/coleoni-favicon/examples/coleoni`](skills/coleoni-favicon/examples/coleoni).
+
 <br>
 
 ### `/coleoni-og`
 
 <a href="https://skills.coleoni.com/coleoni-og/">
-  <img src=".github/assets/coleoni-og-juniper.jpg" alt="A share image made by coleoni-og from a bakery's home page" width="100%">
+  <img src=".github/assets/coleoni-og-cover.jpg" alt="coleoni-og on Loaders: the loaders.coleoni.com link in iMessage, with the share image the skill made from the page" width="100%">
 </a>
 
 The picture a link shows when someone shares it, made from the page itself:
@@ -208,15 +219,20 @@ its headline, its logo, its fonts and colors, and the page in a browser frame.
 /coleoni-og the whole site from the sitemap, title layout for the blog, install it
 ```
 
-The share images of [skills.coleoni.com](https://skills.coleoni.com) were made
-by this skill.
+The example runs it on [Loaders](https://loaders.coleoni.com), my library of
+loading animations: the home in the three layouts, dark and light, then all 28
+pages with their tags checked, 223 right and one description 3 characters too
+long. See
+[`skills/coleoni-og/examples/loaders`](skills/coleoni-og/examples/loaders). The
+share images of [skills.coleoni.com](https://skills.coleoni.com) were made by
+this skill too.
 
 <br>
 
 ### `/coleoni-launch`
 
 <a href="https://skills.coleoni.com/coleoni-launch/">
-  <img src=".github/assets/coleoni-launch-report.jpg" alt="A launch report made by coleoni-launch, in a browser and on a phone" width="100%">
+  <img src=".github/assets/coleoni-launch-cover.jpg" alt="coleoni-launch on coleoni.com: the verdict, Ready after fixes, above the 74 results in the order they were checked" width="100%">
 </a>
 
 Opens every page like a careful first visitor and a search engine would, then
@@ -236,12 +252,17 @@ says plainly whether the site is ready.
 /coleoni-launch ./dist, domain yoursite.com, fix what you can
 ```
 
+The example is the real check of [coleoni.com](https://coleoni.com), my own
+site, in English and Portuguese: ready after fixes, with the www address and
+five security headers to fix. The report, its JSON and the screenshots are in
+[`skills/coleoni-launch/examples/coleoni-com`](skills/coleoni-launch/examples/coleoni-com).
+
 <br>
 
 ### `/coleoni-copy`
 
 <a href="https://skills.coleoni.com/coleoni-copy/">
-  <img src=".github/assets/coleoni-copy-review.jpg" alt="A copy review made by coleoni-copy: before and after, with the reasons" width="100%">
+  <img src=".github/assets/coleoni-copy-cover.jpg" alt="coleoni-copy on coleoni.com/pt: one heading with a single word changed, and the voice guide rule behind it" width="100%">
 </a>
 
 Reads a product the way its reader does and rewrites every sentence that talks
@@ -262,12 +283,16 @@ to itself instead of to them.
 /coleoni-copy src/ (the app's buttons, errors and empty states), apply it
 ```
 
+The example is a real run on my own site, coleoni.com/pt: 149 pieces of text,
+6 flags (5 kept, each with its reason) and 6 rewrites:
+[`skills/coleoni-copy/examples/coleoni-com`](skills/coleoni-copy/examples/coleoni-com).
+
 <br>
 
 ### `/coleoni-a11y`
 
 <a href="https://skills.coleoni.com/coleoni-a11y/">
-  <img src=".github/assets/coleoni-a11y-report.jpg" alt="An accessibility report made by coleoni-a11y, with each problem cropped from the page" width="100%">
+  <img src=".github/assets/coleoni-a11y-cover.jpg" alt="coleoni-a11y on Blob Avatar: the failing contrast ratio, 3.03:1, over the real footer in the grey that fails" width="100%">
 </a>
 
 Checks whether everyone can use the product: on a keyboard, on a screen
@@ -286,15 +311,19 @@ reader, with low vision, at 320px, sensitive to motion.
 /coleoni-a11y ./dist, report in Portuguese, fix the contrast and the focus
 ```
 
-skills.coleoni.com went through it: 268 low-contrast elements, a skip link
-and keyboard access to scrolling boxes, all fixed.
+The example audits [Blob Avatar](https://blob.coleoni.com), my avatar maker, as
+it is today: 37 rules passed, a faint grey that fails contrast in the footer,
+in Animate mode and in the dark theme (one token behind all of it), no skip
+link, and Randomize swapping the blob without telling the screen reader.
+Nothing fixed yet:
+[`skills/coleoni-a11y/examples/blob-avatar`](skills/coleoni-a11y/examples/blob-avatar).
 
 <br>
 
 ### `/coleoni-break`
 
 <a href="https://skills.coleoni.com/coleoni-break/">
-  <img src=".github/assets/coleoni-break-sheet.jpg" alt="A break test sheet made by coleoni-break: each scenario with what broke outlined" width="100%">
+  <img src=".github/assets/coleoni-break-cover.jpg" alt="coleoni-break on Loaders: a 42-letter word pushing the settings card buttons 216px past its edge" width="100%">
 </a>
 
 Mockups get perfect content. Production gets a 60-character name, a German
@@ -307,19 +336,24 @@ that to the component first.
 - **Measured, not eyeballed:** clipped text, overlaps, content spilling out,
   sideways scroll, text in px, all outlined in red on each crop.
 - **Fixes the CSS** at the cause (fixed sizes, nowrap, absolute badges, px),
-  then runs again: the example goes from 9 scenarios breaking to 0.
+  then runs again.
 
 ```text
 /coleoni-break http://localhost:5173/menu .product-card
 /coleoni-break the checkout summary, fix what breaks
 ```
 
+The example is a real run on the settings card of Loaders, my loader library:
+3 of 14 scenarios broke (the worst spill was 216px), and after 8 lines of class
+changes, 0 did. Both sheets and the diff:
+[`skills/coleoni-break/examples/loaders`](skills/coleoni-break/examples/loaders).
+
 <br>
 
 ### `/coleoni-states`
 
 <a href="https://skills.coleoni.com/coleoni-states/">
-  <img src=".github/assets/coleoni-states-board.jpg" alt="A states board made by coleoni-states: loading, empty, error, offline and more" width="100%">
+  <img src=".github/assets/coleoni-states-cover.jpg" alt="coleoni-states on the Streak leaderboard: its 9 states side by side, with the 5 nobody designed marked" width="100%">
 </a>
 
 A component is designed full of data. It lives a good part of its life
@@ -338,12 +372,18 @@ waiting, empty, failing or half filled.
 /coleoni-states the dashboard cards, build the missing states
 ```
 
+The example is a real run on the daily challenge leaderboard of Streak, my game,
+on a copy of the code reading the real production API: 5 of 9 states had
+problems (four different failures showed the same sentence), and 0 after the
+states were built. Both boards and the patch:
+[`skills/coleoni-states/examples/streak`](skills/coleoni-states/examples/streak).
+
 <br>
 
 ### `/coleoni-variants`
 
 <a href="https://skills.coleoni.com/coleoni-variants/">
-  <img src=".github/assets/coleoni-variants-board.jpg" alt="A variations board made by coleoni-variants: the current card and three directions" width="100%">
+  <img src=".github/assets/coleoni-variants-cover.jpg" alt="coleoni-variants on coleoni.com: three directions for the open source cards on a phone, next to the current version" width="100%">
 </a>
 
 Choosing between descriptions is guessing. Choosing between three real
@@ -360,6 +400,11 @@ versions, in the real page, is a decision.
 /coleoni-variants the hero, 3 directions, one of them without the photo
 ```
 
+The example runs on my own site, [coleoni.com](https://coleoni.com): three
+directions for the open source cards at the edge of the hero (Index, Spotlight,
+Shelf), on desktop and phone, and then Index built into the source:
+[`skills/coleoni-variants/examples/coleoni-com`](skills/coleoni-variants/examples/coleoni-com).
+
 <br>
 
 ### The interface family
@@ -371,7 +416,7 @@ and turn what they find into tokens. `/coleoni-interface` runs them together
 everything into one report ordered by severity.
 
 <a href="https://skills.coleoni.com/coleoni-interface/">
-  <img src=".github/assets/coleoni-interface-report.jpg" alt="An interface review made by coleoni-interface: findings by area and by severity" width="100%">
+  <img src=".github/assets/coleoni-interface-cover.jpg" alt="coleoni-interface on Blob Avatar: six review areas tied to one four-step work order" width="100%">
 </a>
 
 #### `/coleoni-polish`
@@ -381,12 +426,23 @@ the outer one, a hard black shadow, spacing off the 4px grid, buttons that
 don't match, an arrow 3px below the text, buttons with no hover, a `div` that
 looks like a button. Shows the radii, shadows and spacing the page really uses.
 
+The example measures skills.coleoni.com, the site of these skills: 5 corner
+radii (the fifth is the skip link) and 14 spacing values off the 4px grid,
+fixed in the tokens and now live, with the reports before and after and the
+diff:
+[`skills/coleoni-polish/examples/skills-coleoni-com`](skills/coleoni-polish/examples/skills-coleoni-com).
+
 #### `/coleoni-type`
 
 Fonts named but never loaded (or only on the machine that built the page),
 faked bold, 13 sizes where 6 would do, line height, lines 130 characters
 long, justified text, capitals without tracking, numbers that don't line up.
 Draws the specimen the page really uses.
+
+The example audits my own site, [coleoni.com](https://coleoni.com), live: Geist
+loads fine, but there are 23 font sizes (14 pairs almost equal) and paragraphs
+about 86 characters wide. Nothing applied yet:
+[`skills/coleoni-type/examples/coleoni-com`](skills/coleoni-type/examples/coleoni-com).
 
 #### `/coleoni-color`
 
@@ -395,10 +451,23 @@ text on its real background with the closest passing shade, hardcoded vs
 tokens. Proposes OKLCH scales from the brand and semantic tokens for light
 and dark, as `palette.css`.
 
+The [example](skills/coleoni-color/examples/streak) is a real run on
+[Streak](https://streak.coleoni.com), my browser game, in English and
+Portuguese, with the palette it built from the brand green `#AEFA0E`.
+
 #### `/coleoni-layout`
 
 Edges off by 2px, uneven gaps between sections, headings that float between
 blocks, sideways scroll on phones. Draws the edges and gaps over the page.
+
+The example is a real run on [Loaders](https://loaders.coleoni.com), my loader
+library, at 390, 700, 768 and 1280px. The engine flagged one 2px near miss at
+390px, left as it is. Loaders is mostly `div` and `button`, so I applied the
+same 1 to 6px rule to every visible box with a small measuring script, which
+found the selected color ring 4px outside the column, the header off its margin
+between 640 and 767px, and 8px between the npm command and the card on phones.
+Four lines fixed it in a local copy; the reports (live and fixed) and the diff:
+[`skills/coleoni-layout/examples/loaders`](skills/coleoni-layout/examples/loaders).
 
 #### `/coleoni-interface`
 
@@ -411,8 +480,13 @@ npx skills add c0le0ni/skills --skill coleoni-interface --skill coleoni-polish -
 /coleoni-interface the checkout page, fix it in order
 ```
 
-The example is a cake order page built section by section: 29 findings
-across six areas, then 0 after one pass of tokens and components.
+The example is a real review of [Blob Avatar](https://blob.coleoni.com), my
+avatar maker, in all six areas: 7 findings in one list, and 3 causes behind
+four of them (one gray token, near-identical whites, an `h1` outside a `main`).
+One token line, `--pulse-foreground-subtle` from `#898C92` to `#6C6F74`, takes
+the footer contrast from 3.04:1 to 4.57:1 in all 11 places it is used. The
+other three findings are the Blob's own choices and stay as they are:
+[`skills/coleoni-interface/examples/blob-avatar`](skills/coleoni-interface/examples/blob-avatar).
 
 ## Signature
 

@@ -88,8 +88,24 @@ function analyze(sel) {
   const root = document.querySelector(sel) ?? document.body;
   let n = 0;
   const idOf = (el) => (el.dataset.cx ||= `c${++n}`);
-  const clear = (c) => !c || c === "transparent" || /rgba\([^)]*,\s*0\)$/.test(c);
-  const solid = (c) => c.replace(/rgba\(([^,]+),([^,]+),([^,]+),[^)]+\)/, "rgb($1,$2,$3)");
+  // computed colors can come back as oklch()/lab()/color(); read them through a canvas as sRGB
+  const cv = document.createElement("canvas");
+  cv.width = cv.height = 1;
+  const cx = cv.getContext("2d", { willReadFrequently: true });
+  const norm = (c) => {
+    if (!c || c === "transparent" || c === "none") return "transparent";
+    if (/^rgba?\(/.test(c)) return c;
+    if (!CSS.supports("color", c)) return "transparent"; // url(#gradient), context-fill…
+    cx.clearRect(0, 0, 1, 1);
+    cx.fillStyle = "#000";
+    cx.fillStyle = c;
+    cx.fillRect(0, 0, 1, 1);
+    const [r, g, b, a] = cx.getImageData(0, 0, 1, 1).data;
+    if (a === 0) return "transparent";
+    return a === 255 ? `rgb(${r}, ${g}, ${b})` : `rgba(${r}, ${g}, ${b}, ${(a / 255).toFixed(3)})`;
+  };
+  const clear = (c) => ((c = norm(c)), c === "transparent" || /rgba\([^)]*,\s*0\)$/.test(c));
+  const solid = (c) => norm(c).replace(/rgba\(\s*([^,]+?)\s*,\s*([^,]+?)\s*,\s*([^,]+?)\s*,[^)]+\)/, "rgb($1, $2, $3)");
   const vis = (el) => {
     const r = el.getBoundingClientRect();
     const cs = getComputedStyle(el);
@@ -168,7 +184,19 @@ const browser = await launch();
 const { page, ctx } = await load(browser, target.url, { width: o.width, wait: o.wait });
 const d = await page.evaluate(analyze, o.select);
 
-const colors = d.uses.map((u) => ({ ...u, rgb: parse(u.c), hex: hex(parse(u.c)), lch: toLch(parse(u.c)) })).sort((a, b) => b.n - a.n);
+// one entry per hex (the page can report the same color in different notations)
+const byHex = new Map();
+for (const u of d.uses) {
+  const h = hex(parse(u.c));
+  const e = byHex.get(h);
+  if (!e) byHex.set(h, { ...u, roles: { ...u.roles }, ids: [...u.ids] });
+  else {
+    for (const [r, k] of Object.entries(u.roles)) e.roles[r] = (e.roles[r] ?? 0) + k;
+    e.n += u.n;
+    e.ids = [...e.ids, ...u.ids].slice(0, 6);
+  }
+}
+const colors = [...byHex.values()].map((u) => ({ ...u, rgb: parse(u.c), hex: hex(parse(u.c)), lch: toLch(parse(u.c)) })).sort((a, b) => b.n - a.n);
 
 // near-duplicates: same color for the eye, different value in the code
 const groups = [];

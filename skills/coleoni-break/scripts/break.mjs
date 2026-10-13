@@ -306,7 +306,7 @@ const T = {
       dark: ["Modo escuro", "O sistema em modo escuro."],
     },
     what: { fixed: "texto ignora o tamanho de fonte do usuário (px)", clipped: "texto cortado", spills: "vaza pra fora do componente", overlap: "textos um em cima do outro", collapsed: "imagem some sem deixar espaço", sideways: "página rola pro lado", same: "fica igual ao normal", nochange: "nenhuma lista pra mudar", empty: "não mostra nada", grows: "cresce pra" },
-    made: "Feito pela /coleoni-break · skills.coleoni.com",
+    made: "Feito por /coleoni-break · skills.coleoni.com",
   },
 };
 

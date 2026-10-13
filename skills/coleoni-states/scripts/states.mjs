@@ -166,7 +166,7 @@ const T = {
       denied: ["Sem permissão", "A API responde 401: a sessão expirou."],
     },
     why: { noload: "não dá sinal de que está carregando", noempty: "não diz que não tem nada, nem o que fazer", blank: "não mostra nada", same: "fica igual a", raw: "mostra valores crus", crash: "quebra", silent: "não diz o que aconteceu nem o que fazer", noapi: "nenhuma chamada de API foi interceptada", spinner: "fica carregando pra sempre" },
-    made: "Feito pela /coleoni-states · skills.coleoni.com",
+    made: "Feito por /coleoni-states · skills.coleoni.com",
   },
 };
 

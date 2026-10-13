@@ -121,7 +121,7 @@ function check(sel) {
 
 const T = {
   en: { title: "Variations", current: "Current", desktop: "Desktop", phone: "Phone", context: "In the page", pick: "Pick one: 1, 2 or 3, or mix (“2 with the prices of 3”).", sideways: "scrolls sideways on the phone", clipped: "text cut off", error: "error", made: "Made by /coleoni-variants · skills.coleoni.com" },
-  pt: { title: "Variações", current: "Atual", desktop: "Computador", phone: "Celular", context: "Na página", pick: "Escolha uma: 1, 2 ou 3, ou misture (“a 2 com os preços da 3”).", sideways: "rola pro lado no celular", clipped: "texto cortado", error: "erro", made: "Feito pela /coleoni-variants · skills.coleoni.com" },
+  pt: { title: "Variações", current: "Atual", desktop: "Computador", phone: "Celular", context: "Na página", pick: "Escolha uma: 1, 2 ou 3, ou misture (“a 2 com os preços da 3”).", sideways: "rola pro lado no celular", clipped: "texto cortado", error: "erro", made: "Feito por /coleoni-variants · skills.coleoni.com" },
 };
 
 // ---------------------------------------------------------------- main

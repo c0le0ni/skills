@@ -120,7 +120,7 @@ const html = report({
   chips: [[c("high"), pt ? "corrigir primeiro" : "fix first", "r"], [c("medium"), pt ? "corrigir" : "to fix", "y"], [c("low"), pt ? "vale olhar" : "worth a look"], [results.filter((r) => r.ok).length, pt ? "áreas revisadas" : "areas reviewed", "g"]],
   findings,
   sections: [{ title: pt ? "Por área" : "By area", note: pt ? "vermelho, amarelo e cinza: corrigir primeiro, corrigir, vale olhar" : "red, yellow and grey: fix first, fix, worth a look", html: areaCards, first: true }],
-  made: pt ? "Feito pela /coleoni-interface · skills.coleoni.com" : "Made by /coleoni-interface · skills.coleoni.com",
+  made: pt ? "Feito por /coleoni-interface · skills.coleoni.com" : "Made by /coleoni-interface · skills.coleoni.com",
 });
 const browser = await launch();
 await writeReport(out, html, { skill: "coleoni-interface", page: name, areas: results.map(({ dir, ...r }) => r), findings }, `# ${pt ? "Revisão de interface" : "Interface review"}: ${name}\n\n${mdFindings(findings, o.lang)}\n`, browser);

@@ -189,7 +189,7 @@ const html = report({
     { title: pt ? "Bordas e espaços na página" : "Edges and gaps on the page", note: pt ? "verde: bordas em uso · vermelho: quase alinhadas · azul: espaço entre seções" : "green: edges in use · red: near misses · blue: gaps between sections", html: edgeHtml, first: true },
     { title: pt ? "Celular e tablet" : "Phone and tablet", html: widthHtml },
   ],
-  made: pt ? "Feito pela /coleoni-layout · skills.coleoni.com" : "Made by /coleoni-layout · skills.coleoni.com",
+  made: pt ? "Feito por /coleoni-layout · skills.coleoni.com" : "Made by /coleoni-layout · skills.coleoni.com",
 });
 await writeReport(out, html, { skill: "coleoni-layout", page: target.name, findings: F, edges: d.edges.map(({ ids, ...e }) => e), gaps: d.gaps.map((g) => g.gap), widths: widths.map(({ file, ...w }) => w) }, `# Layout: ${target.name}\n\n${mdFindings(F, o.lang)}\n`, browser);
 await browser.close();

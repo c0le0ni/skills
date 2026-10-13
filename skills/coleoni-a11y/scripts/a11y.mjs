@@ -203,7 +203,7 @@ const T = {
     kb: { stops: "Paradas do Tab", skip: "Link de pular conteúdo", noFocus: "Sem foco visível", hiddenFocus: "Foco em elementos escondidos", trap: "Teclado preso", yes: "sim", no: "não" },
     manualList: ["Ouça a página com leitor de tela (NVDA, VoiceOver, TalkBack): a ordem faz sentido?", "O texto alternativo diz o que a imagem significa ali, não como ela é.", "Vídeos têm legenda; áudios têm transcrição.", "Erros de formulário dizem o que deu errado e como corrigir, do lado do campo.", "Zoom em 200%: nada cortado, nada sobreposto.", "Tudo o que funciona com o mouse funciona com o teclado."],
     note: "Testes automáticos acham parte dos problemas. O resto precisa da conferência manual acima. A Lei Brasileira de Inclusão (Lei 13.146/2015, art. 63) exige acessibilidade nos sites de empresas com sede ou representação no Brasil e de órgãos públicos.",
-    made: "Feito pela /coleoni-a11y · skills.coleoni.com",
+    made: "Feito por /coleoni-a11y · skills.coleoni.com",
   },
 };
 

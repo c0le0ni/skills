@@ -270,7 +270,7 @@ const html = report({
     { title: pt ? "Sombras em uso" : "Shadows in use", html: shadowSheet },
     { title: pt ? "Espaçamentos em uso" : "Spacing in use", note: pt ? "em vermelho, fora da grade de 4px" : "in red, off the 4px grid", html: spacingSheet },
   ],
-  made: pt ? "Feito pela /coleoni-polish · skills.coleoni.com" : "Made by /coleoni-polish · skills.coleoni.com",
+  made: pt ? "Feito por /coleoni-polish · skills.coleoni.com" : "Made by /coleoni-polish · skills.coleoni.com",
 });
 await writeReport(out, html, { skill: "coleoni-polish", page: target.name, findings: F, scales: { radii: d.radii.map(({ ids, ...r }) => r), shadows: d.shadows.map(({ ids, ...s }) => s), spacing: sp.map(({ ids, ...s }) => s) } }, `# Polish: ${target.name}\n\n${mdFindings(F, o.lang)}\n`, browser);
 await browser.close();

@@ -197,7 +197,7 @@ const html = report({
     { title: pt ? "Famílias e pesos na tela" : "Families and weights on screen", note: pt ? "o que quem visita realmente vê" : "what visitors actually see", html: famHtml, first: true },
     { title: pt ? "A escala em uso" : "The scale in use", note: pt ? "um exemplo real de cada tamanho, recortado da página" : "a real example of each size, cropped from the page", html: specHtml },
   ],
-  made: pt ? "Feito pela /coleoni-type · skills.coleoni.com" : "Made by /coleoni-type · skills.coleoni.com",
+  made: pt ? "Feito por /coleoni-type · skills.coleoni.com" : "Made by /coleoni-type · skills.coleoni.com",
 });
 await writeReport(out, html, { skill: "coleoni-type", page: target.name, findings: F, sizes, families: fams.map(([f, l]) => ({ family: f, weights: [...new Set(l.map((x) => x.weight))] })), missing: missing.map((m) => ({ asked: m.family, shown: m.shown })), faces: d.faces }, `# Typography: ${target.name}\n\nSizes: ${sizes.join(", ")}\n\n${mdFindings(F, o.lang)}\n`, browser);
 await browser.close();

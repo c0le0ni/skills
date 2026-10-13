@@ -341,7 +341,7 @@ const html = report({
     { title: pt ? "Paleta proposta" : "Proposed palette", note: pt ? "escalas OKLCH a partir da marca (contorno verde) · palette.css" : "OKLCH scales from the brand (green outline) · palette.css", html: scaleHtml },
     ...(sem ? [{ title: pt ? "Tokens semânticos" : "Semantic tokens", note: pt ? "claro e escuro, contraste conferido" : "light and dark, contrast checked", html: semHtml }] : []),
   ],
-  made: pt ? "Feito pela /coleoni-color · skills.coleoni.com" : "Made by /coleoni-color · skills.coleoni.com",
+  made: pt ? "Feito por /coleoni-color · skills.coleoni.com" : "Made by /coleoni-color · skills.coleoni.com",
 });
 await writeReport(out, html, { skill: "coleoni-color", page: target.name, findings: F, colors: colors.map((c) => ({ hex: c.hex, n: c.n, roles: c.roles, oklch: c.lch.map((v) => Math.round(v * 1000) / 1000) })), duplicates: dupes.map((g) => g.map((c) => c.hex)), contrast: d.pairs.map((p) => ({ fg: hex(parse(p.fg)), bg: hex(parse(p.bg)), ratio: Math.round(ratio(parse(p.fg), parse(p.bg)) * 100) / 100 })), tokens: { declared: d.tokens, literal: d.literal, token: d.token }, palette: "palette.css" }, `# Color: ${target.name}\n\n${mdFindings(F, o.lang)}\n`, browser);
 await browser.close();
